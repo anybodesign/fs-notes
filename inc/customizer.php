@@ -178,6 +178,26 @@ function fs_customize_register($fs_customize) {
 	// -
 	// + + + + + + + + + + 
 
+		// Hide site name
+		
+		$fs_customize->add_setting(
+			'hide_sitetitle', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'hide_sitetitle', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Hide the site title', 'fs-notes'),
+				'section'		=> 'title_tagline',
+				'settings'		=> 'hide_sitetitle',
+			)
+		);
+		
 		// Hide tagline
 		
 		$fs_customize->add_setting(
@@ -192,7 +212,7 @@ function fs_customize_register($fs_customize) {
 			'hide_tagline', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Hide the website tagline', 'fs-notes'),
+				'label'			=> __('Hide the site tagline', 'fs-notes'),
 				'section'		=> 'title_tagline',
 				'settings'		=> 'hide_tagline',
 			)

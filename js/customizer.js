@@ -12,14 +12,25 @@
 		});
 	});
 
-	// Tagline
+	// Site title
+    wp.customize('hide_sitetitle', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.site-title span' ).hide().addClass('screen-reader-text');
+            }
+            else {
+                $( '.site-title span' ).show().removeClass('screen-reader-text');
+            }
+        });
+    });
+    // Tagline
     wp.customize('hide_tagline', function( value ) {
         value.bind( function( to ) {
             if( to ) {
-                $( '.site-desc' ).hide();
+                $( '.site-desc' ).hide().addClass('screen-reader-text');
             }
             else {
-                $( '.site-desc' ).show();
+                $( '.site-desc' ).show().removeClass('screen-reader-text');
             }
         });
     });
