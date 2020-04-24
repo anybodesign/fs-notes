@@ -1,0 +1,30 @@
+/* ------------------------- */
+/* = Footer
+/* ------------------------- */
+
+
+#site_foot {
+	
+}
+
+.footer-content {
+	display: flex;
+	width: 100%;
+	padding: $grid-padding;
+}
+
+.footer-copyright {
+	margin-bottom: 0;
+}
+
+.footer-nav {
+	
+}
+.footer-menu {
+	margin: 0;
+	
+	li {
+		display: inline;
+		margin: 0 .25em;
+	}
+}

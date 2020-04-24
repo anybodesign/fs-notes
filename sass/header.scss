@@ -1,0 +1,80 @@
+/* ------------------------- */
+/* = Header
+/* ------------------------- */
+
+
+#site_head {
+	position: relative;
+	background-color: #fff;
+	
+	& > .row {
+		flex-direction: row-reverse;
+		align-items: center;
+		padding: $grid-padding*2 0;
+		
+		@include rwd(large) {
+			flex-direction: row;	
+		}
+	}
+}
+
+.site-title {
+	display: block;
+	font-family: $font-title;
+	text-transform: uppercase;
+	font-size: 2.4rem;
+	line-height: 1;
+	margin: 0;
+	
+	a,
+	img {
+		display: block;
+	}
+
+	.logo.has-mobile-logo { display: none; }
+	.logo-mobile { display: block; }
+	
+	@include rwd(large) {
+		.logo.has-mobile-logo { display: block; }
+		.logo-mobile { display: none; }
+	}
+
+}
+
+.site-desc {
+	display: block;
+	margin: 0;
+}
+
+.site-brand {
+	padding: $grid-padding;
+}
+
+// Sticky Nav
+
+.sticky-nav {
+
+	@include rwd(large) {
+		#site_head {
+			position: fixed;
+			width: 100%;
+			top: 0;
+			left: 0;
+			
+			animation: drop-in .8s;
+			z-index: 100;		
+			
+		}
+		
+		&.admin-bar {
+			
+			#site_head {
+				top: 46px;
+				
+				@include rwd(782px) {
+					top: 32px;
+				}
+			}
+		}
+	}
+}

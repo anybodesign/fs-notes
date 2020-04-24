@@ -1,0 +1,110 @@
+// Common Stuff
+// -
+// + + + + + + + + + + 
+
+
+// Structure 
+
+
+.page-wrap {
+	
+	&.has-sidebar {
+		@include center();
+		
+		@include rwd(large) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.page-banner,
+.page-content,
+.page-sidebar {
+	width: 100%;
+}
+
+.page-banner {
+	
+	.inner {
+		padding: $grid-padding;
+	}
+
+
+	.error404 &,
+	.page-template-pagecustom-maintenance & {
+		
+	}
+	
+}
+
+.page-title {
+	
+	.search-term {
+		font-family: $font-bolditalic;
+	}
+}
+
+.page-content {
+	
+	// Centering Blocks and content
+	
+	& > * {
+		width: 100%;
+		padding: 0 $grid-padding;
+		@include center();
+	}
+	
+	& > *.alignwide {
+		max-width: $max-width-large;
+	}
+	& > *.alignfull {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+	}
+	
+	// Beaver container
+	& > *.fl-builder-content {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: none;
+		padding: 0;
+	}
+	
+	& > [class*="wp-block-gallery"],
+	& > [class*="wp-block-cover-image"],
+	& > [class*="wp-block-quote"] {
+		@include center();
+		margin-bottom: $grid-padding*2;
+	}
+	& > [class*="wp-block-table"],
+	& > [class*="wp-block-verse"] {	
+		position: relative;
+		margin: $grid-padding*2 auto;
+		max-width: calc(#{$max-width} - #{$grid-padding}*2);
+	}
+	
+	& > span {
+		display: block;
+	    margin-bottom: 1.5em;
+	}
+	
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 75%;
+		}
+	}	
+}
+
+.page-sidebar {
+	padding: $grid-padding;
+
+	@include rwd(large) {
+		
+		.has-sidebar & {
+			width: 25%;
+		}
+	}	
+}

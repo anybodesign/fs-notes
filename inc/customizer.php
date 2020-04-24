@@ -1,0 +1,413 @@
+<?php defined('ABSPATH') or die();
+/**
+ * FS Notes Customizer functionality
+ *
+ * @package WordPress
+ * @subpackage FS_Notes
+ * @since 1.0
+ * @version 1.0
+ */
+
+// Customizer JS
+
+add_action( 'customize_preview_init', 'fs_customizer_scripts' );
+function fs_customizer_scripts() {
+	wp_enqueue_script(
+		'fs-customizer',
+	    	FS_THEME_URL . '/js/customizer.js',
+	    	array( 'customize-preview' ), 
+	    	false, 
+	    	true
+	);
+}
+
+// Customizer Settings
+ 
+function fs_customize_register($fs_customize) {
+
+	// Title and Description
+	// -
+	// + + + + + + + + + + 
+	
+	$fs_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$fs_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+	if ( isset( $fs_customize->selective_refresh ) ) {
+		$fs_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector'        => array('.site-title', '.site-title a'),
+			'render_callback' => 'fs_customize_partial_blogname',
+		) );
+		$fs_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector'        => '.site-desc',
+			'render_callback' => 'fs_customize_partial_blogdescription',
+		) );
+	}	 
+
+	// Create Some Sections
+	// -
+	// + + + + + + + + + + 
+	
+	$fs_customize->add_section(
+		'fs_options_section',
+		array(
+			'title'			=> __('Theme Options', 'fs-notes'),
+			'priority'		=> 20,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_layout_section', 
+		array(
+			'title' 		=> __('Layout Options', 'fs-notes'),
+			'description' 	=> __('Choose the layout of the site header and main navigation.', 'fs-notes'),
+			'priority'		=> 30,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_fonts_section', 
+		array(
+			'title' 		=> __('Theme Fonts', 'fs-notes'),
+			'description' 	=> __('Choose a font combination for the site.', 'fs-notes'),
+			'priority'		=> 40,
+		)
+	);
+	$fs_customize->add_section(
+		'fs_pictures_section', 
+		array(
+			'title' 		=> __('Theme Pictures', 'fs-notes'),
+			'description' 	=> __('Select default banner pictures.', 'fs-notes'),
+			'priority'		=> 50,
+		)
+	);
+
+
+	// Colors
+	// -
+	// + + + + + + + + + + 
+		
+		// Primary color
+		
+		$fs_customize->add_setting(
+			'primary_color', 
+			array(
+				'default'			=> '',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'refresh', 
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'primary_color', 
+				array(
+					'label'		=> __('Primary color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'primary_color',
+				)
+			)
+		);
+				
+		// Secondary color
+		
+		$fs_customize->add_setting(
+			'secondary_color', 
+			array(
+				'default'			=> '',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'refresh', 
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'secondary_color', 
+				array(
+					'label'		=> __('Secondary color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'secondary_color',
+				)
+			)
+		);
+				
+		// Third color
+		
+		$fs_customize->add_setting(
+			'third_color', 
+			array(
+				'default'			=> '',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'refresh', 
+			)
+		);
+		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
+					'label'		=> __('Contraste color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'third_color',
+				)
+			)
+		);
+
+
+
+	// Site identity
+	// -
+	// + + + + + + + + + + 
+
+		// Site logo
+		
+		$fs_customize->add_setting(
+			'site_logo', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'site_logo', 
+				array(
+					'label'			=> __('Site Logo', 'fs-notes'),
+					'description'	=> __('Your logo, displayed instead of the website title.', 'fs-notes'),
+					'section'		=> 'title_tagline',
+					'settings'		=> 'site_logo',
+				)
+			)
+		);
+		
+		// Site logo - Mobile
+		
+		$fs_customize->add_setting(
+			'site_logo_mobile', array(
+				'sanitize_callback'		=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'site_logo_mobile', 
+				array(
+					'label'			=> __('Site Logo - Mobile', 'fs-notes'),
+					'description'	=> __('Specific version of the logo for mobile devices. If none, the default logo will be used.', 'fs-notes'),
+					'section'		=> 'title_tagline',
+					'settings'		=> 'site_logo_mobile',
+				)
+			)
+		);
+
+
+		// Hide tagline
+		
+		$fs_customize->add_setting(
+			'hide_tagline', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'hide_tagline', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Hide the website tagline', 'fs-notes'),
+				'section'		=> 'title_tagline',
+				'settings'		=> 'hide_tagline',
+			)
+		);
+	
+	
+		// Footer text
+		
+		$fs_customize->add_setting(
+			'footer_text', 
+			array(
+				'default'				=> '',
+				'transport'				=> 'postMessage',				
+				'sanitize_callback'		=> 'sanitize_text_field'
+			)
+		);
+		$fs_customize->add_control(
+			'footer_text', 
+			array(
+				'label'			=> __('Custom footer text', 'fs-notes'),
+				'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-notes'),
+				'section'		=> 'title_tagline',
+				'settings'		=> 'footer_text',
+			)
+		);
+		
+		
+		// WP Credits
+		
+		$fs_customize->add_setting(
+			'display_wp', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',				
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'display_wp', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display WordPress Link', 'fs-notes'),
+				'section'		=> 'title_tagline',
+				'settings'		=> 'display_wp',
+			)
+		);
+
+
+	// Theme Options
+	// -
+	// + + + + + + + + + + 
+		
+		// Back to top
+	
+		$fs_customize->add_setting(
+			'back2top', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'back2top', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Display a Back to top button', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'back2top',
+			)
+		);
+			
+		// Sticky Nav
+		
+		$fs_customize->add_setting(
+			'stickynav', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'stickynav', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Make the header sticky', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'stickynav',
+			)
+		);
+
+
+	// Theme Layout
+	// -
+	// + + + + + + + + + + 
+
+		// Header & Main nav
+
+		$fs_customize->add_setting(
+			'layout_option', 
+			array(
+				'default' => 'version1',
+				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
+			)
+		);
+		
+		$fs_customize->add_control(
+			'layout_option', 
+			array(
+				'type' => 'radio',
+				'label' => __( 'Layout version', 'fs-notes' ),
+				'section' => 'fs_layout_section',
+				'choices' => array(
+					'version1' => __( 'Version 1', 'fs-notes' ),
+					'version2' => __( 'Version 2', 'fs-notes' ),
+					'version3' => __( 'Version 3', 'fs-notes' ),
+				),
+			)
+		);
+
+
+	// Theme Pictures
+	// -
+	// + + + + + + + + + + 
+
+	
+		// 404 Image
+		
+		$fs_customize->add_setting(
+			'bg_404', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'bg_404', 
+				array(
+					'label'			=> __('404 error', 'fs-notes'),
+					'description'	=> __('Choose a picture for the 404 error page. (2048 x 625 pixels max.)', 'fs-notes'),
+					'section'		=> 'fs_pictures_section',
+					'settings'		=> 'bg_404',
+				)
+			)
+		);	
+
+}
+add_action('customize_register', 'fs_customize_register');
+
+
+// Callbacks + Sanitize
+
+function fs_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+function fs_customize_partial_blogdescription() {
+	bloginfo( 'description' );
+}
+
+function fs_customizer_sanitize_checkbox( $input ) {
+	if ( $input === true || $input === '1' ) {
+		return '1';
+	}
+	return '';
+}
+function fs_customizer_sanitize_radio_layout( $input ) {
+    if( !in_array( $input, array( 'version1', 'version2', 'version3' ) ) ) {
+        $input = 'version1';
+    }
+    return $input;
+}
+
+
+// Customizer Colors Output
+
+function fs_colors() {
+	?>
+	<style>
+		.something { 
+			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		}
+		
+		.something { 
+			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
+		}
+		
+		.something {
+			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		}
+		.something {
+			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		}
+	</style>
+	<?php
+}
+add_action('wp_head','fs_colors');

@@ -1,0 +1,835 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FS Notes\n"
+"POT-Creation-Date: 2020-04-24 14:06+0200\n"
+"PO-Revision-Date: 2020-04-24 14:06+0200\n"
+"Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
+"Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
+
+#: blocks/block-custom/block-custom-fields.php:9
+msgid "Block Custom"
+msgstr "Block Custom"
+
+#: blocks/block-custom/block-custom-fields.php:13
+msgid "Field"
+msgstr "Champ"
+
+#: blocks/block-custom/block-custom.php:14
+msgid "Block"
+msgstr "Bloc"
+
+#: blocks/block-custom/block-custom.php:15
+msgid "Block description."
+msgstr "Description du bloc."
+
+#: comments.php:19
+msgid "They talk about it"
+msgstr "Ils en parlent"
+
+#: comments.php:34
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: comments.php:41
+msgid "Do we talk about it?"
+msgstr "On en discute ?"
+
+#: comments.php:42
+msgid "Add my comment!"
+msgstr "Ajouter mon commentaire !"
+
+#: footer.php:31
+msgid "Powered by WordPress!"
+msgstr "Propulsé par WordPress !"
+
+#: footer.php:37 functions.php:373
+msgid "Footer Menu"
+msgstr "Menu pied de page"
+
+#: footer.php:53
+msgid "Back to top"
+msgstr "Haut de page"
+
+#: functions.php:112
+msgid "Black"
+msgstr "Noir"
+
+#: functions.php:117
+msgid "White"
+msgstr "Blanc"
+
+#: functions.php:125 inc/customizer.php:104
+msgid "Primary color"
+msgstr "Couleur primaire"
+
+#: functions.php:130 inc/customizer.php:128
+msgid "Secondary color"
+msgstr "Couleur secondaire"
+
+#: functions.php:135
+msgid "Complementary color"
+msgstr "Couleur complémentaire"
+
+#: functions.php:146
+msgid "Small"
+msgstr "Petite"
+
+#: functions.php:147
+msgid "S"
+msgstr "S"
+
+#: functions.php:152
+msgid "Large"
+msgstr "Grande"
+
+#: functions.php:153
+msgid "L"
+msgstr "L"
+
+#: functions.php:372 template-parts/header-nav.php:6
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: functions.php:374
+msgid "Social Menu"
+msgstr "Menu réseaux sociaux"
+
+#: functions.php:449
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: functions.php:467
+msgid "Thumbnail x2"
+msgstr "Miniature (x2)"
+
+#: functions.php:468
+msgid "Medium x2"
+msgstr "Moyenne (x2)"
+
+#: functions.php:469
+msgid "Large x2"
+msgstr "Grande x2"
+
+#: functions.php:470
+msgid "Screen Medium"
+msgstr "Écran moyen"
+
+#: functions.php:471
+msgid "Screen Full"
+msgstr "Plein écran"
+
+#: functions.php:472
+msgid "Video Medium"
+msgstr "Vidéo taille moyenne"
+
+#: functions.php:473
+msgid "Video Full"
+msgstr "Vidéo plein écran"
+
+#: functions.php:497
+msgid "Primary Widgets Area"
+msgstr "Zone primaire Widgets"
+
+#: functions.php:522
+msgid "Text intro"
+msgstr "Texte d’intro"
+
+#: functions.php:528
+msgid "Text mentions"
+msgstr "Mentions"
+
+#: functions.php:534
+msgid "Action button"
+msgstr "Bouton d’action"
+
+#: functions.php:554
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#: functions.php:555
+msgid "Keywords"
+msgstr "Mots clés"
+
+#: functions.php:556
+msgid "Search"
+msgstr "Chercher"
+
+#: functions.php:633 functions.php:634
+msgid "Site Options"
+msgstr "Options du site"
+
+#: functions.php:642 functions.php:643
+msgid "Archives Customizer"
+msgstr "Personnalisation des pages d’archives"
+
+#: functions.php:648 functions.php:649
+msgid "Social Networks"
+msgstr "Réseaux sociaux"
+
+#: inc/custom-post-type.php:32
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr "Projets"
+
+#: inc/custom-post-type.php:33
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr "Projet"
+
+#: inc/custom-post-type.php:34
+msgid "Projects"
+msgstr "Projets"
+
+#: inc/custom-post-type.php:35 inc/custom-post-type.php:67
+msgid "Project"
+msgstr "Projet"
+
+#: inc/custom-post-type.php:36
+msgid "Project archives"
+msgstr "Archives du projet"
+
+#: inc/custom-post-type.php:37
+msgid "Project attributes"
+msgstr "Attributs du projet"
+
+#: inc/custom-post-type.php:38
+msgid "Parent project:"
+msgstr "Projet parent :"
+
+#: inc/custom-post-type.php:39
+msgid "All the projects"
+msgstr "Tous les projets"
+
+#: inc/custom-post-type.php:40
+msgid "Add new project"
+msgstr "Ajouter un nouveau projet"
+
+#: inc/custom-post-type.php:41
+msgid "Add New"
+msgstr "Ajouter"
+
+#: inc/custom-post-type.php:42
+msgid "New project"
+msgstr "Nouveau projet"
+
+#: inc/custom-post-type.php:43
+msgid "Edit project"
+msgstr "Modifier le projet"
+
+#: inc/custom-post-type.php:44
+msgid "Update project"
+msgstr "Mettre à jour le projet"
+
+#: inc/custom-post-type.php:45
+msgid "View project"
+msgstr "Voir le projet"
+
+#: inc/custom-post-type.php:46
+msgid "View projects"
+msgstr "Voir les projets"
+
+#: inc/custom-post-type.php:47
+msgid "Search project"
+msgstr "Rechercher un projet"
+
+#: inc/custom-post-type.php:48
+msgid "Not found"
+msgstr "Aucun résultat"
+
+#: inc/custom-post-type.php:49
+msgid "Not found in Trash"
+msgstr "Introuvable dans la corbeille"
+
+#: inc/custom-post-type.php:50
+msgid "Project picture"
+msgstr "Image du projet"
+
+#: inc/custom-post-type.php:51
+msgid "Set project picture"
+msgstr "Définir l’image du projet"
+
+#: inc/custom-post-type.php:52
+msgid "Remove project picture"
+msgstr "Supprimer l'image du projet"
+
+#: inc/custom-post-type.php:53
+msgid "Use as project picture"
+msgstr "Utiliser comme image de projet"
+
+#: inc/custom-post-type.php:54
+msgid "Insert into project"
+msgstr "Insérer dans le projet"
+
+#: inc/custom-post-type.php:55
+msgid "Uploaded to this project"
+msgstr "Téléversé dans ce projet"
+
+#: inc/custom-post-type.php:56
+msgid "Projects list"
+msgstr "Liste des projets"
+
+#: inc/custom-post-type.php:57
+msgid "Projects list navigation"
+msgstr "Navigation dans la liste des projets"
+
+#: inc/custom-post-type.php:58
+msgid "Filter events list"
+msgstr "Filtrer la liste d'évènements"
+
+#: inc/custom-post-type.php:68
+msgid "Project description"
+msgstr "Description du projet"
+
+#: inc/custom-post-type.php:97
+msgid "Choose a title for this project"
+msgstr "Choisissez un titre pour ce projet"
+
+#: inc/custom-post-type.php:143
+msgctxt "Taxonomy General Name"
+msgid "Projects types"
+msgstr "Types de projets"
+
+#: inc/custom-post-type.php:144
+msgctxt "Taxonomy Singular Name"
+msgid "Project type"
+msgstr "Type de projet"
+
+#: inc/custom-post-type.php:145
+msgid "Project type"
+msgstr "Type de projet"
+
+#: inc/custom-post-type.php:146
+msgid "All types"
+msgstr "Tous les types"
+
+#: inc/custom-post-type.php:147
+msgid "Parent type"
+msgstr "Type Parent"
+
+#: inc/custom-post-type.php:148
+msgid "Parent type:"
+msgstr "Type parent :"
+
+#: inc/custom-post-type.php:149
+msgid "New type name"
+msgstr "Nouveau nom de type"
+
+#: inc/custom-post-type.php:150
+msgid "Add type Item"
+msgstr "Ajouter un type"
+
+#: inc/custom-post-type.php:151
+msgid "Edit type"
+msgstr "Modifier le type"
+
+#: inc/custom-post-type.php:152
+msgid "Update type"
+msgstr "Mettre à jour le type"
+
+#: inc/custom-post-type.php:153
+msgid "View type"
+msgstr "Voir le type"
+
+#: inc/custom-post-type.php:154
+msgid "Separate types with commas"
+msgstr "Séparer les types par des virgules"
+
+#: inc/custom-post-type.php:155
+msgid "Add or remove types"
+msgstr "Ajouter ou supprimer des types"
+
+#: inc/custom-post-type.php:156
+msgid "Choose from the most used"
+msgstr "Choisir parmi les plus utilisés"
+
+#: inc/custom-post-type.php:157
+msgid "Popular types"
+msgstr "Types populaires"
+
+#: inc/custom-post-type.php:158
+msgid "Search types"
+msgstr "Rechercher des types"
+
+#: inc/custom-post-type.php:159
+msgid "Not Found"
+msgstr "Aucun résultat"
+
+#: inc/custom-post-type.php:160
+msgid "No types"
+msgstr "Aucun type"
+
+#: inc/custom-post-type.php:161
+msgid "Types list"
+msgstr "Liste des types"
+
+#: inc/custom-post-type.php:162
+msgid "Types list navigation"
+msgstr "Navigation dans la liste des types"
+
+#: inc/customizer.php:53
+msgid "Theme Options"
+msgstr "Options du thème"
+
+#: inc/customizer.php:60
+msgid "Layout Options"
+msgstr "Options de mise en page"
+
+#: inc/customizer.php:61
+msgid "Choose the layout of the site header and main navigation."
+msgstr ""
+"Choisissez la mise en page pour l'en-tête du site et la navigation "
+"principale."
+
+#: inc/customizer.php:68
+msgid "Theme Fonts"
+msgstr "Polices du thème"
+
+#: inc/customizer.php:69
+msgid "Choose a font combination for the site."
+msgstr "Choisissez une combinaison de polices pour le site."
+
+#: inc/customizer.php:76
+msgid "Theme Pictures"
+msgstr "Images du thème"
+
+#: inc/customizer.php:77
+msgid "Select default banner pictures."
+msgstr "Sélection des images par défaut pour la bannière."
+
+#: inc/customizer.php:148
+msgid "Contraste color"
+msgstr "Couleur de contraste"
+
+#: inc/customizer.php:174
+msgid "Site Logo"
+msgstr "Logo du site"
+
+#: inc/customizer.php:175
+msgid "Your logo, displayed instead of the website title."
+msgstr "Votre logo, affiché à la place du titre du site."
+
+#: inc/customizer.php:194
+msgid "Site Logo - Mobile"
+msgstr "Logo du site - mobile"
+
+#: inc/customizer.php:195
+msgid ""
+"Specific version of the logo for mobile devices. If none, the default logo "
+"will be used."
+msgstr ""
+"Version spécifique du logo pour appareils mobiles. Si non renseigné, le logo "
+"par défaut sera utilisé."
+
+#: inc/customizer.php:217
+msgid "Hide the website tagline"
+msgstr "Masquer le slogan du site"
+
+#: inc/customizer.php:237
+msgid "Custom footer text"
+msgstr "Texte de pied de page personnalisé"
+
+#: inc/customizer.php:238
+msgid "Add a custom text instead of the year and blog name."
+msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
+
+#: inc/customizer.php:259
+msgid "Display WordPress Link"
+msgstr "Afficher le lien WordPress"
+
+#: inc/customizer.php:283
+msgid "Display a Back to top button"
+msgstr "Afficher un bouton Haut de page"
+
+#: inc/customizer.php:302
+msgid "Make the header sticky"
+msgstr "Rendre l'en-tête collant"
+
+#: inc/customizer.php:327
+msgid "Layout version"
+msgstr "Version de mise en page"
+
+#: inc/customizer.php:330
+msgid "Version 1"
+msgstr "Version 1"
+
+#: inc/customizer.php:331
+msgid "Version 2"
+msgstr "Version 2"
+
+#: inc/customizer.php:332
+msgid "Version 3"
+msgstr "Version 3"
+
+#: inc/customizer.php:356
+msgid "404 error"
+msgstr "Erreur 404"
+
+#: inc/customizer.php:357
+msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
+msgstr ""
+"Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:54
+msgid "View details"
+msgstr "Voir les détails"
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:77
+#, php-format
+msgid "More information about %s"
+msgstr "Plus d'informations sur %s"
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr "Vérifier les mises à jour"
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:213
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr "L’extension %s est à jour."
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:215
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr "Une nouvelle version de l'extension %s est disponible."
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:217
+#, php-format
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
+
+#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:223
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
+
+#: inc/plugin-update-checker/Puc/v4p8/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr "Il n’y a aucun historique des mises à jour disponible."
+
+#: inc/subnav-walker.php:20
+msgid "Unfold Sub-Menu"
+msgstr "Déplier le sous-menu"
+
+#: index.php:33
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: index.php:34
+msgid "Next page"
+msgstr "Page suivante"
+
+#: index.php:35
+msgid "Page"
+msgstr "Page"
+
+#: template-parts/header-brand.php:15
+msgid "Go to Home Page"
+msgstr "Aller à la page d'accueil"
+
+#: template-parts/header-nav.php:7
+msgid "Menu"
+msgstr "Menu"
+
+#: template-parts/header-skiplinks.php:6
+msgid "Go to main content"
+msgstr "Aller au contenu principal"
+
+#: template-parts/header-skiplinks.php:8
+msgid "Go to main menu"
+msgstr "Aller au menu principal"
+
+#: template-parts/nothing.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: template-parts/nothing.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=« %1$s »>Commencez ici</a>."
+
+#: template-parts/nothing.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Aucun résultat ne correspond à vos critères de recherche. Essayez avec "
+"d’autres mots clés."
+
+#: template-parts/nothing.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
+"recherche."
+
+#: template-parts/page-banner.php:23
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: template-parts/page-banner.php:25
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
+
+#: template-parts/post-meta.php:16
+msgid "Posted on&nbsp;"
+msgstr "Posté le&nbsp;"
+
+#: template-parts/post-meta.php:17
+msgid "by&nbsp;"
+msgstr "par&nbsp;"
+
+#: template-parts/post-meta.php:18
+msgid "in&nbsp;"
+msgstr "dans&nbsp;"
+
+#: template-parts/post-meta.php:24
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s commentaire"
+msgstr[1] "%s commentaires"
+
+#. Theme Name of the plugin/theme
+msgid "FS Notes"
+msgstr "FS Notes"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/anybodesign/fs-notes"
+msgstr "https://github.com/anybodesign/fs-notes"
+
+#. Description of the plugin/theme
+msgid "A WordPress Sketchbook Theme"
+msgstr "Un thème WordPress Sketchbook"
+
+#. Author of the plugin/theme
+msgid "Thomas Villain"
+msgstr "Thomas Villain"
+
+#. Author URI of the plugin/theme
+msgid "https://anybodesign.com/"
+msgstr "https://anybodesign.com/"
+
+#. Template Name of the plugin/theme
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. Template Name of the plugin/theme
+msgid "Style Guide"
+msgstr "Style Guide"
+
+#~ msgid "Pictures selection."
+#~ msgstr "Sélection des images."
+
+#~ msgid "Fonts"
+#~ msgstr "Polices"
+
+#~ msgid "Layout customisation"
+#~ msgstr "Personnalisation de la mise en page"
+
+#~ msgid "Large High"
+#~ msgstr "Grande (x2)"
+
+#~ msgid "Rich Text"
+#~ msgstr "Texte riche"
+
+#~ msgid "Text and Image"
+#~ msgstr "Texte et image"
+
+#~ msgid "Photo gallery"
+#~ msgstr "Galerie photos"
+
+#~ msgid "Content gallery"
+#~ msgstr "Galerie de contenu"
+
+#~ msgid "CTA"
+#~ msgstr "CTA"
+
+#~ msgid "Read "
+#~ msgstr "Lire "
+
+#~ msgid "Enlarge picture"
+#~ msgstr "Agrandir l'image"
+
+#~ msgid "Enter text here..."
+#~ msgstr "Entrez du texte ici…"
+
+#, php-format
+#~ msgid "Continue reading %s"
+#~ msgstr "Lire la suite de l'article %s"
+
+#~ msgid "Tagged with:"
+#~ msgstr "Étiquetté&nbsp;:"
+
+#~ msgid "Pages:"
+#~ msgstr "Pages :"
+
+#~ msgid "A WordPress Starter Theme using Prid’x"
+#~ msgstr "Un starter thème WordPress utilisant Prid’x"
+
+#~ msgid "Comment(s)"
+#~ msgstr "Commentaire(s)"
+
+#~ msgid "Page builder"
+#~ msgstr "Constructeur de Page"
+
+#~ msgid "Custom page template with Sidebar"
+#~ msgstr "Page avec colonne latérale"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgid "Portfolio"
+#~ msgstr "Portfolio"
+
+#~ msgid "All Creations"
+#~ msgstr "Toutes les créations"
+
+#~ msgid "No creations were found"
+#~ msgstr "Aucune création trouvée"
+
+#~ msgid "Creation Picture"
+#~ msgstr "Image de référence"
+
+#~ msgid "portfolio"
+#~ msgstr "portfolio"
+
+#~ msgid "Anybodesign Portfolio"
+#~ msgstr "Portfolio Anybodesign"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Creation Categories"
+#~ msgstr "Types de créations"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "Creation Category"
+#~ msgstr "Type de création"
+
+#~ msgid "All Creation Categories"
+#~ msgstr "Tous les types de créations"
+
+#~ msgid "Parent Creation Category"
+#~ msgstr "Type de création parent"
+
+#~ msgid "Parent Creation Category:"
+#~ msgstr "Type de création parent :"
+
+#~ msgid "New Creation Category"
+#~ msgstr "Nouveau type de création"
+
+#~ msgid "Add New Creation Category"
+#~ msgstr "Ajouter un type de création"
+
+#~ msgid "Edit Creation Category"
+#~ msgstr "Modifier le type de création"
+
+#~ msgid "Update Creation Category"
+#~ msgstr "Mettre à jour le type de création"
+
+#~ msgid "View Creation Category"
+#~ msgstr "Voir le type de création"
+
+#~ msgid "Popular Creation Category"
+#~ msgstr "Type de création populaire"
+
+#~ msgid "Search Creation Category"
+#~ msgstr "Chercher un type de création"
+
+#~ msgid "No creation categories were found"
+#~ msgstr "Aucun type de création trouvé"
+
+#~ msgid "creations"
+#~ msgstr "creations"
+
+#~ msgid "Enter the name of the creation"
+#~ msgstr "Entrer le nom de la création"
+
+#~ msgid "Picture"
+#~ msgstr "Image"
+
+#~ msgid "Date"
+#~ msgstr "Date"
+
+#~ msgid "very dark gray"
+#~ msgstr "gris très foncé"
+
+#~ msgid "very light gray"
+#~ msgstr "gris très clair"
+
+#~ msgid "Footer menu"
+#~ msgstr "Menu pied de page"
+
+#~ msgid "Main menu"
+#~ msgstr "Menu principal"
+
+#~ msgid "Unfold navigation menu"
+#~ msgstr "Déplier le menu de navigation"
+
+#~ msgid ""
+#~ "Your browser should be <a href=\"http://browsehappy.com\">updated</a> to "
+#~ "improve your experience."
+#~ msgstr ""
+#~ "Votre navigateur doit être <a href=\"http://browsehappy.com\">mis à jour</"
+#~ "a> afin d'améliorer votre expérience."
+
+#~ msgid "Site Settings"
+#~ msgstr "Paramètres du site"
+
+#~ msgid "Copyright"
+#~ msgstr "Copyright"
+
+#~ msgid "Twitter URL"
+#~ msgstr "URL Twitter"
+
+#~ msgid "Facebook URL"
+#~ msgstr "URL Facebook"
+
+#~ msgid "Google+ URL"
+#~ msgstr "URL Google+"
+
+#~ msgid "The site&rsquo;s copyright, displayed in the footer"
+#~ msgstr "Le copyright du site, affiché dans le footer"
+
+#~ msgid "Enter your Social Networks URLs"
+#~ msgstr "Entrez les URLs de vos réseaux sociaux"
+
+#~ msgid "Sorry! Couldn’t find any post!"
+#~ msgstr "Désolé ! Impossible de trouver des articles !"
+
+#~ msgid "The site’s copyright, displayed in the footer"
+#~ msgstr "Copyright du site, affiché dans le pied de page"
+
+#~ msgid "Thomas Villain - Anybodesign"
+#~ msgstr "Thomas Villain - Anybodesign"
