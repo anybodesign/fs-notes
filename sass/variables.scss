@@ -22,23 +22,13 @@ $width-wide: 75em;	 		// @note: 1200px
 $width-xwide: 90em;	 		// @note: 1440px
 
 
-// Colors
-
-$primary-color: #23252B;
-$secondary-color: $primary-color;
-$page-color: #FFF;
-$text-color: #23252B;
-$bg-color: #E3DFC0;
-
-
-// Root CSS vars
-// Ex: var(--primary-color)
+// Color CSS vars
+// Ex: var(--primary_color)
 
 :root {
-	--primary-color: #23252B; 
-	--secondary-color: var(--text-color); 
-	--page-color: #FFF;
-	--sidebar-color: #FBFF00;
-	--text-color: #23252B;
-	--bg-color: #E3DFC0;
+	--primary_color: #23252B; 
+	--page_color: #FFF;
+	--sidebar_color: #FBFF00;
+	--text_color: #23252B;
+	--bg_color: #E3DFC0;
 }

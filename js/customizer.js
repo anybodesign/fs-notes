@@ -24,6 +24,22 @@
         });
     });
     
+    // Colors
+   
+	var rootCustomProperty = function( setting ) {
+		var bStyle = document.createElement( 'style' );
+		document.head.appendChild( bStyle );
+		setting.bind( function( newval ) {
+			bStyle.innerHTML = ':root { --' + setting.id + ': ' + newval + ' }';
+		} );
+	};
+    wp.customize( 'primary_color', rootCustomProperty );
+    wp.customize( 'text_color', rootCustomProperty );
+    wp.customize( 'page_color', rootCustomProperty );
+    wp.customize( 'sidebar_color', rootCustomProperty );
+    
+    
+    
     // WP Credits
     wp.customize('display_wp', function( value ){
         value.bind( function( to ) {

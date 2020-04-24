@@ -30,8 +30,8 @@
 			height: 16px;
 			margin: 0 8px;
 			border-radius: 16px;
-			border: $primary-color 2px solid;
-			background-color: $secondary-color;
+			border: var(--primary_color) 2px solid;
+			background-color: var(--secondary-color);
 			//outline: none !important;
 			
 			@include a11y-hide();
@@ -39,14 +39,14 @@
 			
 			&:hover, &.focus-visible {
 				transform: scale(1.4);
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				//outline: none;
 			}
 		
 		}
 		
 		&.slick-active button {
-			background-color: $primary-color;
+			background-color: var(--primary_color);
 		}
 		&.slick-disabled {
 			visibility: hidden;

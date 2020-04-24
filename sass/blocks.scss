@@ -6,29 +6,29 @@
 // Colors
 
 .has-primary-color-background-color {
-	background-color: $primary-color;
+	background-color: var(--primary_color);
 }
 .has-secondary-color-background-color {
-	background-color: $secondary-color;
+	background-color: var(--secondary-color);
 }
 .has-white-color-background-color {
 	background-color: #fff;
 }
 .has-black-color-background-color {
-	background-color: $text-color;
+	background-color: var(--text_color);
 }
 
 .has-text-color.has-primary-color-color {
-	color: $primary-color;
+	color: var(--primary_color);
 }
 .has-text-color.has-secondary-color-color {
-	color: $secondary-color;
+	color: var(--secondary-color);
 }
 .has-text-color.has-white-color-color {
 	color: #fff;
 }
 .has-text-color.has-black-color-color {
-	color: $text-color;
+	color: var(--text_color);
 }
 
 
@@ -49,15 +49,15 @@
 	a:first-child {
 		font-family: $font-regular;
 		text-decoration: none;
-		border-bottom: $secondary-color 2px solid;
+		border-bottom: var(--secondary-color) 2px solid;
 		transition: border .2s ease-in-out;
 		
 		&:hover {
 			border-bottom-width: 4px;
 		}
 		&.focus-visible {
-			background-color: $text-color;
-			border-bottom-color: $text-color;
+			background-color: var(--text_color);
+			border-bottom-color: var(--text_color);
 			color: #fff;
 		}
 	}
@@ -149,10 +149,10 @@
 	
 	li {
 		margin-left: 0;
-		border-bottom: $text-color 1px solid;
+		border-bottom: var(--text_color) 1px solid;
 		
 		&:first-child {
-			border-top: $text-color 1px solid;
+			border-top: var(--text_color) 1px solid;
 		}
 			
 		a {
@@ -164,7 +164,7 @@
 			&.focus-visible {
 				padding-left: $grid-padding;
 				padding-right: $grid-padding;
-				background-color: $primary-color;
+				background-color: var(--primary_color);
 				color: #fff;
 			}
 		}
@@ -205,7 +205,7 @@
 hr,
 .wp-block-separator {
 	border: 0;
-	border-top: $text-color 1px solid;
+	border-top: var(--text_color) 1px solid;
 }
 .wp-block-separator {
 	
