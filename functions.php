@@ -389,12 +389,14 @@ add_filter( 'excerpt_more', 'fs_excerpt_more' );
 add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
+add_image_size( 'banner', 1260, 520, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'thumbnail-hd'	=> __( 'Thumbnail x2', 'fs-blog' ),
-        'medium-hd'		=> __( 'Medium x2', 'fs-blog' ),
-        'large-hd'		=> __( 'Large x2', 'fs-blog' ),
+        'thumbnail-hd'	=> __( 'Thumbnail HD', 'fs-blog' ),
+        'medium-hd'		=> __( 'Medium HD', 'fs-blog' ),
+        'large-hd'		=> __( 'Large HD', 'fs-blog' ),
+        'banner'			=> __( 'Banner', 'fs-blog' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
