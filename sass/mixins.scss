@@ -8,27 +8,19 @@
 @mixin link-style() {
 
 	text-decoration: none;
-	color: var(--secondary-color);
-	border-bottom: var(--secondary-color) 2px solid;
+	border-bottom: var(--primary_color) 1px solid;
 	transition: .2s ease-in-out;
 	
 	&:hover {
-		border-bottom-width: 4px;
+		border-bottom-width: 2px;
 	}
 	&.focus-visible {
-		background-color: var(--secondary-color);
-		color: #fff;
-	}
-	&:visited {
-		color: var(--text_color);
-		border-bottom-color: var(--text_color);
-		border-bottom-width: 1px;
-	}
-	&:visited:focus {
+		padding: 0 $grid-padding/2;
+		background-color: var(--text_color);
 		color: #fff;
 	}
 	&:active {
-		color: var(--secondary-color);
+		color: var(--text_color);
 		border-bottom-color: transparent;
 	}	
 }
@@ -40,6 +32,12 @@
 	margin-left: auto; 
 	margin-right: auto;
 	max-width: $max-width;	
+}
+@mixin center-small() {
+	position: relative;
+	margin-left: auto; 
+	margin-right: auto;
+	max-width: $max-width-small;	
 }
 
 // Visually obfuscate the text of an element (a11y ok)

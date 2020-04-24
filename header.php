@@ -47,5 +47,9 @@
 		</div>
 	</header>
 
+<?php 
+	$lines = get_theme_mod('lines');
+	$spiral = get_theme_mod('spiral');
+?>
 
-		<main class="content-area" role="main" id="site_main">
+		<main class="content-area<?php if ($lines == true) { echo ' has-lines'; } if ($spiral == true) { echo ' has-spiral'; } ?>" role="main" id="site_main">

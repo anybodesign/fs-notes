@@ -11,16 +11,9 @@
  */
 ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						
-						<?php if ( '' != get_the_post_thumbnail() ) { ?>
-						<figure class="post-figure">
-							<?php the_post_thumbnail('large-hd'); ?>
-						</figure>
-						<?php } ?>
-						
-						<div class="post-content">
-							<?php the_content(); ?>
-						</div>
-
-					</article>
+					<header class="post-header">
+						<h1 class="page-title"><?php the_title(); ?></h1>
+						<?php get_template_part('template-parts/post', 'meta'); ?>
+					</header>
+					
+					<?php the_content(); ?>
