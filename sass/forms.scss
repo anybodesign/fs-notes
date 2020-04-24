@@ -34,7 +34,7 @@ select {
 	border: var(--text_color) 1px solid; 
 	background-color: #fff;
 	font-size: 1.6rem;
-	font-family: $font-regular;
+	font-family: var(--font-regular);
 	border-radius: 0;
 	appearance: none;
 	
@@ -95,7 +95,7 @@ input[type="submit"] {
 	padding: $grid-padding $grid-padding*2;
 	border: 0;
 	width: auto; 
-	font-family: $font-regular;
+	font-family: var(--font-regular);
 	font-size: 1.6rem;
 	border-radius: 0;
 	appearance: none;
@@ -105,7 +105,7 @@ input[type="submit"] {
 
 ::placeholder {
 	color: #777;
-	font-family: $font-italic;
+	font-family: var(--font-italic);
 	font-size: 1.4rem;
 }
 .focus-visible::placeholder,
@@ -384,7 +384,7 @@ input[type="submit"].gform_button {
 div.wpcf7-response-output {
 	margin: 10px 0 0 0 !important; 
 	padding: 5px !important;
-	font-family: $font-regular;
+	font-family: var(--font-regular);
 }
 span.wpcf7-not-valid-tip {
 	color: #c00;

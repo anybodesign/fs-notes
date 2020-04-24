@@ -6,61 +6,27 @@
 
 // Define your custom fonts :)
 
-$f-regular: Asap-Regular;
-$f-italic: Asap-Italic;
-$f-bold: Asap-Medium;
-$f-bolditalic: Asap-MediumItalic;
-$f-title: Miriam-Libre-Bold;
-
-$fontface-regular: local('#{$f-regular}'), url('fonts/#{$f-regular}.woff2') format('woff2'), url('fonts/#{$f-regular}.woff') format('woff');
-$fontface-italic: local('#{$f-italic}'), url('fonts/#{$f-italic}.woff2') format('woff2'), url('fonts/#{$f-italic}.woff') format('woff');	
-$fontface-bold: local('#{$f-bold}'), url('fonts/#{$f-bold}.woff2') format('woff2'), url('fonts/#{$f-bold}.woff') format('woff');
-$fontface-bolditalic: local('#{$f-bolditalic}'), url('fonts/#{$f-bolditalic}.woff2') format('woff2'), url('fonts/#{$f-bolditalic}.woff') format('woff');
-$fontface-title: local('#{$f-title}'), url('fonts/#{$f-title}.woff2') format('woff2'), url('fonts/#{$f-title}.woff') format('woff');
-
-$fontface-regular-out: local('#{$f-regular}'), url('../fonts/#{$f-regular}.woff2') format('woff2'), url('../fonts/#{$f-regular}.woff') format('woff');
-$fontface-italic-out: local('#{$f-italic}'), url('../fonts/#{$f-italic}.woff2') format('woff2'), url('../fonts/#{$f-italic}.woff') format('woff');	
-$fontface-bold-out: local('#{$f-bold}'), url('../fonts/#{$f-bold}.woff2') format('woff2'), url('../fonts/#{$f-bold}.woff') format('woff');
-$fontface-bolditalic-out: local('#{$f-bolditalic}'), url('../fonts/#{$f-bolditalic}.woff2') format('woff2'), url('../fonts/#{$f-bolditalic}.woff') format('woff');
-$fontface-title-out: local('#{$f-title}'), url('../fonts/#{$f-title}.woff2') format('woff2'), url('../fonts/#{$f-title}.woff') format('woff');
-
-
-// Customize your Font-Stack
-
-$font-stack: Helvetica, Arial, sans-serif;
-
-// The Fonts
-
-$font-title: 'Title', $font-stack;
-$font-regular: 'Regular', $font-stack;
-$font-italic: 'Italic', $font-stack;
-$font-bold: 'Bold', $font-stack;
-$font-bolditalic: 'BoldItalic', $font-stack;
-
-$font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
-
-
 // Root CSS vars
 // Ex: var(--font-title)
-/*
 :root {
-	--f-regular: Asap-Regular;
-	--f-italic: Asap-Italic;
-	--f-bold: Asap-Medium;
-	--f-bolditalic: Asap-MediumItalic;
-	--f-title: Miriam-Libre-Bold;
 	
-	--fontface-regular: local('var(--f-regular)'), url('fonts/var(--f-regular).woff2') format('woff2'), url('fonts/var(--f-regular).woff') format('woff');
-	--fontface-italic: local('var(--f-italic)'), url('fonts/var(--f-italic).woff2') format('woff2'), url('fonts/var(--f-italic).woff') format('woff');	
-	--fontface-bold: local('var(--f-bold)'), url('fonts/var(--f-bold).woff2') format('woff2'), url('fonts/var(--f-bold).woff') format('woff');
-	--fontface-bolditalic: local('var(--f-bolditalic)'), url('fonts/var(--f-bolditalic).woff2') format('woff2'), url('fonts/var(--f-bolditalic).woff') format('woff');
-	--fontface-title: local('var(--f-title)'), url('fonts/var(--f-title).woff2') format('woff2'), url('fonts/var(--f-title).woff') format('woff');
+	--f-regular: LibreBaskerville-Regular;
+	--f-italic: LibreBaskerville-Italic;
+	--f-bold: LibreBaskerville-Bold;
+	--f-bolditalic: LibreBaskerville-Regular;
+	--f-title: BebasNeue-Bold;
 	
-	--fontface-regular-out: local('var(--f-regular)'), url('../fonts/var(--f-regular).woff2') format('woff2'), url('../fonts/var(--f-regular).woff') format('woff');
-	--fontface-italic-out: local('var(--f-italic)'), url('../fonts/var(--f-italic).woff2') format('woff2'), url('../fonts/var(--f-italic).woff') format('woff');	
-	--fontface-bold-out: local('var(--f-bold)'), url('../fonts/var(--f-bold).woff2') format('woff2'), url('../fonts/var(--f-bold).woff') format('woff');
-	--fontface-bolditalic-out: local('var(--f-bolditalic)'), url('../fonts/var(--f-bolditalic).woff2') format('woff2'), url('../fonts/var(--f-bolditalic).woff') format('woff');
-	--fontface-title-out: local('var(--f-title)'), url('../fonts/var(--f-title).woff2') format('woff2'), url('../fonts/var(--f-title).woff') format('woff');
+	--fontface-regular: local('LibreBaskerville-Regular'), url('fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('fonts/LibreBaskerville-Regular.woff') format('woff');
+	--fontface-italic: local('LibreBaskerville-Italic'), url('fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('fonts/LibreBaskerville-Italic.woff') format('woff');	
+	--fontface-bold: local('LibreBaskerville-Bold'), url('fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('fonts/LibreBaskerville-Bold.woff') format('woff');
+	--fontface-bolditalic: var(--fontface-regular);
+	--fontface-title: local('BebasNeue-Bold'), url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
+	
+	--fontface-regular-out: local('LibreBaskerville-Regular'), url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('../fonts/LibreBaskerville-Regular.woff') format('woff');
+	--fontface-italic-out: local('LibreBaskerville-Italic'), url('../fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('../fonts/LibreBaskerville-Italic.woff') format('woff');	
+	--fontface-bold-out: local('LibreBaskerville-Bold'), url('../fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('../fonts/LibreBaskerville-Bold.woff') format('woff');
+	--fontface-bolditalic-out: var(--fontface-regular-out);
+	--fontface-title-out: local('BebasNeue-Bold'), url('../fonts/BebasNeue-Bold.woff2') format('woff2'), url('../fonts/BebasNeue-Bold.woff') format('woff');
 
 	--font-stack: Helvetica, Arial, sans-serif;
 	
@@ -76,4 +42,3 @@ $font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 
 
 }
-*/

@@ -9,35 +9,35 @@ Description: Have fun with Gutenberg style editor.
 
 @font-face {
 	font-family: 'Regular';
-	src: $fontface-regular-out;
+	src: var(--fontface-regular-out);
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Italic';
-	src: $fontface-italic-out;
+	src: var(--fontface-italic-out);
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Bold';
-	src: $fontface-bold-out;
+	src: var(--fontface-bold-out);
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'BoldItalic';
-	src: $fontface-bolditalic-out;
-	font-weight: normal;
+	src: var(--fontface-regular-out);
+	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'Title';
-	src: $fontface-title-out;
+	src: var(--fontface-title-out);
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -52,11 +52,11 @@ Description: Have fun with Gutenberg style editor.
 	
 	h1, h2, h3, h4, h5, h6,
 	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-		font-family: $font-title;
+		font-family: var(--font-title);
 		font-weight: normal;
 	}
 	p, li, small, span {
-		font-family: $font-regular;
+		font-family: var(--font-regular);
 	}
 	
 }

@@ -38,7 +38,7 @@
 .page-title {
 	
 	.search-term {
-		font-family: $font-bolditalic;
+		font-family: var(--font-bold)italic;
 	}
 }
 
@@ -61,7 +61,8 @@
 	
 	& > * {
 		max-width: 90%;
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 0 $grid-padding;
 		
 		@include rwd(medium) {
@@ -150,7 +151,8 @@
 			transparent 2.5rem,
 			rgba(120, 120, 120, 0.2) 2.5rem,
 			rgba(120, 120, 120, 0.2) 2.6rem
-		);		
+		);
+		z-index: -1;		
 	}
 	
 	.has-spiral &::before
