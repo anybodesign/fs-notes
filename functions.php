@@ -213,45 +213,7 @@ function fs_scripts_load() {
 		
 			// jQuery 
 					
-			wp_enqueue_script( 'jquery' );
-
-			// Slick
-			/*
-			   	wp_enqueue_script( 
-				    	'slick', 
-				    	FS_THEME_URL . '/js/slick.min.js',
-				    	array('jquery'), 
-				    	'1.8', 
-				    	true
-			    );
-			    wp_enqueue_script( 
-				    	'slick-init', 
-				    	FS_THEME_URL . '/js/slick-init.js',
-				    	array('jquery'), 
-				    	false, 
-				    	true
-			    );
-			*/
-			
-			// Fancybox
-			
-			/*
-			   	wp_enqueue_script( 
-				    	'fancybox', 
-				    	FS_THEME_URL . '/js/jquery.fancybox.min.js',
-				    	array('jquery'), 
-				    	'3.1.20', 
-				    	true
-			    );
-			    wp_enqueue_script( 
-				    	'fancybox-init', 
-				    	FS_THEME_URL . '/js/fancybox-init.js',
-				    	array('fancybox'), 
-				    	false, 
-				    	true
-			    );
-			*/			
-			
+			wp_enqueue_script( 'jquery' );			
 			
 			// Back 2 top
 			
@@ -260,19 +222,6 @@ function fs_scripts_load() {
 				wp_enqueue_script(
 					'back2top', 
 					FS_THEME_URL . '/js/back2top.js', 
-					array(), 
-					FS_THEME_VERSION, 
-					true
-				);
-			}
-			
-			// Sticky Nav
-			
-			if ( get_theme_mod('stickynav') == true ) {
-				
-				wp_enqueue_script(
-					'stickynav', 
-					FS_THEME_URL . '/js/sticky-header.js', 
 					array(), 
 					FS_THEME_VERSION, 
 					true
@@ -314,30 +263,6 @@ function fs_scripts_load() {
 		
 		// CSS
 
-			/* Enqueue your customl CSS here
-			
-			// Slick
-			
-				wp_enqueue_style( 
-					'slick', 
-					FS_THEME_URL . '/css/slick.css',
-					array(), 
-					'1.8', 
-					'screen' 
-				);
-			
-			// Fancybox
-	
-				wp_enqueue_style( 
-					'fancybox', 
-					FS_THEME_URL . '/css/jquery.fancybox.min.css',
-					array(), 
-					'3.1.20', 
-					'screen' 
-				);
-			
-			*/
-	
 			// Back to top
 	
 			if ( get_theme_mod('back2top') == true ) {
@@ -384,7 +309,7 @@ function fs_custom_nav_menus() {
 	$locations = array(
 		'main_menu' =>  esc_html__( 'Main Menu', 'fs-notes' ),
 		'footer_menu' => esc_html__( 'Footer Menu', 'fs-notes' ),
-		'social_menu' => esc_html__( 'Social Menu', 'fs-notes' )
+		'social_menu' => esc_html__( 'Social Networks Menu', 'fs-notes' )
 	);
 	register_nav_menus( $locations );
 
@@ -407,12 +332,6 @@ add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 // Sub-menus Walker
 
 include_once( FS_THEME_DIR . '/inc/subnav-walker.php' );
-
-
-// Custom Post types
-
-include_once( FS_THEME_DIR . '/inc/custom-post-type.php' );
-include_once( FS_THEME_DIR . '/inc/custom-post-type-functions.php' );
 
 
 // Extended Search
@@ -470,20 +389,12 @@ add_filter( 'excerpt_more', 'fs_excerpt_more' );
 add_image_size( 'thumbnail-hd', 320, 320, true );
 add_image_size( 'medium-hd', 640, 640, false );
 add_image_size( 'large-hd', 2048, 2048, false );
-add_image_size( 'screen-md', 720, 450, true );
-add_image_size( 'screen-hd', 1440, 900, true );
-add_image_size( 'video-md', 960, 540, true );
-add_image_size( 'video-hd', 1920, 1080, true );
 
 function fs_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'thumbnail-hd'	=> __( 'Thumbnail x2', 'fs-blog' ),
         'medium-hd'		=> __( 'Medium x2', 'fs-blog' ),
         'large-hd'		=> __( 'Large x2', 'fs-blog' ),
-        'screen-md'		=> __( 'Screen Medium', 'fs-blog' ),
-        'screen-hd'		=> __( 'Screen Full', 'fs-blog' ),
-        'video-md'		=> __( 'Video Medium', 'fs-blog' ),
-        'video-hd'		=> __( 'Video Full', 'fs-blog' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'fs_custom_sizes' );
@@ -507,7 +418,7 @@ function fs_bg_img() {
 
 function fs_widgets_init() {
 	register_sidebar(array(
-		'name'			=>	esc_html__( 'Primary Widgets Area', 'fs-notes' ),
+		'name'			=>	esc_html__( 'Sidebar Widgets', 'fs-notes' ),
 		'id'			=>	'widgets_area1',
 		'description' 	=> 	'',
 		'before_widget' => 	'<div id="%1$s" class="widget-container %2$s">',
@@ -572,115 +483,6 @@ function fs_search_form( $form ) {
     return $form;
 }
 add_filter( 'get_search_form', 'fs_search_form' );
-
-
-
-// ------------------------
-// ACF
-// ------------------------
-
-
-if( class_exists('acf') ) {
-
-	// Remove the WP Custom Fields meta box
-	
-	add_filter('acf/settings/remove_wp_meta_box', '__return_true');
-		
-	
-	// Custom blocks
-
-	$my_blocks = array_diff( scandir(FS_THEME_DIR . '/blocks'), array('..', '.') );
-	
-	foreach( $my_blocks as $block ) {
-		include_once 'blocks/'. $block .'/'. $block .'.php';
-		include_once 'blocks/'. $block .'/'. $block .'-fields.php';
-	}	
-	
-	// Front-End ACF Functions
-	
-	add_filter('acf/settings/save_json', 'fs_acf_json_save_point');
-	function fs_acf_json_save_point( $path ) {
-	    
-	    $path = FS_THEME_DIR . '/inc/acf-json';
-	    
-	    return $path;
-	}
-	add_filter('acf/settings/load_json', 'fs_acf_json_load_point');
-	function fs_acf_json_load_point( $paths ) {
-	    
-	    unset($paths[0]);
-	
-	    $paths[] = FS_THEME_DIR . '/inc/acf-json';
-	    
-	    return $paths;
-	}
-
-	// Social Menu icons
-	
-	add_filter('wp_nav_menu_objects', 'fs_nav_menu_icons', 10, 2);
-	
-	function fs_nav_menu_icons( $items, $args ) {
-		
-		foreach( $items as $item ) {
-			
-			$icon = get_field('icon', $item);
-			
-			if( $icon ) {
-				$item->classes[] = 'social-item';
-				$item->title = '<img src="'.$icon['url'].'" alt=""><span>'.$item->title.'</span>';
-			}		
-		}
-
-		return $items;
-	}
-
-
-	//	ACF Options page
-	
-	if (function_exists('acf_add_options_page')) {
-	    
-		add_action( 'init', 'fs_acf_add_options_page' );
-		function fs_acf_add_options_page() {
-			
-			$parent = acf_add_options_page(array(
-				'page_title'	=> esc_html__( 'Site Options', 'fs-notes' ),
-				'menu_title'	=> esc_html__( 'Site Options', 'fs-notes' ),
-				'menu_slug'		=> 'options-site',
-				'capability'	=> 'edit_posts',
-				'icon_url'		=> 'dashicons-admin-network',
-				'redirect'		=> false,
-				'position'		=> 30
-			));
-			acf_add_options_sub_page(array(
-				'page_title' 	=> esc_html__( 'Archives Customizer', 'fs-notes'),
-				'menu_title' 	=> esc_html__( 'Archives Customizer', 'fs-notes'),
-				'parent_slug' 	=> $parent['menu_slug'],
-				'menu_slug'		=> 'options-site-archives'
-			));	
-			acf_add_options_sub_page(array(
-				'page_title' 	=> esc_html__( 'Social Networks', 'fs-notes'),
-				'menu_title' 	=> esc_html__( 'Social Networks', 'fs-notes'),
-				'parent_slug' 	=> $parent['menu_slug'],
-				'menu_slug'		=> 'options-site-social'
-			));
-			
-		}
-	}
-
-	// Translate ACF fields
-	
-	function fs_custom_acf_settings_localization($localization){
-	  return true;
-	}
-	add_filter('acf/settings/l10n', 'fs_custom_acf_settings_localization');
-	
-	function fs_custom_acf_settings_textdomain($domain){
-	  return 'fs-notes';
-	}
-	add_filter('acf/settings/l10n_textdomain', 'fs_custom_acf_settings_textdomain');
-	
-		
-}
 
 
 
