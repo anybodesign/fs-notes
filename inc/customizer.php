@@ -54,14 +54,15 @@ function fs_customize_register($fs_customize) {
 			'priority'		=> 20,
 		)
 	);
+	
 	$fs_customize->add_section(
-		'fs_layout_section', 
+		'fs_footer_section',
 		array(
-			'title' 		=> __('Layout Options', 'fs-notes'),
-			'description' 	=> __('Choose the layout of the site header and main navigation.', 'fs-notes'),
-			'priority'		=> 30,
+			'title'			=> __('Footer Options', 'fs-notes'),
+			'priority'		=> 40,
 		)
 	);
+/*
 	$fs_customize->add_section(
 		'fs_fonts_section', 
 		array(
@@ -70,14 +71,7 @@ function fs_customize_register($fs_customize) {
 			'priority'		=> 40,
 		)
 	);
-	$fs_customize->add_section(
-		'fs_pictures_section', 
-		array(
-			'title' 		=> __('Theme Pictures', 'fs-notes'),
-			'description' 	=> __('Select default banner pictures.', 'fs-notes'),
-			'priority'		=> 50,
-		)
-	);
+*/
 
 
 	// Colors
@@ -108,10 +102,10 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 				
-		// Secondary color
+		// Background color
 		
 		$fs_customize->add_setting(
-			'secondary_color', 
+			'bg_color', 
 			array(
 				'default'			=> '',
 				'sanitize_callback'	=> 'sanitize_hex_color',
@@ -125,17 +119,17 @@ function fs_customize_register($fs_customize) {
 				$fs_customize, 
 				'secondary_color', 
 				array(
-					'label'		=> __('Secondary color', 'fs-notes'),
+					'label'		=> __('Background color', 'fs-notes'),
 					'section'	=> 'colors',
-					'settings'	=> 'secondary_color',
+					'settings'	=> 'bg_color',
 				)
 			)
 		);
 				
-		// Third color
+		// Page color
 		
 		$fs_customize->add_setting(
-			'third_color', 
+			'page_color', 
 			array(
 				'default'			=> '',
 				'sanitize_callback'	=> 'sanitize_hex_color',
@@ -144,10 +138,38 @@ function fs_customize_register($fs_customize) {
 				'transport'			=> 'refresh', 
 			)
 		);
-		$fs_customize->add_control( new WP_Customize_Color_control($fs_customize, 'third_color', array(
-					'label'		=> __('Contraste color', 'fs-notes'),
+		$fs_customize->add_control( 
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'page_color', 
+				array(
+					'label'		=> __('Page color', 'fs-notes'),
 					'section'	=> 'colors',
-					'settings'	=> 'third_color',
+					'settings'	=> 'page_color',
+				)
+			)
+		);
+		
+		// Sidebar color
+		
+		$fs_customize->add_setting(
+			'sidebar_color', 
+			array(
+				'default'			=> '',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'refresh', 
+			)
+		);
+		$fs_customize->add_control( 
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'sidebar_color', 
+				array(
+					'label'		=> __('Sidebar color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'sidebar_color',
 				)
 			)
 		);
@@ -157,6 +179,27 @@ function fs_customize_register($fs_customize) {
 	// Site identity
 	// -
 	// + + + + + + + + + + 
+
+		// Hide tagline
+		
+		$fs_customize->add_setting(
+			'hide_tagline', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'hide_tagline', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Hide the website tagline', 'fs-notes'),
+				'section'		=> 'title_tagline',
+				'settings'		=> 'hide_tagline',
+			)
+		);
+
 
 		// Site logo
 		
@@ -178,49 +221,34 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
-		
-		// Site logo - Mobile
-		
-		$fs_customize->add_setting(
-			'site_logo_mobile', array(
-				'sanitize_callback'		=> 'esc_url_raw'
-			)
-		);
-		$fs_customize->add_control( 
-			new WP_Customize_Image_control(
-				$fs_customize, 
-				'site_logo_mobile', 
-				array(
-					'label'			=> __('Site Logo - Mobile', 'fs-notes'),
-					'description'	=> __('Specific version of the logo for mobile devices. If none, the default logo will be used.', 'fs-notes'),
-					'section'		=> 'title_tagline',
-					'settings'		=> 'site_logo_mobile',
-				)
-			)
-		);
+
+	
+	// Footer Options
+	// -
+	// + + + + + + + + + + 
 
 
-		// Hide tagline
+		// Show Author
 		
 		$fs_customize->add_setting(
-			'hide_tagline', 
+			'display_author', 
 			array(
 				'default'			=> false,
-				'transport'			=> 'postMessage',
+				'transport'			=> 'postMessage',				
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
 		$fs_customize->add_control(
-			'hide_tagline', 
+			'display_author', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Hide the website tagline', 'fs-notes'),
-				'section'		=> 'title_tagline',
-				'settings'		=> 'hide_tagline',
+				'label'			=> __('Display Blog Author', 'fs-notes'),
+				'section'		=> 'fs_footer_section',
+				'settings'		=> 'display_author',
 			)
 		);
-	
-	
+		
+				
 		// Footer text
 		
 		$fs_customize->add_setting(
@@ -236,7 +264,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'label'			=> __('Custom footer text', 'fs-notes'),
 				'description'	=> __('Add a custom text instead of the year and blog name.', 'fs-notes'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'footer_text',
 			)
 		);
@@ -257,7 +285,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Display WordPress Link', 'fs-notes'),
-				'section'		=> 'title_tagline',
+				'section'		=> 'fs_footer_section',
 				'settings'		=> 'display_wp',
 			)
 		);
@@ -285,81 +313,78 @@ function fs_customize_register($fs_customize) {
 				'settings'		=> 'back2top',
 			)
 		);
-			
-		// Sticky Nav
 		
+		// Sketchbook
+	
 		$fs_customize->add_setting(
-			'stickynav', 
+			'spiral', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
 		$fs_customize->add_control(
-			'stickynav', 
+			'spiral', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Make the header sticky', 'fs-notes'),
+				'label'			=> __('Display the sketchbook spiral', 'fs-notes'),
 				'section'		=> 'fs_options_section',
-				'settings'		=> 'stickynav',
-			)
-		);
-
-
-	// Theme Layout
-	// -
-	// + + + + + + + + + + 
-
-		// Header & Main nav
-
-		$fs_customize->add_setting(
-			'layout_option', 
-			array(
-				'default' => 'version1',
-				'sanitize_callback' => 'fs_customizer_sanitize_radio_layout',
+				'settings'		=> 'spiral',
 			)
 		);
 		
+		$fs_customize->add_setting(
+			'lines', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
 		$fs_customize->add_control(
-			'layout_option', 
+			'lines', 
 			array(
-				'type' => 'radio',
-				'label' => __( 'Layout version', 'fs-notes' ),
-				'section' => 'fs_layout_section',
-				'choices' => array(
-					'version1' => __( 'Version 1', 'fs-notes' ),
-					'version2' => __( 'Version 2', 'fs-notes' ),
-					'version3' => __( 'Version 3', 'fs-notes' ),
-				),
+				'type'			=> 'checkbox',
+				'label'			=> __('Display the sketchbook lines', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'lines',
 			)
 		);
-
-
-	// Theme Pictures
-	// -
-	// + + + + + + + + + + 
-
-	
-		// 404 Image
+		
+		// Tags & Formats
 		
 		$fs_customize->add_setting(
-			'bg_404', 
+			'use_tags', 
 			array(
-				'sanitize_callback'	=> 'esc_url_raw'
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
-		$fs_customize->add_control( 
-			new WP_Customize_Image_control(
-				$fs_customize, 
-				'bg_404', 
-				array(
-					'label'			=> __('404 error', 'fs-notes'),
-					'description'	=> __('Choose a picture for the 404 error page. (2048 x 625 pixels max.)', 'fs-notes'),
-					'section'		=> 'fs_pictures_section',
-					'settings'		=> 'bg_404',
-				)
+		$fs_customize->add_control(
+			'use_tags', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable Tags', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_tags',
 			)
-		);	
+		);
+		
+		$fs_customize->add_setting(
+			'use_formats', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'use_formats', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Enable Post Formats', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'use_formats',
+			)
+		);
 
 }
 add_action('customize_register', 'fs_customize_register');
@@ -379,12 +404,6 @@ function fs_customizer_sanitize_checkbox( $input ) {
 		return '1';
 	}
 	return '';
-}
-function fs_customizer_sanitize_radio_layout( $input ) {
-    if( !in_array( $input, array( 'version1', 'version2', 'version3' ) ) ) {
-        $input = 'version1';
-    }
-    return $input;
 }
 
 
