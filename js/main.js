@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
 	
 	// Responsive Main Menu
 
+/*
 	$('#menu-toggle').click(function() {
 		$(this).toggleClass('menu-opened');
 			
@@ -24,6 +25,7 @@ jQuery(document).ready(function($) {
 		    	$('#menu-toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
 		});
+*/
 	
 	
 	// Sub-Menus Toggle Button

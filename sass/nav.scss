@@ -45,41 +45,19 @@
 }
 
 .main-menu {
-	position: absolute;
-	top: 0; 
-	right: 0;
-	width: 80%;
-	padding: $grid-padding;
-	background-color: #fff;
-	
-	transform: translateX(110%);
-	transition: transform .4s ease-in-out;
-	z-index: 100;
-	
-	.menu-opened + & {
-		transform: translateX(0);
-	}
-	
-	@include rwd(large) {
-		position: relative;
-		top: auto;
-		left: auto;
-		padding: 0;
-		width: auto;
-		background-color: transparent;
-		transform: none;
+	position: relative;
+	background-color: transparent;
 
-		display: flex;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
-	
 	& > li {
 		position: relative;
 		display: block;
 		
 		@include rwd(large) {
-			margin-right: $grid-padding;
+			margin: 0 $grid-padding;
 		}
 		
 		a {

@@ -5,16 +5,11 @@
 
 #site_head {
 	position: relative;
-	background-color: #fff;
 	
 	& > .row {
-		flex-direction: row-reverse;
+		flex-direction: column;
 		align-items: center;
 		padding: $grid-padding*2 0;
-		
-		@include rwd(large) {
-			flex-direction: row;	
-		}
 	}
 }
 
