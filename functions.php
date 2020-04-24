@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '3.4.1' );
+define( 'FS_THEME_VERSION', '1.0' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -41,22 +41,24 @@ function fs_setup() {
 
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-/*
-	
-	// https://codex.wordpress.org/Theme_Logo
+	if ( get_theme_mod('use_formats') == true ) {
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+			'gallery',
+			'status',
+			'audio',
+			'chat',
+		));
+	}
 
-	add_theme_support( 'custom-logo', array(
-		'height'      => '',
-		'width'       => '',
-		'flex-height' => true,
-		'flex-width'  => true,
-		'header-text' => array( 'site-title', 'site-desc' ),
-	));	
-	
 	// https://codex.wordpress.org/Custom_Backgrounds
 	
 	add_theme_support( 'custom-background', array(
-		'default-color'          => 'ffffff',
+		'default-color'          => 'E3DFC0',
 		'default-image'          => '',
 		'default-repeat'         => 'repeat',
 		'default-position-x'     => 'left',
@@ -67,6 +69,19 @@ function fs_setup() {
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
 	));
+
+
+/*	
+
+	// https://codex.wordpress.org/Theme_Logo
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => '',
+		'width'       => '',
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-desc' ),
+	));	
 	
 	// https://codex.wordpress.org/Custom_Headers
 	
@@ -85,17 +100,6 @@ function fs_setup() {
 		'admin-preview-callback' => '',
 	));
 
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	));
 */
 
 
@@ -111,7 +115,7 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Black', 'fs-notes' ),
 	        'slug' => 'black',
-	        'color' => '#4a4a4a',
+	        'color' => '#23252B',
 	    ),
 	    array(
 	        'name' => esc_html__( 'White', 'fs-notes' ),
@@ -164,6 +168,15 @@ function fs_setup() {
 endif;
 add_action( 'after_setup_theme', 'fs_setup' );
 
+
+// Disable Tags
+
+if ( get_theme_mod('use_tags') != true ) {
+	function fs_unregister_tags(){
+		register_taxonomy( 'post_tag', array() );
+	}
+	add_action('init', 'fs_unregister_tags');
+}
 
 // Gutenberg editor styles
 
