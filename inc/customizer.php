@@ -83,7 +83,7 @@ function fs_customize_register($fs_customize) {
 		$fs_customize->add_setting(
 			'primary_color', 
 			array(
-				'default'			=> '',
+				'default'			=> '#23252B',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
@@ -101,37 +101,13 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
-				
-		// Background color
-		
-		$fs_customize->add_setting(
-			'bg_color', 
-			array(
-				'default'			=> '',
-				'sanitize_callback'	=> 'sanitize_hex_color',
-				'capability'		=> 'edit_theme_options',
-				'type'				=> 'theme_mod',
-				'transport'			=> 'refresh', 
-			)
-		);
-		$fs_customize->add_control( 
-			new WP_Customize_Color_control(
-				$fs_customize, 
-				'secondary_color', 
-				array(
-					'label'		=> __('Background color', 'fs-notes'),
-					'section'	=> 'colors',
-					'settings'	=> 'bg_color',
-				)
-			)
-		);
-				
+						
 		// Page color
 		
 		$fs_customize->add_setting(
 			'page_color', 
 			array(
-				'default'			=> '',
+				'default'			=> '#FFFFFF',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
@@ -149,13 +125,13 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
-		
+
 		// Sidebar color
 		
 		$fs_customize->add_setting(
 			'sidebar_color', 
 			array(
-				'default'			=> '',
+				'default'			=> '#FBFF00',
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'capability'		=> 'edit_theme_options',
 				'type'				=> 'theme_mod',
@@ -412,19 +388,12 @@ function fs_customizer_sanitize_checkbox( $input ) {
 function fs_colors() {
 	?>
 	<style>
-		.something { 
-			background-color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		
-		.something { 
-			color: <?php echo get_theme_mod('primary_color', '#9c0'); ?> 
-		}
-		
-		.something {
-			background-color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
-		}
-		.something {
-			color: <?php echo get_theme_mod('secondary_color', '#606060'); ?>
+		:root {
+			--primary-color: <?php echo get_theme_mod('primary_color', '#23252B'); ?>; 
+			--secondary-color: var(--text-color); 
+			--page-color: <?php echo get_theme_mod('page_color', '#FFF'); ?>;
+			--sidebar-color: <?php echo get_theme_mod('page_color', '#FBFF00'); ?>;
+			--text-color: <?php echo get_theme_mod('text_color', '#23252B'); ?>;
 		}
 	</style>
 	<?php
