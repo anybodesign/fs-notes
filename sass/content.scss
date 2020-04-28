@@ -47,6 +47,14 @@
 	background-color: var(--page_color);
 	z-index: 1;
 	
+	// Padding
+	
+	.home &,
+	.archive & {
+		padding: $grid-padding*2.5 0;
+	}
+	
+	
 	// Centering Blocks and content
 
 	.page-banner {
@@ -155,10 +163,14 @@
 		z-index: -1;		
 	}
 	
-	.has-spiral &::before
-	.has-spiral &::after, {
+	.has-spiral &::after {
 		content: '';
 		display: block;
+		width: 30px;
+		height: calc(100% - 4rem);
 		position: absolute;
+		top: 2rem;
+		left: -1rem;
+		background: url(img/ui/spiral-pattern.svg) 0 0 repeat-y;
 	}
 }
