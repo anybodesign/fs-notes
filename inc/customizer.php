@@ -500,7 +500,7 @@ function fs_colors() {
 			--text_color: <?php echo get_theme_mod('text_color', '#23252B'); ?>;
 			--btn_color: <?php echo get_theme_mod('btn_color', '#FF0055'); ?>;
 			--btn_text_color: <?php echo get_theme_mod('btn_text_color', '#FFFFFF'); ?>;
-			--sidebar_color: <?php echo get_theme_mod('page_color', '#FBFF00'); ?>;
+			--sidebar_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
 		}
 	</style>

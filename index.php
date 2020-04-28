@@ -12,15 +12,9 @@
 get_header(); ?>
 
 				<div class="page-wrap has-sidebar">
-					
-					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
-					?>
 
 					<div class="page-content">
-					
-					<?php // The Loop ?>
-					
+
 					<?php if ( have_posts() ) : ?>		
 			
 						<?php while ( have_posts() ) : the_post(); ?>
@@ -29,26 +23,29 @@ get_header(); ?>
 			
 						<?php endwhile; ?>
 			
-						<?php the_posts_pagination(array(
-								'prev_text'          => __( 'Previous page', 'fs-notes' ),
-								'next_text'          => __( 'Next page', 'fs-notes' ),
-								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-notes' ) . ' </span>',
-							)); ?>
+						<?php 
+							if ( function_exists('wp_pagenavi') ) {
+								wp_pagenavi();
+							} else {
+								the_posts_pagination(array(
+									'prev_text'          => __( 'Previous page', 'fs-notes' ),
+									'next_text'          => __( 'Next page', 'fs-notes' ),
+									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-notes' ) . ' </span>',
+								));
+							}
+						?>
 			
 					<?php else : ?>
 	
 						<?php get_template_part( 'template-parts/nothing' ); ?>
 				
 					<?php endif; ?>	
-						
-	
 					</div>
-
-
+					
 					<div class="page-sidebar">
 						<?php get_sidebar(); ?>
-					</div>
-										
+					</div>	
+
 				</div>
 
 <?php get_footer(); ?>
