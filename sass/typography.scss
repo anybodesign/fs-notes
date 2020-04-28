@@ -10,7 +10,7 @@ html {
 	font-size: 62.5%;
 }
 body {
-	font-family: var(--font-regular);
+	font-family: var(--font_regular);
 	font-size: 1.6rem;
 	line-height: 1.5;
 	color: var(--text_color);
@@ -30,7 +30,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
 	color: var(--title_color);
-	font-family: var(--font-title);
+	font-family: var(--font_title);
 	font-weight: normal;
 	margin: 0 0 .75em 0;
 	
@@ -79,18 +79,18 @@ p {
 }
 
 b, strong {
-	font-family: var(--font-bold);
+	font-family: var(--font_bold);
 	font-weight: normal;
 }
 i, em {
-	font-family: var(--font-italic);
+	font-family: var(--font_italic);
 	font-style: normal;
 }
 em strong, strong em,
 i strong, strong i,
 em b, b em,
 i b, b i {
-	font-family: var(--font-bolditalic);
+	font-family: var(--font_bolditalic);
 	font-weight: bold;
 	font-style: normal;
 }
@@ -277,7 +277,7 @@ blockquote {
 q,
 blockquote,
 blockquote p {
-	font-family: var(--font-bold)italic;
+	font-family: var(--font_bold)italic;
 	font-style: normal;
 	font-size: 2rem;
 }
@@ -286,7 +286,7 @@ blockquote p {
 }
 cite {
 	display: block;
-	font-family: var(--font-italic);
+	font-family: var(--font_italic);
 	margin-top: $grid-padding;
 	font-size: 85%;
 }
@@ -340,7 +340,7 @@ thead {
 th {
 	color: #fff;
 	font-weight: normal;
-	font-family: var(--font-bold);
+	font-family: var(--font_bold);
 }
 td, th {
 	vertical-align: middle;
@@ -366,7 +366,7 @@ td, th {
 code, pre, samp, kbd {
 	white-space: pre-line; // IE fix
 	white-space: pre-wrap;
-	font-family: var(--font-mono);
+	font-family: var(--font_mono);
 	font-size: 1.6rem;
 }
 
@@ -435,7 +435,7 @@ input[type="submit"] {
 	border: #fff 1px solid;
 	outline: var(--btn_color) 1px solid;
 	font-size: 2rem;
-	font-family: var(--font-title);
+	font-family: var(--font_title);
 	text-transform: uppercase;
 	text-decoration: none;
 	background-color: var(--btn_color);

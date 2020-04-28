@@ -34,7 +34,7 @@ select {
 	border: var(--text_color) 1px solid; 
 	background-color: #fff;
 	font-size: 1.6rem;
-	font-family: var(--font-regular);
+	font-family: var(--font_regular);
 	border-radius: 0;
 	appearance: none;
 	
@@ -82,8 +82,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 label, legend {
 	display: block;
+	font-family: var(--font_title);
 	font-weight: normal;
 	margin: 0;
+}
+label {
+	font-size: 1.8rem;
+}
+legend {
+	font-size: 2.4rem;
 }
 
 button,
@@ -95,8 +102,6 @@ input[type="submit"] {
 	padding: $grid-padding $grid-padding*2;
 	border: 0;
 	width: auto; 
-	font-family: var(--font-regular);
-	font-size: 1.6rem;
 	border-radius: 0;
 	appearance: none;
 }
@@ -105,7 +110,7 @@ input[type="submit"] {
 
 ::placeholder {
 	color: #777;
-	font-family: var(--font-italic);
+	font-family: var(--font_italic);
 	font-size: 1.4rem;
 }
 .focus-visible::placeholder,
@@ -192,11 +197,11 @@ input[type="submit"] {
 }
 .formfield-radio input[type="radio"] + label::after,
 .formfield-radio input[type="radio"] + span::after {
-	width: 6px; 
-	height: 6px;
+	width: .6rem; 
+	height: .6rem;
 	background-color: var(--primary_color);
-	top: 9px; 
-	left: 6px;
+	top: .9rem; 
+	left: .6rem;
 	border-radius: 100%;
 	opacity: 0;
 	transition: opacity .2s linear;
@@ -208,13 +213,13 @@ input[type="submit"] {
 
 .formfield-checkbox input[type="checkbox"] + label::after,
 .formfield-checkbox input[type="checkbox"] + span::after {
-	top: -9px; 
-	left: 6px;
+	top: .5rem; 
+	left: .35rem;
 	content: '';
-	width: 10px;
-	height: 5px;
-	border-left: 2px solid var(--primary_color);
-	border-bottom: 2px solid var(--primary_color);	
+	width: 1rem;
+	height: .5rem;
+	border-left: 3px solid var(--primary_color);
+	border-bottom: 3px solid var(--primary_color);	
 	opacity: 0;
 	transform: rotate(-45deg);
 	transition: opacity .2s linear;
@@ -242,6 +247,11 @@ span.wpcf7-list-item {
 .formfield-radio input[type="checkbox"].focus-visible + span::after {
 	//opacity: .5;
 }
+
+.comment-form-cookies-consent {
+	@extend .formfield-checkbox;
+}
+
 
 
 
@@ -384,7 +394,7 @@ input[type="submit"].gform_button {
 div.wpcf7-response-output {
 	margin: 10px 0 0 0 !important; 
 	padding: 5px !important;
-	font-family: var(--font-regular);
+	font-family: var(--font_regular);
 }
 span.wpcf7-not-valid-tip {
 	color: #c00;

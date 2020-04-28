@@ -52,11 +52,11 @@ Description: Have fun with Gutenberg style editor.
 	
 	h1, h2, h3, h4, h5, h6,
 	.h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-		font-family: var(--font-title);
+		font-family: var(--font_title);
 		font-weight: normal;
 	}
 	p, li, small, span {
-		font-family: var(--font-regular);
+		font-family: var(--font_regular);
 	}
 	
 }

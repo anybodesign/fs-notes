@@ -8,15 +8,15 @@
 
 :root {
 
-	--font-stack: Helvetica, Arial, sans-serif;
+	--font_stack: Helvetica, Arial, sans-serif;
 	
-	--font-title: 'Title', var(--font-stack);
-	--font-regular: 'Regular', var(--font-stack);
-	--font-italic: 'Italic', var(--font-stack);
-	--font-bold: 'Bold', var(--font-stack);
-	--font-bolditalic: 'BoldItalic', var(--font-stack);
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
 	
-	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 }
 
 // Fonts

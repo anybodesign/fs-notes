@@ -22,17 +22,17 @@ Description: Used to style the TinyMCE editor.
 	--fontface-bolditalic-out: local('var(--f-bolditalic)'), url('../fonts/var(--f-bolditalic).woff2') format('woff2'), url('../fonts/var(--f-bolditalic).woff') format('woff');
 	--fontface-title-out: local('var(--f-title)'), url('../fonts/var(--f-title).woff2') format('woff2'), url('../fonts/var(--f-title).woff') format('woff');
 
-	--font-stack: Helvetica, Arial, sans-serif;
+	--font_stack: Helvetica, Arial, sans-serif;
 	
 	// The Fonts
 	
-	--font-title: 'Title', var(--font-stack);
-	--font-regular: 'Regular', var(--font-stack);
-	--font-italic: 'Italic', var(--font-stack);
-	--font-bold: 'Bold', var(--font-stack);
-	--font-bolditalic: 'BoldItalic', var(--font-stack);
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
 	
-	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 
 
 }
@@ -70,17 +70,17 @@ Description: Have fun with Gutenberg style editor.
 	--fontface-bolditalic-out: local('var(--f-bolditalic)'), url('../fonts/var(--f-bolditalic).woff2') format('woff2'), url('../fonts/var(--f-bolditalic).woff') format('woff');
 	--fontface-title-out: local('var(--f-title)'), url('../fonts/var(--f-title).woff2') format('woff2'), url('../fonts/var(--f-title).woff') format('woff');
 
-	--font-stack: Helvetica, Arial, sans-serif;
+	--font_stack: Helvetica, Arial, sans-serif;
 	
 	// The Fonts
 	
-	--font-title: 'Title', var(--font-stack);
-	--font-regular: 'Regular', var(--font-stack);
-	--font-italic: 'Italic', var(--font-stack);
-	--font-bold: 'Bold', var(--font-stack);
-	--font-bolditalic: 'BoldItalic', var(--font-stack);
+	--font_title: 'Title', var(--font_stack);
+	--font_regular: 'Regular', var(--font_stack);
+	--font_italic: 'Italic', var(--font_stack);
+	--font_bold: 'Bold', var(--font_stack);
+	--font_bolditalic: 'BoldItalic', var(--font_stack);
 	
-	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
 
 
 }
