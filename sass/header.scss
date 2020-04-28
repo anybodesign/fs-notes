@@ -9,7 +9,7 @@
 	& > .row {
 		flex-direction: column;
 		align-items: center;
-		padding: $grid-padding*2 0;
+		padding: $grid-padding 0;
 	}
 }
 
@@ -17,19 +17,35 @@
 	display: block;
 	font-family: var(--font_title);
 	text-transform: uppercase;
-	font-size: 2.4rem;
+	text-align: center;
+	font-size: 4.2rem;
 	line-height: 1;
+	letter-spacing: .1rem;
 	margin: 0;
 	
 	a,
 	img {
 		display: block;
 	}
+	
+	a {
+		text-decoration: none;
+		transition: background .2s ease-in-out;
+		
+		&:hover,
+		&.focus-visible {
+			color: #fff;
+			background-color: var(--text_color);
+		}
+	}
 
 	.logo.has-mobile-logo { display: none; }
 	.logo-mobile { display: block; }
 	
 	@include rwd(large) {
+		font-size: 5.2rem;
+		line-height: .8;
+		
 		.logo.has-mobile-logo { display: block; }
 		.logo-mobile { display: none; }
 	}
@@ -37,12 +53,32 @@
 }
 
 .site-desc {
+	position: relative;
 	display: block;
 	margin: 0;
+	font-size: 2rem;
+	line-height: 1.1;
+	font-family: var(--font_title);
+	text-align: center;
+	letter-spacing: .1rem;
+	
+	&::after {
+		content: '';
+		display: block;
+		width: 7rem;
+		height: 1px;
+		border-top: var(--text_color) 1px solid;
+		margin: $grid-padding*2 auto 0 auto;
+	}
+	
+	@include rwd(large) {
+		font-size: 2.6rem;
+	}
 }
 
 .site-brand {
 	padding: $grid-padding;
+	padding-bottom: 0;
 }
 
 // Sticky Nav
