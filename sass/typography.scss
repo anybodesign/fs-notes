@@ -29,7 +29,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1-like, .h2-like, .h3-like, .h4-like, .h5-like, .h6-like {
-	color: var(--text_color);
+	color: var(--title_color);
 	font-family: var(--font-title);
 	font-weight: normal;
 	margin: 0 0 .75em 0;
@@ -427,21 +427,26 @@ mark {
 
 button,
 .action-btn,
-input[type=button],
-input[type=submit] {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
 	display: inline-block;
 	padding: $grid-padding $grid-padding*2;
-	font-size: 1.6rem;
-	font-family: var(--font-bold);
+	border: #fff 1px solid;
+	outline: var(--btn_color) 1px solid;
+	font-size: 2rem;
+	font-family: var(--font-title);
 	text-transform: uppercase;
 	text-decoration: none;
-	background-color: var(--text_color);
-	color: #fff;
+	background-color: var(--btn_color);
+	color: var(--btn_text_color);
 	transition: background .2s linear;
 	
 	&.focus-visible, 
 	&:hover {
-		background-color: var(--secondary-color);
+		outline: var(--text_color) 1px solid;
+		background-color: var(--text_color);
+		color: #fff;
 	}
 	&:focus {
 		outline: none;

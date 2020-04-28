@@ -101,6 +101,70 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
+		$fs_customize->add_setting(
+			'title_color', 
+			array(
+				'default'			=> '#23252B',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'title_color', 
+				array(
+					'label'		=> __('Titles color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'title_color',
+				)
+			)
+		);
+		
+		$fs_customize->add_setting(
+			'btn_color', 
+			array(
+				'default'			=> '#FF0055',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'btn_color', 
+				array(
+					'label'		=> __('Buttons color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'btn_color',
+				)
+			)
+		);
+		$fs_customize->add_setting(
+			'btn_text_color', 
+			array(
+				'default'			=> '#fff',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'btn_text_color', 
+				array(
+					'label'		=> __('Buttons text color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'btn_text_color',
+				)
+			)
+		);
 		
 		$fs_customize->add_setting(
 			'text_color', 
@@ -432,9 +496,12 @@ function fs_colors() {
 	<style>
 		:root {
 			--primary_color: <?php echo get_theme_mod('primary_color', '#23252B'); ?>; 
-			--page_color: <?php echo get_theme_mod('page_color', '#FFF'); ?>;
-			--sidebar_color: <?php echo get_theme_mod('page_color', '#FBFF00'); ?>;
+			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
 			--text_color: <?php echo get_theme_mod('text_color', '#23252B'); ?>;
+			--btn_color: <?php echo get_theme_mod('btn_color', '#FF0055'); ?>;
+			--btn_text_color: <?php echo get_theme_mod('btn_text_color', '#FFFFFF'); ?>;
+			--sidebar_color: <?php echo get_theme_mod('page_color', '#FBFF00'); ?>;
+			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
 		}
 	</style>
 	<?php

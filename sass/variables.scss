@@ -26,8 +26,11 @@ $width-xwide: 90em;	 		// @note: 1440px
 
 :root {
 	--primary_color: #23252B; 
-	--page_color: #FFF;
+	--title_color: var(--primary_color);
+	--text_color: var(--primary_color);
+	--btn_color: #FF0055;
+	--btn_text_color: #FFFFFF;
 	--sidebar_color: #FBFF00;
-	--text_color: #23252B;
+	--page_color: #FFFFFF;
 	--bg_color: #E3DFC0;
 }

@@ -45,6 +45,9 @@
 		} );
 	};
     wp.customize( 'primary_color', rootCustomProperty );
+    wp.customize( 'title_color', rootCustomProperty );
+    wp.customize( 'btn_color', rootCustomProperty );
+    wp.customize( 'btn_text_color', rootCustomProperty );
     wp.customize( 'text_color', rootCustomProperty );
     wp.customize( 'page_color', rootCustomProperty );
     wp.customize( 'sidebar_color', rootCustomProperty );
