@@ -6,31 +6,9 @@
 
 // Define your custom fonts :)
 
-// Root CSS vars
-// Ex: var(--font-title)
 :root {
-	
-	--f-regular: LibreBaskerville-Regular;
-	--f-italic: LibreBaskerville-Italic;
-	--f-bold: LibreBaskerville-Bold;
-	--f-bolditalic: LibreBaskerville-Regular;
-	--f-title: BebasNeue-Bold;
-	
-	--fontface-regular: local('LibreBaskerville-Regular'), url('fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('fonts/LibreBaskerville-Regular.woff') format('woff');
-	--fontface-italic: local('LibreBaskerville-Italic'), url('fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('fonts/LibreBaskerville-Italic.woff') format('woff');	
-	--fontface-bold: local('LibreBaskerville-Bold'), url('fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('fonts/LibreBaskerville-Bold.woff') format('woff');
-	--fontface-bolditalic: var(--fontface-regular);
-	--fontface-title: local('BebasNeue-Bold'), url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
-	
-	--fontface-regular-out: local('LibreBaskerville-Regular'), url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('../fonts/LibreBaskerville-Regular.woff') format('woff');
-	--fontface-italic-out: local('LibreBaskerville-Italic'), url('../fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('../fonts/LibreBaskerville-Italic.woff') format('woff');	
-	--fontface-bold-out: local('LibreBaskerville-Bold'), url('../fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('../fonts/LibreBaskerville-Bold.woff') format('woff');
-	--fontface-bolditalic-out: var(--fontface-regular-out);
-	--fontface-title-out: local('BebasNeue-Bold'), url('../fonts/BebasNeue-Bold.woff2') format('woff2'), url('../fonts/BebasNeue-Bold.woff') format('woff');
 
 	--font-stack: Helvetica, Arial, sans-serif;
-	
-	// The Fonts
 	
 	--font-title: 'Title', var(--font-stack);
 	--font-regular: 'Regular', var(--font-stack);
@@ -39,6 +17,43 @@
 	--font-bolditalic: 'BoldItalic', var(--font-stack);
 	
 	--font-mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
-
-
 }
+
+// Fonts
+
+@font-face {
+	font-family: 'Regular';
+	src: url('fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('fonts/LibreBaskerville-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Italic';
+	src: url('fonts/LibreBaskerville-Italic.woff2') format('woff2'), url('fonts/LibreBaskerville-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Bold';
+	src: url('fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('fonts/LibreBaskerville-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'BoldItalic';
+	src: url('fonts/LibreBaskerville-Bold.woff2') format('woff2'), url('fonts/LibreBaskerville-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Title';
+	src: url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+

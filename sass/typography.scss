@@ -25,45 +25,6 @@ body {
 	// Focus styles 
 }
 
-// Fonts
-
-@font-face {
-	font-family: 'Regular';
-	src: var(--fontface-regular);
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Italic';
-	src: var(--fontface-italic);
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Bold';
-	src: var(--fontface-bold);
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'BoldItalic';
-	src: var(--fontface-regular);
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Title';
-	//src: var(--fontface-title);
-	src: local('BebasNeue-Bold'), url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
 // Typography
 
 h1, h2, h3, h4, h5, h6,
@@ -129,8 +90,8 @@ em strong, strong em,
 i strong, strong i,
 em b, b em,
 i b, b i {
-	font-family: var(--font-bold)italic;
-	font-weight: normal;
+	font-family: var(--font-bolditalic);
+	font-weight: bold;
 	font-style: normal;
 }
 
