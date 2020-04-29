@@ -11,12 +11,61 @@
 
 .footer-content {
 	display: flex;
+	flex-direction: column;
 	width: 100%;
-	padding: $grid-padding;
 	max-width: $max-width-small;
+	margin: $grid-padding*2 auto 0 auto;
+	padding: $grid-padding;
+	
+	@include rwd(large) {
+		flex-direction: row;
+	}
+	@include rwd($max-width-small) {
+		padding: 0;
+	}
 }
 .footer-section {
+	margin-bottom: $grid-padding*6;
+}
+.footer-title {
+	@extend .h3-like;
+	margin-bottom: $grid-padding;
+}
+
+.footer-author {
 	
+}
+
+
+.footer-nav {
+	max-width: 22rem;
+	
+	@include rwd(large) {
+		min-width: 25%;
+	}
+}
+.footer-menu {
+	margin: 0;
+	border-top: var(--text_color) 1px solid;
+	
+	li {
+		display: block;
+		border-bottom: var(--text_color) 1px solid;
+		
+		a {
+			display: block;
+			padding: $grid-padding $grid-padding $grid-padding 0;
+			text-decoration: none;
+			transition: .3s ease-in-out;
+			
+			&:hover,
+			&.focus-visible {
+				padding-left: $grid-padding;
+				background-color: var(--text_color);
+				color: #fff;
+			}
+		}
+	}
 }
 
 .footer-copyright {
@@ -30,26 +79,3 @@
 	border-top: var(--text_color) 1px solid;
 }
 
-.footer-nav {
-	
-}
-.footer-menu {
-	margin: 0;
-	
-	li {
-		display: block;
-		border-bottom: var(--text_color) 1px solid;
-		
-		a {
-			display: block;
-			padding: $grid-padding 0;
-			text-decoration: none;
-			transition: .3s ease-in-out;
-			
-			&:hover,
-			&.focus-visible {
-				
-			}
-		}
-	}
-}

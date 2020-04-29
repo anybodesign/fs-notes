@@ -316,7 +316,7 @@ function fs_customize_register($fs_customize) {
 			'display_author', 
 			array(
 				'default'			=> false,
-				'transport'			=> 'postMessage',				
+				//'transport'			=> 'postMessage',				
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
@@ -329,6 +329,96 @@ function fs_customize_register($fs_customize) {
 				'settings'		=> 'display_author',
 			)
 		);
+
+		
+		// Author custom infos
+			
+			$fs_customize->add_setting(
+				'author_name', 
+				array(
+					'default'				=> '',
+					'transport'				=> 'postMessage',				
+					'sanitize_callback'		=> 'sanitize_text_field'
+				)
+			);
+			$fs_customize->add_control(
+				'author_name', 
+				array(
+					'label'			=> __('Author name', 'fs-notes'),
+					'section'		=> 'fs_footer_section',
+					'settings'		=> 'author_name',
+				)
+			);
+
+			$fs_customize->add_setting(
+				'author_desc', 
+				array(
+					'default'				=> '',
+					'transport'				=> 'postMessage',
+					'sanitize_callback'		=> 'sanitize_text_field'
+				)
+			);
+			$fs_customize->add_control(
+				'author_desc', 
+				array(
+					'type'			=> 'textarea',				
+					'label'			=> __('Author biography', 'fs-notes'),
+					'section'		=> 'fs_footer_section',
+					'settings'		=> 'author_desc',
+				)
+			);
+
+			$fs_customize->add_setting(
+				'author_avatar', 
+				array(
+					'sanitize_callback'	=> 'esc_url_raw'
+				)
+			);
+			$fs_customize->add_control(
+				new WP_Customize_Image_control(
+					$fs_customize, 
+					'author_avatar', 
+					array(
+						'label'			=> __('Author Avatar', 'fs-notes'),
+						'section'		=> 'fs_footer_section',
+						'settings'		=> 'author_avatar',
+					)
+				)
+			);
+
+			// Conditional options
+			// https://themehybrid.com/board/topics/conditional-customizer-controls
+			
+			add_action( 'customize_controls_print_footer_scripts', 'fs_author_customizer_script' );
+			
+			function fs_author_customizer_script() {
+			?>
+			<script type="text/javascript">
+			jQuery(document).ready(function ($) {
+			
+				/* adv. color option */
+				var author_opt = $( '#customize-control-author_name, #customize-control-author_desc, #customize-control-author_avatar' );
+			
+				/* on page load, hide or show adv. option */
+				if( $( '#customize-control-display_author input' ).prop( "checked" ) ){
+					author_opt.show();
+				}
+				else{
+					author_opt.hide();
+				}
+			
+				/* on change, hide or show adv. option */
+				$( '#customize-control-display_author input' ).change(function(){
+					if( $(this).prop("checked") ) {
+						author_opt.show();
+					} else {
+						author_opt.hide();
+					}
+				});
+			});
+			</script>
+			<?php
+			}
 		
 				
 		// Footer text

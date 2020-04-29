@@ -23,6 +23,7 @@
             }
         });
     });
+
     // Tagline
     wp.customize('hide_tagline', function( value ) {
         value.bind( function( to ) {
@@ -36,7 +37,6 @@
     });
     
     // Colors
-   
 	var rootCustomProperty = function( setting ) {
 		var bStyle = document.createElement( 'style' );
 		document.head.appendChild( bStyle );
@@ -51,8 +51,18 @@
     wp.customize( 'text_color', rootCustomProperty );
     wp.customize( 'page_color', rootCustomProperty );
     wp.customize( 'sidebar_color', rootCustomProperty );
-    
-    
+
+    // Author
+	wp.customize('author_name', function(value) {
+        value.bind( function( text ) {
+            $('.author-description .footer-title').text( text );
+        });
+    });
+    wp.customize('author_desc', function(value) {
+        value.bind( function( text ) {
+            $('.author-bio').text( text );
+        });
+    });
     
     // WP Credits
     wp.customize('display_wp', function( value ){
@@ -65,6 +75,7 @@
             }
         });
     });
+  
     
     // Footer text
     wp.customize('footer_text', function(value) {
@@ -72,5 +83,6 @@
             $('.footer-copyright').text( text );
         });
     });
+    
     
 })(jQuery);

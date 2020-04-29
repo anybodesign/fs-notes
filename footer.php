@@ -18,16 +18,16 @@
 			
 			<div class="inner">
 				
-				<div class="footer-content<?php if (get_theme_mod('author')) { echo ' has-author'; } ?>">				
+				<div class="footer-content<?php if (get_theme_mod('display_author')) { echo ' has-author'; } ?>">				
 					
-					<?php if (get_theme_mod('author') || has_nav_menu( 'social_menu' )) { ?> 
-					<div class="footer-section">
-						<?php if (get_theme_mod('author')) {
+					<?php if (get_theme_mod('display_author') || has_nav_menu( 'social_menu' )) { ?> 
+					<div class="footer-section footer-author">
+						<?php if (get_theme_mod('display_author')) {
 							get_template_part('template-parts/footer', 'author'); 
 						} ?>
 
 						<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
-						<nav class="footer-nav" role="navigation" aria-label="<?php _e('Social Networks', 'fs-notes'); ?>">
+						<nav class="footer-social" role="navigation" aria-label="<?php _e('Social Networks', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'social_menu',
 								'menu_class'		=>	'social-menu',
@@ -42,8 +42,11 @@
 					<?php // The footer menu location ?>
 					
 					<?php if ( has_nav_menu( 'footer_menu' ) ) : ?>
-					<div class="footer-section">
-						<nav class="footer-nav" role="navigation" aria-label="<?php _e('Footer Menu', 'fs-notes'); ?>">
+					<div class="footer-section footer-nav">
+						<p class="footer-title">
+							<?php echo wp_get_nav_menu_name('footer_menu'); ?>
+						</p>
+						<nav role="navigation" aria-label="<?php _e('Footer Menu', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'footer_menu',
 								'menu_class'		=>	'footer-menu',
