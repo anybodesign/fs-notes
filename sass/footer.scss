@@ -5,16 +5,29 @@
 
 #site_foot {
 	
+	.inner {
+	}
 }
 
 .footer-content {
 	display: flex;
 	width: 100%;
 	padding: $grid-padding;
+	max-width: $max-width-small;
+}
+.footer-section {
+	
 }
 
 .footer-copyright {
+	font-family: var(--font_mono);
+	font-size: 1.2rem;
 	margin-bottom: 0;
+	text-align: center;
+	max-width: $max-width-small;
+	margin: 0 auto;
+	padding: $grid-padding;
+	border-top: var(--text_color) 1px solid;
 }
 
 .footer-nav {
@@ -24,7 +37,19 @@
 	margin: 0;
 	
 	li {
-		display: inline;
-		margin: 0 .25em;
+		display: block;
+		border-bottom: var(--text_color) 1px solid;
+		
+		a {
+			display: block;
+			padding: $grid-padding 0;
+			text-decoration: none;
+			transition: .3s ease-in-out;
+			
+			&:hover,
+			&.focus-visible {
+				
+			}
+		}
 	}
 }
