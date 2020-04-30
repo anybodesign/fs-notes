@@ -8,7 +8,8 @@
 
 .page-wrap {
 	position: relative;
-	overflow: hidden;
+	padding-top: $grid-padding;
+	overflow-x: hidden;
 	@include center-small();
 	
 	&.has-sidebar {
@@ -39,7 +40,7 @@
 .page-title {
 	
 	.search-term {
-		font-family: var(--font_bolditalic);
+		font-family: var(--font_bold);
 	}
 }
 
@@ -129,7 +130,7 @@
 
 .page-sidebar {
 	position: absolute;
-	top: $grid-padding*3;
+	top: $grid-padding*4;
 	right: 0;
 	transform: translateX(100%);
 	transition: transform .3s ease-in-out;
@@ -155,14 +156,52 @@
 	}
 	
 	.widget-container {
-		margin-bottom: $grid-padding*4;	
+		margin-bottom: $grid-padding*4;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}	
 	}
 	
 	.widget-title {
 		@extend .h3-like;
 	}
 	
+	// Corner
 	
+	&::after {
+		content: '';
+		display: block;
+		height: 3rem;
+		width: 20rem;
+		background-color: var(--sidebar_color);
+		position: absolute;
+		bottom: -3rem;
+		left: 0;		
+	}
+	
+	& aside {
+		
+		&::before,
+		&::after {
+			@include pointer(left, 1.5rem);		
+			position: absolute;
+			bottom: -3rem;
+			right: 0;
+		}
+		
+		&::before {
+			border-top-color: var(--sidebar_color);
+			border-left-color: var(--sidebar_color);
+			z-index: 1;
+		}
+		&::after {
+			border-top-color: #999;
+			border-left-color: #999;
+			opacity: .4;
+			z-index: 2;
+		}
+	}
 	
 		
 }
