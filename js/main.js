@@ -1,18 +1,17 @@
 jQuery(document).ready(function($) {
 	
 	
-	// Responsive Main Menu
+	// Responsive Sidebar Menu
 
-/*
 	$('#menu-toggle').click(function() {
 		$(this).toggleClass('menu-opened');
 			
 			if ($(this).hasClass('menu-opened')) {
 				$(this).attr('aria-expanded','true');
-				$('.main-menu').attr('aria-hidden','false');
+				$('.page-sidebar').attr('aria-hidden','false');
 			} else {
 				$(this).attr('aria-expanded','false');
-				$('.main-menu').attr('aria-hidden','true');
+				$('.page-sidebar').attr('aria-hidden','true');
 			}
 			
 		return false;
@@ -20,12 +19,10 @@ jQuery(document).ready(function($) {
 
 		$(window).resize(function() {
 			if ($(window).width() > 960) {
-		    	$('.main-menu').show().removeAttr('style').removeAttr('aria-hidden');
-		    	$('.sub-menu').show().removeAttr('style');
+		    	$('.page-sidebar').show().removeAttr('style').removeAttr('aria-hidden');
 		    	$('#menu-toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
 		});
-*/
 	
 	
 	// Sub-Menus Toggle Button

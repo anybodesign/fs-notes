@@ -8,6 +8,7 @@
 
 .page-wrap {
 	position: relative;
+	overflow: hidden;
 	@include center-small();
 	
 	&.has-sidebar {
@@ -127,12 +128,26 @@
 }
 
 .page-sidebar {
-	position: relative;
+	position: absolute;
+	top: $grid-padding*3;
+	right: 0;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out;
+
+	max-width: 23rem;
 	padding: $grid-padding*2;
 	background-color: var(--sidebar_color);
 	z-index: 2;
 
+	.menu-opened + .page-content + & {
+		transform: translateX(0);
+	}
+
 	@include rwd(large) {
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
 		
 		.has-sidebar & {
 			width: 25%;
@@ -145,7 +160,11 @@
 	
 	.widget-title {
 		@extend .h3-like;
-	}	
+	}
+	
+	
+	
+		
 }
 
 

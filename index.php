@@ -12,6 +12,7 @@
 get_header(); ?>
 
 				<div class="page-wrap has-sidebar">
+					<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-notes'); ?><span></span></button>
 
 					<div class="page-content">
 
