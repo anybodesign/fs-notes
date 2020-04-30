@@ -367,19 +367,25 @@ function fs_customize_register($fs_customize) {
 					'settings'		=> 'author_desc',
 				)
 			);
-
+			
+			// https://www.sitepoint.com/using-the-wordpress-customizer-media-controls/
+			
 			$fs_customize->add_setting(
 				'author_avatar', 
 				array(
-					'sanitize_callback'	=> 'esc_url_raw'
+				    'sanitize_callback' => 'absint'
 				)
 			);
 			$fs_customize->add_control(
-				new WP_Customize_Image_control(
+				new WP_Customize_Cropped_Image_Control(
 					$fs_customize, 
 					'author_avatar', 
 					array(
 						'label'			=> __('Author Avatar', 'fs-notes'),
+					    'flex_width'	=> false, 
+					    'flex_height'	=> false,
+					    'width'			=> 300,
+					    'height'		=> 300,						
 						'section'		=> 'fs_footer_section',
 						'settings'		=> 'author_avatar',
 					)

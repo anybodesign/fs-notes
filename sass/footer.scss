@@ -14,28 +14,69 @@
 	flex-direction: column;
 	width: 100%;
 	max-width: $max-width-small;
-	margin: $grid-padding*2 auto 0 auto;
-	padding: $grid-padding;
+	margin: $grid-padding*3 auto 0 auto;
+	padding: $grid-padding $grid-padding*5;
 	
+	@include rwd(medium) {
+		padding: 0;
+	}	
 	@include rwd(large) {
 		flex-direction: row;
-	}
-	@include rwd($max-width-small) {
-		padding: 0;
 	}
 }
 .footer-section {
 	margin-bottom: $grid-padding*6;
 }
 .footer-title {
-	@extend .h3-like;
+	@extend .h2-like;
 	margin-bottom: $grid-padding;
 }
 
+// Author 
+
 .footer-author {
+
+	@include rwd(large) {
+		min-width: 75%;
+	}
+}
+.author-info {
 	
+	@include rwd(large) {
+		display: flex;
+		flex-wrap: wrap;
+		transform: translateX(-16.6667%);
+	}
+}
+.author-avatar {
+	@include figure();
+	border-radius: 50%;
+	width: 15rem;
+	height: 15rem;
+	overflow: hidden;
+	margin-bottom: $grid-padding;
+	transform: translateX(-25%);
+	
+	@include rwd(large) {
+		margin: 0;
+		transform: translateY(-1rem);
+	}
+	
+	img.avatar {
+		display: block;
+		border-radius: 50%;
+	}
+}
+.author-description {
+	
+	@include rwd(large) {
+		flex: 1 0 0;
+		padding-left: $grid-padding*2;
+	}
+
 }
 
+// Footer nav
 
 .footer-nav {
 	max-width: 22rem;
@@ -54,7 +95,7 @@
 		
 		a {
 			display: block;
-			padding: $grid-padding $grid-padding $grid-padding 0;
+			padding: $grid-padding/1.5 0;
 			text-decoration: none;
 			transition: .3s ease-in-out;
 			
@@ -68,14 +109,30 @@
 	}
 }
 
+// Copyright
+
 .footer-copyright {
-	font-family: var(--font_mono);
-	font-size: 1.2rem;
-	margin-bottom: 0;
-	text-align: center;
 	max-width: $max-width-small;
 	margin: 0 auto;
-	padding: $grid-padding;
-	border-top: var(--text_color) 1px solid;
+	
+	p {
+		font-family: var(--font_mono);
+		font-size: 1.2rem;
+		margin-bottom: 0;
+		text-align: center;
+		border-top: var(--text_color) 1px solid;
+		padding: $grid-padding;
+	}
+	
+	@include rwd(large) {
+		
+		.has-author + & {
+			padding-left: calc( 8.3333% + #{$grid-padding} );
+		}
+			
+		p {
+			text-align: left;
+		}
+	}
 }
 

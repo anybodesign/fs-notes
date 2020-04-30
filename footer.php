@@ -22,7 +22,8 @@
 					
 					<?php if (get_theme_mod('display_author') || has_nav_menu( 'social_menu' )) { ?> 
 					<div class="footer-section footer-author">
-						<?php if (get_theme_mod('display_author')) {
+
+						<?php if ( get_theme_mod('display_author') && !is_search() && !is_404() || get_theme_mod('author_avatar') && get_theme_mod('author_name') && get_theme_mod('author_desc') ) {
 							get_template_part('template-parts/footer', 'author'); 
 						} ?>
 
@@ -60,16 +61,18 @@
 
 				<?php // The credit/copyright line, settings in the Customizer ?>
 				
-				<p class="footer-copyright">
-					<?php if(get_theme_mod('footer_text')) {
-						echo get_theme_mod('footer_text', ''); 
-					} else {
-						echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
-					} ?>
-					
-					<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
-				</p>
-
+				<div class="footer-copyright">
+					<p>
+						<?php if(get_theme_mod('footer_text')) {
+							echo get_theme_mod('footer_text', ''); 
+						} else {
+							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
+						} ?>
+						
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
+					</p>
+				</div>
+				
 			</div>
 			
 		</footer>
