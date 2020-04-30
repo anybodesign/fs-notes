@@ -277,9 +277,7 @@
 
 }
 
-
 // Hamburger Menu
-
 
 #menu-toggle {
 	display: block; 
@@ -347,4 +345,35 @@
 	@include rwd(large) {
 		display: none;				
 	}
+}
+
+// Widget & Footer menus
+
+.widget-container ul,
+.footer-menu {
+	margin: 0;
+	border-top: var(--text_color) 1px solid;
+	
+	li {
+		display: block;
+		border-bottom: var(--text_color) 1px solid;
+		
+		a {
+			display: block;
+			padding: $grid-padding/1.5 0;
+			text-decoration: none;
+			transition: .3s ease-in-out;
+			
+			&:hover,
+			&.focus-visible {
+				padding-left: $grid-padding;
+				background-color: var(--text_color);
+				color: #fff;
+			}
+		}
+	}
+}
+
+.widget-container ul {
+	padding-left: 0;
 }

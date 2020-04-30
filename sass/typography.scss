@@ -12,7 +12,7 @@ html {
 body {
 	font-family: var(--font_regular);
 	font-size: 1.4rem;
-	line-height: 1.5;
+	line-height: 1.6;
 	color: var(--text_color);
 }
 
@@ -199,7 +199,6 @@ figure {
 	max-width: 100%;
 	margin: 0 0 $grid-padding 0;
 	overflow: hidden;
-	@include figure();
 		
 	img {
 		display: block;
@@ -265,6 +264,7 @@ figcaption {
 	font-size: 1.3rem; 
 	line-height: 1;
 	margin: $grid-padding 0;
+	font-family: var(--font_italic);
 }
 
 
@@ -272,16 +272,24 @@ figcaption {
 
 q,
 blockquote {
-	max-width: 75%;
-	padding: $grid-padding 0 $grid-padding $grid-padding*2;
-	border-left: var(--primary_color) 2px solid;
+	position: relative;
+	
+	&::before {
+		content: '“';
+		font-size: 7.2rem;
+		display: block;
+		position: absolute;
+		top: -2.5rem;
+		left: -1.5rem;
+	}
 }
 q,
 blockquote,
 blockquote p {
-	font-family: var(--font_bold)italic;
-	font-style: normal;
+	font-family: var(--font_bold);
+	font-weight: normal;
 	font-size: 2rem;
+	padding-left: 3rem;
 }
 blockquote p {
 	margin-bottom: 0;

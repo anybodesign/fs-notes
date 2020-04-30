@@ -11,19 +11,19 @@
  */
 ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('post-block'); ?>>
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>
 						<div class="post-figure">
 							<a href="<?php the_permalink(); ?>" rel="nofollow">
-							<?php the_post_thumbnail('medium-hd'); ?>
+							<?php the_post_thumbnail('thumbnail-hd'); ?>
 							</a>
 						</div>
 						<?php } ?>
 						
 						<div class="post-content">
 							<header class="post-header">
-								<h2 class="post-title"><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+								<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<?php get_template_part('template-parts/post', 'meta'); ?>							
 							</header>
 							<div class="post-excerpt">

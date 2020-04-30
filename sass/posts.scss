@@ -1,30 +1,130 @@
+/* ------------------------- */
+/* = Posts block
+/* ------------------------- */
+
+.post-block {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-top: $grid-padding*2;
+	padding-bottom: $grid-padding*4;
+	margin-bottom: $grid-padding*2;
+	
+	&::after {
+		@include after-stroke(15rem);
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);		
+	}
+	
+	@include rwd(large) {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+			padding-right: $grid-padding;
+		}
+	}
+}
+.post-figure {
+	@include figure();
+	max-width: 16rem;
+	margin-bottom: $grid-padding;
+	@include img-opacity(.7);
+	
+	@include rwd(large) {
+		width: 15rem;
+	}
+}
+.post-title {
+	margin-bottom: 0;
+	
+	a {
+		text-decoration: none;
+		transition: color .3s ease-in-out;
+		
+		&:hover,
+		&.focus-visible {
+			color: var(--btn_color);
+		}
+	}
+}
+.post-content {
+	
+	@include rwd(large) {
+		flex: 1 0 0;
+		padding: 0 $grid-padding*2 0 $grid-padding;
+	}	
+}
+
+
+
 .sticky {
 	display: block;
 }
-
 .tag-links {
 	
 }
-
 .nav-links {
 	font-family: var(--font_regular);
 }
-
 .page-links {
 	
 }
 
+// Meta
+
+.meta-infos, 
+.meta-comments {
+	font-size: 1.2rem;
+	font-family: var(--font_mono);
+	line-height: 1.2;
+}
 .meta-infos {
+	margin-bottom: $grid-padding/2;
+}
+.meta-comments::before {
+	content: '\1F5E8';
+	position: relative;
+	top: .2rem;
+}
+
+
+/* ------------------------- */
+/* = Single
+/* ------------------------- */
+
+.single {
 	
+	.post-header {
+		position: relative;
+		margin-top: -3rem;
+		transform: translateX(-1rem);
+	}
+	
+	.page-title {
+		display: inline-block;
+		padding: $grid-padding/2 $grid-padding;
+		margin-bottom: $grid-padding/2;
+		background-color: #fff;
+	}
+	.post-meta {
+		padding: 0 $grid-padding;
+		
+		&::after {
+			@include after-stroke(15rem);
+			margin: $grid-padding*3 0;
+		}
+	}
 }
 
 /* ------------------------- */
 /* = Comments
 /* ------------------------- */
 
-.meta-comments {
-	
-}
 
 .bypostauthor {
 	display: block;

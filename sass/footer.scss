@@ -28,7 +28,7 @@
 	margin-bottom: $grid-padding*6;
 }
 .footer-title {
-	@extend .h2-like;
+	@extend .h3-like;
 	margin-bottom: $grid-padding;
 }
 
@@ -87,29 +87,6 @@
 		min-width: 30%;
 	}
 }
-.footer-menu {
-	margin: 0;
-	border-top: var(--text_color) 1px solid;
-	
-	li {
-		display: block;
-		border-bottom: var(--text_color) 1px solid;
-		
-		a {
-			display: block;
-			padding: $grid-padding/1.5 0;
-			text-decoration: none;
-			transition: .3s ease-in-out;
-			
-			&:hover,
-			&.focus-visible {
-				padding-left: $grid-padding;
-				background-color: var(--text_color);
-				color: #fff;
-			}
-		}
-	}
-}
 
 
 // Social nav
@@ -122,11 +99,7 @@
 			padding-top: $grid-padding*2.5;
 			
 			&::before {
-				content: '';
-				display: block;
-				width: 5rem;
-				height: 1px;
-				border-top: var(--text_color) 1px solid;
+				@include after-stroke();
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -153,7 +126,7 @@
 			height: 30px;
 			transition: transform .3s ease-in-out;
 			@include a11y-hide();
-			
+
 			&::before {
 				content: '';
 				display: block;

@@ -8,6 +8,22 @@
 	border: #fff $grid-padding solid;
 	background-color: #fff;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+	
+	img {
+		display: block;
+	}
+}
+
+// Stroke 
+
+@mixin after-stroke($w: 7rem) {
+
+	content: '';
+	display: block;
+	width: $w;
+	height: 1px;
+	border-top: var(--text_color) 1px solid;
+	
 }
 
 // Link Style

@@ -61,15 +61,12 @@
 	font-family: var(--font_title);
 	text-align: center;
 	letter-spacing: .1rem;
-	
+
 	&::after {
-		content: '';
-		display: block;
-		width: 7rem;
-		height: 1px;
-		border-top: var(--text_color) 1px solid;
+		@include after-stroke();
 		margin: $grid-padding*2 auto 0 auto;
 	}
+	
 	
 	@include rwd(large) {
 		font-size: 2.6rem;

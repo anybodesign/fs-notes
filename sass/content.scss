@@ -23,7 +23,7 @@
 				transform: translateX($shift);
 			}
 			.page-sidebar {
-				margin-top: $grid-padding*4;
+				margin-top: $grid-padding*3;
 			}
 		}
 	}
@@ -38,7 +38,7 @@
 .page-title {
 	
 	.search-term {
-		font-family: var(--font_bold)italic;
+		font-family: var(--font_bolditalic);
 	}
 }
 
@@ -128,7 +128,7 @@
 
 .page-sidebar {
 	position: relative;
-	padding: $grid-padding;
+	padding: $grid-padding*2;
 	background-color: var(--sidebar_color);
 	z-index: 2;
 
@@ -137,6 +137,14 @@
 		.has-sidebar & {
 			width: 25%;
 		}
+	}
+	
+	.widget-container {
+		margin-bottom: $grid-padding*4;	
+	}
+	
+	.widget-title {
+		@extend .h3-like;
 	}	
 }
 
@@ -166,12 +174,20 @@
 	.has-spiral &::before {
 		content: '';
 		display: block;
-		width: 30px;
-		height: calc(100% - 4rem);
+		height: 30px;
+		width: calc(100% - 4rem);
 		position: absolute;
-		top: 2rem;
-		left: -1rem;
-		background: url(img/ui/spiral-pattern.svg) 0 0 repeat-y;
+		top: -1rem;
+		left: 2rem;
+		background: url(img/ui/spiral-pattern-x.svg) 0 0 repeat-x;
 		z-index: 1;
+		
+		@include rwd(large) {
+			top: 2rem;
+			left: -1rem;
+			width: 30px;
+			height: calc(100% - 4rem);
+			background: url(img/ui/spiral-pattern.svg) 0 0 repeat-y;
+		}
 	}
 }
