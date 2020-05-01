@@ -397,10 +397,18 @@ hr,
 	
 	.acf-block-list-item {
 		padding-bottom: $grid-padding;
+		
+		@include dark() {
+			border-bottom-color: #fff;
+		}
 	}
 	.list-legend	 {
 		padding-top: $grid-padding;
 		margin-top: $grid-padding;
+		
+		@include dark() {
+			border-top-color: #fff;
+		}
 	}
 }
 

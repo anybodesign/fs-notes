@@ -125,6 +125,10 @@
 		
 		text-align: center;
 		line-height: 3.4rem;
+		
+		@include dark() {
+			color: var(--text_dark);
+		}
 	}
 	a {
 		text-decoration: none;
@@ -133,10 +137,15 @@
 		&:hover,
 		&.focus-visible {
 			background-color: var(--primary_color);
+			color: #fff;
 		}
 	}
 	.current {
 		background-color: var(--primary_color);
+
+		@include dark() {
+			color: #fff;
+		}
 	}
 	
 	.pages {
