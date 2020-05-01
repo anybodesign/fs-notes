@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2020-05-01 10:59+0200\n"
-"PO-Revision-Date: 2020-05-01 10:59+0200\n"
+"POT-Creation-Date: 2020-05-01 19:01+0200\n"
+"PO-Revision-Date: 2020-05-01 19:02+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -20,7 +20,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:22
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found"
+msgstr "Oops! Page introuvable"
+
+#: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "On dirait qu’il n'y a rien ici. Essayez peut-être une recherche ?"
 
@@ -40,21 +44,17 @@ msgstr "Laisser un commentaire"
 msgid "Add my comment"
 msgstr "Ajouter mon commentaire"
 
-#: footer.php:32
+#: footer.php:38
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: footer.php:51 functions.php:311
+#: footer.php:57 functions.php:308
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: footer.php:73
+#: footer.php:79
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
-
-#: footer.php:82
-msgid "Back to top"
-msgstr "Haut de page"
 
 #: functions.php:116
 msgid "Black"
@@ -68,104 +68,112 @@ msgstr "Blanc"
 msgid "Primary color"
 msgstr "Couleur primaire"
 
-#: functions.php:134
-msgid "Secondary color"
-msgstr "Couleur secondaire"
+#: functions.php:134 inc/customizer.php:121
+msgid "Titles color"
+msgstr "Couleur des titres"
 
-#: functions.php:139
-msgid "Complementary color"
-msgstr "Couleur complémentaire"
+#: functions.php:139 inc/customizer.php:189
+msgid "Page color"
+msgstr "Couleur de la page"
 
-#: functions.php:150
+#: functions.php:144 inc/customizer.php:213
+msgid "Sidebar color"
+msgstr "Couleur de la barre latérale"
+
+#: functions.php:149
+msgid "Background color"
+msgstr "Couleur de l'arrière-plan"
+
+#: functions.php:161
 msgid "Small"
 msgstr "Petite"
 
-#: functions.php:151
+#: functions.php:162
 msgid "S"
 msgstr "S"
 
-#: functions.php:156
+#: functions.php:167
 msgid "Large"
 msgstr "Grande"
 
-#: functions.php:157
+#: functions.php:168
 msgid "L"
 msgstr "L"
 
-#: functions.php:310 template-parts/header-nav.php:6
+#: functions.php:307 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:312
+#: functions.php:309
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:381
+#: functions.php:378
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:396
+#: functions.php:393
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:397
+#: functions.php:394
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:398
+#: functions.php:395
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:399
+#: functions.php:396
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:423
+#: functions.php:420
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:448
+#: functions.php:445
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:454
+#: functions.php:451
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:460
+#: functions.php:457
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:480
+#: functions.php:477
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:481
+#: functions.php:478
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:482
+#: functions.php:479
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:513
+#: functions.php:510
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:524
+#: functions.php:521
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:534
+#: functions.php:531
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:541
+#: functions.php:538
 msgid "Edit"
 msgstr "Modifier"
 
-#: header.php:69
+#: header.php:74
 msgid "Menu"
 msgstr "Menu"
 
@@ -185,10 +193,6 @@ msgstr "Couleur de contraste"
 msgid "Links and buttons color"
 msgstr "Couleur des liens et des boutons"
 
-#: inc/customizer.php:121
-msgid "Titles color"
-msgstr "Couleur des titres"
-
 #: inc/customizer.php:143
 msgid "Text color"
 msgstr "Couleur du texte"
@@ -197,77 +201,77 @@ msgstr "Couleur du texte"
 msgid "Buttons text color"
 msgstr "Couleur du texte des boutons"
 
-#: inc/customizer.php:189
-msgid "Page color"
-msgstr "Couleur de la page"
+#: inc/customizer.php:234
+msgid "Dark Mode"
+msgstr "Mode sombre"
 
-#: inc/customizer.php:213
-msgid "Sidebar color"
-msgstr "Couleur de la barre latérale"
+#: inc/customizer.php:254
+msgid "Use dark social icons"
+msgstr "Utilisez des icônes sociales sombres"
 
-#: inc/customizer.php:240
+#: inc/customizer.php:281
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:260
+#: inc/customizer.php:301
 msgid "Hide the site tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:280
+#: inc/customizer.php:321
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:322
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:308
+#: inc/customizer.php:342
+msgid "Dark mode Logo"
+msgstr "Logo pour mode sombre"
+
+#: inc/customizer.php:343
+msgid "Your logo, for the Dark mode."
+msgstr "Votre logo, pour le mode sombre."
+
+#: inc/customizer.php:369
 msgid "Display Blog Author"
 msgstr "Afficher l’auteur du blog"
 
-#: inc/customizer.php:328
+#: inc/customizer.php:389
 msgid "Author name"
 msgstr "Nom de l’auteur"
 
-#: inc/customizer.php:346
+#: inc/customizer.php:407
 msgid "Author biography"
 msgstr "Biographie de l’auteur"
 
-#: inc/customizer.php:365
+#: inc/customizer.php:426
 msgid "Author Avatar"
 msgstr "Avatar de l’auteur"
 
-#: inc/customizer.php:424
+#: inc/customizer.php:499
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:425
+#: inc/customizer.php:500
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:446
+#: inc/customizer.php:521
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:470
+#: inc/customizer.php:545
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:489
+#: inc/customizer.php:564
 msgid "Display the sketchbook spiral"
 msgstr "Afficher la spirale du carnet"
 
-#: inc/customizer.php:506
+#: inc/customizer.php:581
 msgid "Display the sketchbook lines"
 msgstr "Afficher les lignes de carnet"
-
-#: inc/customizer.php:525
-msgid "Enable Tags"
-msgstr "Activer les étiquettes"
-
-#: inc/customizer.php:542
-msgid "Enable Post Formats"
-msgstr "Activez les formats d’articles"
 
 #: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:54
 msgid "View details"
@@ -313,17 +317,26 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 msgid "Unfold Sub-Menu"
 msgstr "Déplier le sous-menu"
 
-#: index.php:26
+#: index.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: index.php:36
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:27
+#: index.php:37
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:28
+#: index.php:38
 msgid "Page"
 msgstr "Page"
+
+#: template-parts/footer-back2top.php:10
+msgid "Back to top"
+msgstr "Haut de page"
 
 #: template-parts/header-brand.php:15
 msgid "Go to Home Page"
@@ -376,7 +389,7 @@ msgstr "par&nbsp;"
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
 
-#: template-parts/post-meta.php:24
+#: template-parts/post-meta.php:27
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
@@ -410,6 +423,15 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Complementary color"
+#~ msgstr "Couleur complémentaire"
+
+#~ msgid "Enable Tags"
+#~ msgstr "Activer les étiquettes"
+
+#~ msgid "Enable Post Formats"
+#~ msgstr "Activez les formats d’articles"
 
 #~ msgid "Buttons color"
 #~ msgstr "Couleur des boutons"
@@ -652,13 +674,6 @@ msgstr "Style Guide"
 #~ msgid "Choose a picture for the 404 error page. (2048 x 625 pixels max.)"
 #~ msgstr ""
 #~ "Choisissez une image pour la page d’erreur 404. (2048 x 625 pixels max.)"
-
-#, php-format
-#~ msgid "Search Results for: %s"
-#~ msgstr "Résultats de la recherche pour : %s"
-
-#~ msgid "Oops! That page can&rsquo;t be found"
-#~ msgstr "Oops! Page introuvable"
 
 #~ msgid "Pictures selection."
 #~ msgstr "Sélection des images."
