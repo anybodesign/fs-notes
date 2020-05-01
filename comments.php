@@ -16,11 +16,13 @@ if ( post_password_required() ) {
 					<div id="comments" class="comments-area">
 
 					<?php if ( have_comments() ) : ?>
-						<h3 class="comments-title"><?php _e('They talk about it','fs-notes'); ?></h3>
+						<h3 class="comments-title"><?php _e('Comments', 'fs-notes'); ?></h3>
 				
 						<ol class="comment-list">
 							<?php
-								wp_list_comments();
+								wp_list_comments( array(
+								    'callback' => 'fs_custom_comments',
+								));
 							?>
 						</ol>
 						
@@ -38,8 +40,8 @@ if ( post_password_required() ) {
 					$comments_args = array(
 				       	//'comment_notes_after' => 'fs-notes',
 				        //'logged_in_as' => 'fs-notes',
-				        'title_reply' => __('Do we talk about it?', 'fs-notes'),
-				        'label_submit' => __('Add my comment!', 'fs-notes')
+				        'title_reply' => __('Leave a comment', 'fs-notes'),
+				        'label_submit' => __('Add my comment', 'fs-notes')
 					);
 					
 					comment_form($comments_args);
