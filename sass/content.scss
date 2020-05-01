@@ -70,7 +70,18 @@
 .page-title {
 	
 	.search-term {
-		font-family: var(--font_bold);
+		font-family: var(--font_title);
+		color: var(--primary_color);
+	}
+	
+	.error404 &::before {
+		content: '404';
+		display: block;
+		font-size: 14rem;
+		
+		@include rwd(medium) {
+			font-size: 28rem;
+		}
 	}
 }
 
@@ -85,6 +96,7 @@
 	.has-spiral & {
 		padding-top: $grid-padding*5;	
 	}
+	.error404 &,
 	&.has-post-thumbnail {
 		padding-top: 0;	
 	}

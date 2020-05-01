@@ -11,19 +11,17 @@
  */
 get_header(); ?>
 					
-				<div class="page-wrap">
 
-					<?php 
-						get_template_part( 'template-parts/page', 'banner' ); 
-					?>
-					
 					<div class="page-content">
+						
+						<h1 class="page-title">
+							<?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-notes' ); ?>
+						</h1>
 							
 						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'fs-notes' ); ?></p>
 						<?php get_search_form(); ?>		
 																			
 					</div>	
 									
-				</div>
 
 <?php get_footer(); ?>
