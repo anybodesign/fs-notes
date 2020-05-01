@@ -229,7 +229,6 @@
 		
 }
 
-
 // Sketchbook
 
 .page-content {
@@ -270,5 +269,14 @@
 			height: calc(100% - 4rem);
 			background: url(img/ui/spiral-pattern.svg) 0 0 repeat-y;
 		}
+	}
+}
+
+// Search form
+
+.searchform {
+	
+	.page-content & {
+		padding-right: $grid-padding*2;
 	}
 }
