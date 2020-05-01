@@ -86,10 +86,20 @@
 .meta-infos {
 	margin-bottom: $grid-padding/2;
 }
-.meta-comments::before {
-	content: '\1F5E8';
+.meta-comments {
 	position: relative;
-	top: .2rem;
+	
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		
+		path {
+			fill: var(--text_color);
+		}
+	}
+	a::after {
+		@include linkblock();
+	}
 }
 
 

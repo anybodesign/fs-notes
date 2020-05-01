@@ -47,6 +47,10 @@
 			display: inline-block;
 			padding: $grid-padding/2 $grid-padding;
 			background-color: #fff;
+			
+			@include dark() {
+				background-color: var(--page_dark);
+			}
 		}
 		.post-meta {
 			padding: 0 $grid-padding;
@@ -78,6 +82,9 @@
 	// Padding
 	padding: $grid-padding*2.5 0;
 	
+	.has-spiral & {
+		padding-top: $grid-padding*5;	
+	}
 	&.has-post-thumbnail {
 		padding-top: 0;	
 	}

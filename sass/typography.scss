@@ -16,6 +16,11 @@ body {
 	line-height: 1.6;
 	color: var(--text_color);
 	background-color: var(--bg_color);
+	
+	@include dark() {
+		background-color: var(--text_dark) !important;
+		background-image: none !important;
+	}
 }
 
 // Focus visible
@@ -403,7 +408,7 @@ kbd {
 
 code, pre {
 	background-color: #eee;
-	color: var(--text_color);
+	color: var(--text_dark);
 }
 code {
 	padding: .5em;
@@ -474,8 +479,12 @@ input[type="submit"] {
 		background-color: var(--text_color);
 		color: #fff;
 	}
-	&:focus {
-		outline: none;
+	
+	@include dark() {
+		&.focus-visible, 
+		&:hover {
+			background-color: var(--text_dark);
+		}
 	}
 }
 
@@ -494,7 +503,19 @@ input[type=submit].white-btn {
 	&:hover {
 		background-color: var(--text_color);
 		color: #fff;
-	}	
+	}
+	
+	
+	@include dark() {
+		color: var(--text_dark);
+
+		&.focus-visible, 
+		&:hover {
+			background-color: var(--text_dark);
+			color: #fff;
+		}
+		
+	}		
 }
 
 

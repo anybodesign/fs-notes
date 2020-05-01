@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="17" height="29" viewBox="0 0 17 29">
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="29" viewBox="0 0 19 29">
   <g fill="none" fill-rule="evenodd" transform="rotate(90 5.5 5.5)">
-    <circle cx="24" cy="5.5" r="5" fill="#686A6F"/>
+    <circle cx="24" cy="5.5" r="5" fill="#979AA3"/>
     <rect width="24" height="3" y="2" fill="#23252B" rx="1.5"/>
     <rect width="24" height="3" y="6" fill="#23252B" rx="1.5"/>
+    <path fill="#FFFFFF" fill-opacity=".3" d="M23,6.5 C23,7.05228475 22.5522847,7.5 22,7.5 L2,7.5 C1.44771525,7.5 1,7.05228475 1,6.5 L1,6.5 L1,6.5 L23,6.5 Z" transform="matrix(1 0 0 -1 0 14)"/>
+    <path fill="#FFFFFF" fill-opacity=".3" d="M23,2.5 C23,3.05228475 22.5522847,3.5 22,3.5 L2,3.5 C1.44771525,3.5 1,3.05228475 1,2.5 L1,2.5 L1,2.5 L23,2.5 Z" transform="matrix(1 0 0 -1 0 6)"/>
   </g>
 </svg>

@@ -367,14 +367,22 @@
 			padding: $grid-padding/1.5 0;
 			text-decoration: none;
 			transition: .3s ease-in-out;
+		}
+		
+		& a:hover,
+		& a.focus-visible,
+		&.current-menu-item a,
+		&.current-cat a {
+			padding-left: $grid-padding;
+			background-color: var(--text_color);
+			color: #fff;
 			
-			&:hover,
-			&.focus-visible {
-				padding-left: $grid-padding;
-				background-color: var(--text_color);
-				color: #fff;
+			@include dark() {
+				color: var(--text_dark);
 			}
 		}
+		
+		
 	}
 }
 

@@ -132,10 +132,16 @@
 				display: block;
 				width: 30px; 
 				height: 30px;
-				background-color: var(--primary_color);
-				background-image: url(img/ui/social-icons-white.svg);
-				background-position: 0 0;
+				background-color: var(--text_color);
+				background-image: url(img/ui/social-icons.svg);
+				//background-position: 0 0;
+				background-position-x: 0;
+				background-position-y: 0;
 				background-repeat: no-repeat;
+				
+				@include dark() {
+					background-position-y: -30px;
+				}
 			}
 			
 			&:hover,
@@ -144,37 +150,37 @@
 			}
 		}
 		a[href*="facebook.com"]::before {
-			background-position: 0 0;
+			background-position-x: 0;
 		}
 		a[href*="twitter.com"]::before {
-			background-position: -30px 0;
+			background-position-x: -30px;
 		}
 		a[href*="instagram.com"]::before {
-			background-position: -60px 0;
+			background-position-x: -60px;
 		}
 		a[href*="linkedin.com"]::before {
-			background-position: -90px 0;
+			background-position-x: -90px;
 		}
 		a[href*="pinterest.com"]::before {
-			background-position: -120px 0;
+			background-position-x: -120px;
 		}
 		a[href*="youtube.com"]::before {
-			background-position: -150px 0;
+			background-position-x: -150px;
 		}
 		a[href*="googleplus.com"]::before {
-			background-position: -180px 0;
+			background-position-x: -180px;
 		}
 		a[href*="vimeo.com"]::before {
-			background-position: -210px 0;
+			background-position-x: -210px;
 		}
 		a[href*="tripadvisor.com"]::before {
-			background-position: -240px 0;
+			background-position-x: -240px;
 		}
 		a[href*="snapchat.com"]::before {
-			background-position: -270px 0;
+			background-position-x: -270px;
 		}
 		a[href*="github.com"]::before {
-			background-position: -300px 0;
+			background-position-x: -300px;
 		}
 		a[href*="dribble.com"]::before {
 			background-position: -330px 0;

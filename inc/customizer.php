@@ -77,7 +77,7 @@ function fs_customize_register($fs_customize) {
 	// Colors
 	// -
 	// + + + + + + + + + + 
-		
+
 		// Primary color
 		
 		$fs_customize->add_setting(
@@ -217,6 +217,47 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 
+		// Dark Mode
+		
+		$fs_customize->add_setting(
+			'dark_mode', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'dark_mode', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Dark Mode', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'dark_mode',
+			)
+		);
+				
+		// Dark social icons
+		
+		$fs_customize->add_setting(
+			'dark_icons', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'dark_icons', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Use dark social icons', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'dark_icons',
+			)
+		);
+		
+
 
 
 	// Site identity
@@ -297,7 +338,6 @@ function fs_customize_register($fs_customize) {
 			'display_author', 
 			array(
 				'default'			=> false,
-				//'transport'			=> 'postMessage',				
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
@@ -383,23 +423,37 @@ function fs_customize_register($fs_customize) {
 			<script type="text/javascript">
 			jQuery(document).ready(function ($) {
 			
-				/* adv. color option */
 				var author_opt = $( '#customize-control-author_name, #customize-control-author_desc, #customize-control-author_avatar' );
+				var dark = $( '#customize-control-dark_icons' );
 			
-				/* on page load, hide or show adv. option */
+				/* on page load, hide or show */
 				if( $( '#customize-control-display_author input' ).prop( "checked" ) ){
 					author_opt.show();
 				}
 				else{
 					author_opt.hide();
 				}
-			
-				/* on change, hide or show adv. option */
+				if( $( '#customize-control-dark_mode input' ).prop( "checked" ) ){
+					dark.hide();
+				}
+				else{
+					dark.show();
+				}
+		
+				/* on change, hide or show  */
 				$( '#customize-control-display_author input' ).change(function(){
 					if( $(this).prop("checked") ) {
 						author_opt.show();
 					} else {
 						author_opt.hide();
+					}
+				});
+				
+				$( '#customize-control-dark_mode input' ).change(function(){
+					if( $(this).prop("checked") ) {
+						dark.hide();
+					} else {
+						dark.show();
 					}
 				});
 			});
@@ -510,7 +564,7 @@ function fs_customize_register($fs_customize) {
 		);
 		
 		// Tags & Formats
-		
+		/*
 		$fs_customize->add_setting(
 			'use_tags', 
 			array(
@@ -544,6 +598,7 @@ function fs_customize_register($fs_customize) {
 				'settings'		=> 'use_formats',
 			)
 		);
+		*/
 
 }
 add_action('customize_register', 'fs_customize_register');
@@ -568,8 +623,9 @@ function fs_customizer_sanitize_checkbox( $input ) {
 
 // Customizer Colors Output
 
-function fs_colors() {
-	?>
+function fs_colors() { ?>
+
+	<?php if ( get_theme_mod('dark_mode') != true ) { ?>
 	<style>
 		:root {
 			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
@@ -580,6 +636,12 @@ function fs_colors() {
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
 		}
 	</style>
-	<?php
-}
+	<?php } else { ?>
+	<style>
+		:root {
+			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
+		}
+	</style>
+	<?php } ?>
+<?php }
 add_action('wp_head','fs_colors');

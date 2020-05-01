@@ -40,7 +40,7 @@
 	}
 	&.focus-visible {
 		padding: 0 $grid-padding/2;
-		background-color: var(--text_color);
+		background-color: var(--text_dark);
 		color: #fff;
 	}
 	&:active {
@@ -140,6 +140,14 @@
 	
 }
 
+// Dark Mode 
+
+@mixin dark() {
+
+	.dark-mode & {
+		@content;
+	}
+}
 
 // Mobile First Media Queries
 

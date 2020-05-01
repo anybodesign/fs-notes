@@ -50,6 +50,19 @@
     wp.customize( 'text_color', rootCustomProperty );
     wp.customize( 'page_color', rootCustomProperty );
     wp.customize( 'sidebar_color', rootCustomProperty );
+	
+	// Dark Mode
+    wp.customize('dark_mode', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( 'html' ).addClass('dark-mode');
+            }
+            else {
+                $( 'html' ).removeClass('dark-mode');
+            }
+        });
+    });
+
 
     // Author
 	wp.customize('author_name', function(value) {

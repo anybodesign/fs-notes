@@ -30,7 +30,7 @@ select {
 	width: 100%;
 	margin: 0 0 $grid-padding*2 0;
 	padding: $grid-padding;
-	color: var(--text_color); 
+	color: var(--text_dark); 
 	border: var(--text_color) 1px solid; 
 	background-color: #fff;
 	font-size: 1.6rem;
@@ -40,7 +40,11 @@ select {
 	
 	&.focus-visible {
 		background-color: var(--text_color);
-		color: #fff; 	
+		color: #fff;
+		
+		@include dark() {
+			background-color: var(--text_dark);
+		}
 	}
 	&:focus {
 		outline: none;
