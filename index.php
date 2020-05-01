@@ -11,42 +11,33 @@
  */ 
 get_header(); ?>
 
-				<div class="page-wrap has-sidebar">
-					<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-notes'); ?><span></span></button>
+				<div class="page-content">
 
-					<div class="page-content">
-
-					<?php if ( have_posts() ) : ?>		
+					<?php // The Loop
+					if ( have_posts() ) :		
+						while ( have_posts() ) : the_post();
+							get_template_part( 'template-parts/post', 'block' );
+						endwhile;
 			
-						<?php while ( have_posts() ) : the_post(); ?>
+						if ( function_exists('wp_pagenavi') ) {
+							wp_pagenavi();
+						} else {
+							the_posts_pagination(array(
+								'prev_text'          => __( 'Previous page', 'fs-notes' ),
+								'next_text'          => __( 'Next page', 'fs-notes' ),
+								'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-notes' ) . ' </span>',
+							));
+						}
 			
-							<?php get_template_part( 'template-parts/post', 'block' ); ?>
-			
-						<?php endwhile; ?>
-			
-						<?php 
-							if ( function_exists('wp_pagenavi') ) {
-								wp_pagenavi();
-							} else {
-								the_posts_pagination(array(
-									'prev_text'          => __( 'Previous page', 'fs-notes' ),
-									'next_text'          => __( 'Next page', 'fs-notes' ),
-									'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'fs-notes' ) . ' </span>',
-								));
-							}
-						?>
-			
-					<?php else : ?>
-	
-						<?php get_template_part( 'template-parts/nothing' ); ?>
-				
-					<?php endif; ?>	
-					</div>
-					
-					<div class="page-sidebar">
-						<?php get_sidebar(); ?>
-					</div>	
-
+					else:
+						get_template_part( 'template-parts/nothing' );
+					endif; 
+					?>
+						
 				</div>
+				
+				<div class="page-sidebar">
+					<?php get_sidebar(); ?>
+				</div>	
 
 <?php get_footer(); ?>

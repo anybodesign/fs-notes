@@ -11,8 +11,6 @@
  */
 get_header(); ?>
 
-				<div class="page-wrap">
-					<?php get_template_part( 'template-parts/page', 'content' ); ?>
-				</div>
+				<?php get_template_part( 'template-parts/page', 'content' ); ?>
 				
 <?php get_footer(); ?>

@@ -50,6 +50,18 @@
 <?php 
 	$lines = get_theme_mod('lines');
 	$spiral = get_theme_mod('spiral');
+	
+	if ( is_home() || is_single() ) {
+		$sidebar = ' has-sidebar';
+	} else {
+		$sidebar = null;
+	}
 ?>
 
 		<main class="content-area<?php if ($lines == true) { echo ' has-lines'; } if ($spiral == true) { echo ' has-spiral'; } ?>" role="main" id="site_main">
+			
+			<div class="page-wrap<?php echo $sidebar; ?>">
+				
+				<?php if ( $sidebar ) { ?>
+				<button id="menu-toggle" type="button"><?php _e('Menu', 'fs-notes'); ?><span></span></button>
+				<?php } ?>

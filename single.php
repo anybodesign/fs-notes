@@ -11,25 +11,21 @@
  */
 get_header(); ?>
 					
-				<div class="page-wrap has-sidebar">
-					
-					<div class="page-content">
-					<?php 
-						while (have_posts()) : the_post(); 
-							get_template_part( 'template-parts/page', 'banner' ); 
-							get_template_part( 'template-parts/post', 'content' );	
-						endwhile;
-					
-						if ( comments_open() || get_comments_number() ) :
-			  				comments_template();
-						endif;
-					?>
-					</div>
-					
-					<div class="page-sidebar">
-						<?php get_sidebar(); ?>
-					</div>	
-									
-				</div>
+				<article <?php post_class('page-content') ?>>
+				<?php 
+					while (have_posts()) : the_post(); 
+						get_template_part( 'template-parts/page', 'banner' ); 
+						get_template_part( 'template-parts/post', 'content' );	
+					endwhile;
 				
+					if ( comments_open() || get_comments_number() ) :
+		  				comments_template();
+					endif;
+				?>
+				</article>
+				
+				<div class="page-sidebar">
+					<?php get_sidebar(); ?>
+				</div>	
+									
 <?php get_footer(); ?>
