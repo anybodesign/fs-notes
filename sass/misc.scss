@@ -2,74 +2,43 @@
 /* = Plugins
 /* ------------------------- */
 
-// Slick
-
-.slick-dots {
-	position: absolute;
-	bottom: -50px;
-	left: 0;
-	width: 100%;
-	margin: 0;
-	padding: 1em 0; 
-	list-style: none;
-	text-align: center;
-	
-	li {
-		display: inline-block;
-		padding: .5em !important;
-		margin: 0;
-		
-		&::before {
-			content: none !important;
-		}
-		
-		button {
-			padding: 0;
-			display: block;
-			width: 16px; 
-			height: 16px;
-			margin: 0 8px;
-			border-radius: 16px;
-			border: var(--primary_color) 2px solid;
-			background-color: var(--secondary-color);
-			//outline: none !important;
-			
-			@include a11y-hide();
-			transition: .2s ease-in-out;
-			
-			&:hover, &.focus-visible {
-				transform: scale(1.4);
-				background-color: var(--primary_color);
-				//outline: none;
-			}
-		
-		}
-		
-		&.slick-active button {
-			background-color: var(--primary_color);
-		}
-		&.slick-disabled {
-			visibility: hidden;
-		}
-
-	}
-}
-
-// Fancybox
-
-
 
 /* ------------------------- */
 /* = Misc
 /* ------------------------- */
 
-.error-404 {}
-
-
-// Back to top
-
 #back2top {
+	display: block;
+	padding: .5rem;
+	width: 6rem;
+	height: 6rem;
+	border: 0;
+	outline: 0;
+	border-radius: 50%;
+	background-color: transparent;
 	
+	position: fixed;
+	bottom: 1.5rem;
+	right: 1.5rem;
+	
+	opacity: 0;
+	transition: .4s ease-in-out;
+}
+#back2top svg {
+	width: 100%;
+	height: auto;
+	
+	path {
+		fill: var(--text_color);
+	}
+}
+#back2top:hover,
+#back2top.focus-visible {
+	transform: scale(1.1);
+}
+
+.back2top-btn #back2top {
+	opacity: 1;
 }
 
 

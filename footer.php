@@ -78,11 +78,9 @@
 			
 		</footer>
 
-		<?php if ( get_theme_mod('back2top') == true ) { ?>
-			<button id="back2top" title="<?php _e('Back to top','fs-notes'); ?>">
-				<img src="<?php bloginfo( 'template_directory' ); ?>/img/ui/back-to-top.svg" alt="">
-			</button>
-		<?php } ?>
+		<?php if ( get_theme_mod('back2top') == true ) {
+			get_template_part('template-parts/footer', 'back2top');
+		} ?>
 
 	<?php } ?>	
 		
