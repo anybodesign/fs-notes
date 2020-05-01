@@ -9,11 +9,11 @@
 .page-wrap {
 	position: relative;
 	padding-top: $grid-padding;
-	overflow-x: hidden;
 	@include center-small();
 	
 	&.has-sidebar {
 		@include center();	
+		overflow-x: hidden;
 		
 		@include rwd(large) {
 			display: flex;
@@ -37,6 +37,29 @@
 	width: 100%;
 }
 
+.page-header {
+	.page-banner + & {
+		position: relative;
+		margin-top: -3rem;
+		transform: translateX(-1rem);
+	
+		.page-title {
+			display: inline-block;
+			padding: $grid-padding/2 $grid-padding;
+			margin-bottom: $grid-padding/2;
+			background-color: #fff;
+		}
+		.post-meta {
+			padding: 0 $grid-padding;
+		}
+	}
+}
+.post-header {
+	@extend .page-header;
+}
+
+
+
 .page-title {
 	
 	.search-term {
@@ -50,10 +73,10 @@
 	z-index: 1;
 	
 	// Padding
+	padding: $grid-padding*2.5 0;
 	
-	.home &,
-	.archive & {
-		padding: $grid-padding*2.5 0;
+	&.has-post-thumbnail {
+		padding-top: 0;	
 	}
 	
 	

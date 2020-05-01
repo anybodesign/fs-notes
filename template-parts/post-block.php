@@ -10,7 +10,6 @@
  * @version 1.0
  */
 ?>
-
 					<article id="post-<?php the_ID(); ?>" <?php post_class('post-block'); ?>>
 						
 						<?php if ( '' != get_the_post_thumbnail() ) { ?>

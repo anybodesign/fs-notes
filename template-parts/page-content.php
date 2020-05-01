@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-					<div class="page-content">
+					<div <?php post_class('page-content') ?>>
 					<?php 
 						get_template_part( 'template-parts/page', 'banner' );
 						

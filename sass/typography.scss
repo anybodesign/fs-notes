@@ -10,10 +10,12 @@ html {
 	font-size: 62.5%;
 }
 body {
+	text-size-adjust: none;
 	font-family: var(--font_regular);
 	font-size: 1.4rem;
 	line-height: 1.6;
 	color: var(--text_color);
+	background-color: var(--bg_color);
 }
 
 // Focus visible

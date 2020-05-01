@@ -99,20 +99,7 @@
 
 .single {
 	
-	.post-header {
-		position: relative;
-		margin-top: -3rem;
-		transform: translateX(-1rem);
-	}
-	
-	.page-title {
-		display: inline-block;
-		padding: $grid-padding/2 $grid-padding;
-		margin-bottom: $grid-padding/2;
-		background-color: #fff;
-	}
 	.post-meta {
-		padding: 0 $grid-padding;
 		
 		&::after {
 			@include after-stroke(15rem);
