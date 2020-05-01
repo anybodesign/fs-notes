@@ -49,10 +49,9 @@
 						<li>Or not…</li>
 					</ol>
 					
-					<blockquote>
-						“ Typography is the craft of endowing human language with a durable visual form.  (I'm a quote) “
-						<cite>Robert Bringhurst</cite>
-					</blockquote>
+					<blockquote class="wp-block-quote">
+						<p>Hi there! I’m a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin’ caught in the rain.)</p>
+					</blockquote>					
 					
 					<div class="white-text" style="background-color:#303030;margin-bottom:1.5rem;padding:1.5rem;">
 						

@@ -360,7 +360,7 @@ table {
     margin-bottom: $grid-padding*2;
 }
 thead {
-	background-color: var(--primary_color);
+	background-color: var(--text_dark);
 }
 th {
 	color: #fff;
@@ -371,16 +371,14 @@ td, th {
 	vertical-align: middle;
 	margin-bottom: 0;
 	padding: $grid-padding;
-	border: var(--primary_color) 1px solid;
+	border: var(--text_color) 1px solid;
 	
-	thead &, 
-	tbody &, 
+	thead + tbody &, 
 	tfoot & {
 		border-top: 0;
 	}
-	tbody &:first-child,
 	thead & {
-		border-top: var(--primary_color) 1px solid;
+		border-top: var(--text_color) 1px solid;
 	}
 	
 }
@@ -413,7 +411,9 @@ code {
 	}
 }
 pre {
-	padding: $grid-padding;
+	.page-content > & {
+		padding: $grid-padding;
+	}
 	border: var(--text_color) 1px dashed;
 	white-space: pre-line;
 }

@@ -170,6 +170,10 @@
 .wp-block-categories-list,
 .wp-block-latest-posts__list {
 	
+	.page-content > & {
+		padding-left: 0;
+	}
+	
 	li {
 		margin-left: 0;
 		border-bottom: var(--text_color) 1px solid;
@@ -204,6 +208,7 @@
 	}
 }
 .wp-block-latest-posts__list {
+
 	li {
 		a {
 			display: block;
@@ -235,6 +240,7 @@ hr,
 	.page-content > & {
 		max-width: 20rem;
 		margin-top: 2rem;
+		margin-bottom: 2rem;
 
 		&.is-style-wide {
 			max-width: 50rem;
@@ -254,10 +260,15 @@ hr,
 
 .wp-block-gallery {
 	
+	.page-content > & {
+		padding-left: 0;
+	}
+	
 	.blocks-gallery-image,
 	.blocks-gallery-item { 
 		figcaption {
 			padding: $grid-padding;
+			margin: 0;
 		}
 	}
 	
@@ -346,6 +357,39 @@ hr,
 
 .acf-block--testimonial {}
 
+.acf-block-testimonial-item {
+	
+	@include rwd(large) {
+		align-items: flex-start;
+	}
+	
+	figure {
+		overflow: visible;
+	}
+	blockquote {
+		margin: 0 0 0 -3rem;
+		
+		&::before {
+			top: -2rem;
+			left: -1rem;
+		}
+	}
+}
+.testimonial-picture {
+	@include figure();
+	border-radius: 50%;
+	
+	@include rwd(large) {
+		transform: translateY(-3rem);
+		
+		.right & {
+			transform: translateX(-3rem);
+		}
+	}
+}
+.testimonal-title {
+	@extend .h3-like;
+}
 
 // Lists Advanced
 
