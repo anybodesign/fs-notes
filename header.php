@@ -51,7 +51,7 @@
 	$lines = get_theme_mod('lines');
 	$spiral = get_theme_mod('spiral');
 	
-	if ( is_home() || is_single() ) {
+	if ( is_active_sidebar( 'widgets_area1' ) && is_home() || is_active_sidebar( 'widgets_area1' ) && is_single() ) {
 		$sidebar = ' has-sidebar';
 	} else {
 		$sidebar = null;
