@@ -247,14 +247,18 @@ hr,
 
 
 [class*=acf-block--] {
-
+	margin-bottom: $grid-padding*2;
+	
 	.acf-block-container {
 		width: 100%;
 		
 		&.center-max {
-			padding: $grid-padding;
 			margin: 0 auto;
-			max-width: $max-width;
+			max-width: 90%;
+			
+			@include rwd(large) {
+				max-width: 75%;
+			}
 		}
 	}
 }
@@ -284,6 +288,36 @@ hr,
 .acf-block--post {}
 .acf-block-post-item {}
 
+.acf-block-post-figure {
+	@extend .post-figure !optional;
+
+	.acf-block-post-content--1col .acf-block-post-item & {
+		
+		@include rwd(medium) {
+			width: 15rem !important;
+			height: 15rem;
+			padding-right: 0 !important;
+		}
+	}	
+}
+.acf-block-post-content {
+
+	.acf-block-post-content--1col .acf-block-post-item & {
+		
+		@include rwd(medium) {
+			flex: 1 0 0;
+			padding-left: $grid-padding;
+		}
+	}	
+}
+
+.acf-block-post-title {
+	@extend .post-title !optional;
+}
+.acf-block-post-metas {
+	@extend .meta-infos !optional;
+	margin-bottom: $grid-padding;
+}
 
 // Tesstimonial
 
@@ -292,6 +326,16 @@ hr,
 
 // Lists Advanced
 
-.acf-block--advanced-list {}
+.acf-block--advanced-list {
+	
+	.acf-block-list-item {
+		padding-bottom: $grid-padding;
+	}
+	.list-legend	 {
+		padding-top: $grid-padding;
+		margin-top: $grid-padding;
+	}
+}
+
 
 

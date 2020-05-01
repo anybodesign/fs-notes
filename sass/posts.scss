@@ -23,7 +23,7 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		
-		&:nth-child(even) {
+		&:nth-of-type(even) {
 			flex-direction: row-reverse;
 			padding-right: $grid-padding;
 		}
@@ -56,7 +56,11 @@
 	
 	@include rwd(large) {
 		flex: 1 0 0;
-		padding: 0 $grid-padding*2 0 0;
+		padding: 0 $grid-padding*2 0 $grid-padding;
+		
+		.post-block:nth-of-type(even) & {
+			padding: 0 $grid-padding*2 0 0;
+		}
 	}	
 }
 

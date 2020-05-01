@@ -2,10 +2,46 @@
 /* = Plugins
 /* ------------------------- */
 
+// Fancybox
 
-/* ------------------------- */
-/* = Misc
-/* ------------------------- */
+.fancybox-toolbar {
+	
+	.admin-bar & {
+		top: 46px;
+		
+		@include rwd($admin-bar) {
+			top: 32px;
+		}
+	}	
+}
+
+.fancybox-button {
+	outline: 0;
+	background-color: var(--text_dark);
+
+	&[disabled],
+	&[disabled]:hover,
+	&[disabled]:focus {
+		opacity: 0.2 !important;	
+	}
+	
+	.fancybox-navigation & {
+		height: 4.4rem;
+		width: 4.4rem;
+		padding: 0;
+	}
+	
+	svg path { fill: #fff; }
+
+	&:hover,
+	&.focus-visible {
+		background-color: #fff;
+		outline: 0;
+		
+		svg path { fill: var(--text_dark); }
+	}
+}
+
 
 #back2top {
 	display: block;
@@ -23,6 +59,8 @@
 	
 	opacity: 0;
 	transition: .4s ease-in-out;
+	
+	z-index: 100;
 }
 #back2top svg {
 	width: 100%;
