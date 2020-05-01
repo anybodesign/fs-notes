@@ -456,15 +456,15 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	display: inline-block;
-	padding: $grid-padding $grid-padding*2;
+	padding: $grid-padding/2 $grid-padding;
 	border: #fff 1px solid;
-	outline: var(--btn_color) 1px solid;
-	font-size: 2rem;
+	outline: var(--primary_color) 1px solid;
+	font-size: 1.8rem;
 	font-family: var(--font_title);
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: .1rem;
-	background-color: var(--btn_color);
+	background-color: var(--primary_color);
 	color: var(--btn_text_color);
 	transition: background .2s linear;
 	
@@ -487,6 +487,7 @@ input[type=button].white-btn,
 input[type=submit].white-btn {
 	@extend .action-btn;
 	background-color: #fff;
+	outline: #fff 1px solid;
 	color: var(--text_color);
 
 	&.focus-visible, 
