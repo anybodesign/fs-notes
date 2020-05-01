@@ -10,7 +10,9 @@
  * @version 1.0
  */
 ?>
-					<?php if ( get_theme_mod('site_logo') ) { ?>
+					<?php if ( get_theme_mod('white_logo') && get_theme_mod('dark_mode') ) { ?>
+					<img class="logo white-logo" src="<?php echo(get_theme_mod('white_logo', 'none')); ?>" alt="<?php echo esc_url(bloginfo('name')); ?>">
+					<?php } else if ( get_theme_mod('site_logo') ) { ?>
 					<img class="logo" src="<?php echo(get_theme_mod('site_logo', 'none')); ?>" alt="<?php echo esc_url(bloginfo('name')); ?>">
 					<?php } ?>
 					<span<?php if (get_theme_mod( 'hide_sitetitle' )) { echo ' class="screen-reader-text"'; } ?>>

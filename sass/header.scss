@@ -30,17 +30,25 @@
 	
 	a {
 		text-decoration: none;
-		transition: background .2s ease-in-out;
+		transition: .2s ease-in-out;
 		
 		&:hover,
 		&.focus-visible {
-			color: #fff;
-			background-color: var(--text_color);
+			color: var(--primary_color);
 			
-			@include dark() {
-				color: var(--text_dark);
+			img {
+				opacity: .7;
 			}
 		}
+	}
+
+	img {
+		margin: 0 auto;
+		transition: opacity .3s ease-in-out;
+	}
+	img + span {
+		display: inline-block;
+		margin-top: $grid-padding;
 	}
 
 	.logo.has-mobile-logo { display: none; }
@@ -59,7 +67,7 @@
 .site-desc {
 	position: relative;
 	display: block;
-	margin: 0;
+	margin: $grid-padding 0 0 0;
 	font-size: 2rem;
 	line-height: 1.1;
 	font-family: var(--font_title);

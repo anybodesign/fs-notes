@@ -326,6 +326,27 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 
+		// White logo
+		
+		$fs_customize->add_setting(
+			'white_logo', 
+			array(
+				'sanitize_callback'	=> 'esc_url_raw'
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Image_control(
+				$fs_customize, 
+				'white_logo', 
+				array(
+					'label'			=> __('Dark mode Logo', 'fs-notes'),
+					'description'	=> __('Your logo, for the Dark mode.', 'fs-notes'),
+					'section'		=> 'title_tagline',
+					'settings'		=> 'white_logo',
+				)
+			)
+		);
+	
 	
 	// Footer Options
 	// -
