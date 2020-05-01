@@ -263,20 +263,6 @@ function fs_scripts_load() {
 		
 		// CSS
 
-			// Back to top
-	
-			if ( get_theme_mod('back2top') == true ) {
-	
-				wp_enqueue_style( 
-					'back2top', 
-					FS_THEME_URL . '/css/back2top.css',
-					array(), 
-					FS_THEME_VERSION, 
-					'screen' 
-				);
-			}
-			
-			
 			// Main stylesheet
 			
 			wp_enqueue_style( 

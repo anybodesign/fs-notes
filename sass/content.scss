@@ -46,7 +46,6 @@
 		.page-title {
 			display: inline-block;
 			padding: $grid-padding/2 $grid-padding;
-			margin-bottom: $grid-padding/2;
 			background-color: #fff;
 		}
 		.post-meta {
@@ -56,6 +55,10 @@
 }
 .post-header {
 	@extend .page-header;
+	
+	.page-title {
+		margin-bottom: $grid-padding/2;
+	}
 }
 
 
