@@ -106,6 +106,71 @@
 	}
 }
 
+// Pagenavi & Nav links
+
+.nav-links,
+.wp-pagenavi {
+	display: flex;
+	
+	& > a,
+	& > span {
+		display: block;
+		width: 3.4rem;
+		height: 3.4rem;
+		margin-right: $grid-padding;
+		
+		background-color: var(--text_color);
+		color: #fff;
+		border-radius: 50%;
+		
+		text-align: center;
+		line-height: 3.4rem;
+	}
+	a {
+		text-decoration: none;
+		transition: background .2s ease-in-out;
+		
+		&:hover,
+		&.focus-visible {
+			background-color: var(--primary_color);
+		}
+	}
+	.current {
+		background-color: var(--primary_color);
+	}
+	
+	.pages {
+		@include a11y-hidden();
+	}
+}
+.nav-links {
+	
+	a.next,
+	a.prev {
+		position: relative;
+		background-color: transparent;
+		color: var(--text_color);
+		padding: 0 $grid-padding;
+		border-radius: 0;
+		width: auto;
+		
+		&::after {
+			content: '';
+			display: block;
+			width: 25%;
+			height: 1px;
+			border-top: var(--text_color) 1px solid;
+			transition: .3s ease-in-out;
+		}
+		&:hover::after,
+		&.focus-visible::after {
+			width: 100%;
+		}
+	}
+}
+
+
+
 
 /* ------------------------- */
 /* = Single
