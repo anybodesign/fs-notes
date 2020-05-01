@@ -572,7 +572,7 @@ function fs_colors() {
 	?>
 	<style>
 		:root {
-			--primary_color: <?php echo get_theme_mod('primary_color', '#23252B'); ?>; 
+			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
 			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
 			--text_color: <?php echo get_theme_mod('text_color', '#23252B'); ?>;
 			--btn_text_color: <?php echo get_theme_mod('btn_text_color', '#FFFFFF'); ?>;
