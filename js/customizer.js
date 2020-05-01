@@ -62,6 +62,18 @@
             }
         });
     });
+    
+    // Dark Icons
+    wp.customize('dark_icons', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.footer-social' ).addClass('dark-icons');
+            }
+            else {
+                $( '.footer-social' ).removeClass('dark-icons');
+            }
+        });
+    });
 
 
     // Author

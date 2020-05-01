@@ -28,8 +28,14 @@
 							get_template_part('template-parts/footer', 'author'); 
 						} ?>
 
-						<?php if ( has_nav_menu( 'social_menu' ) ) : ?>
-						<nav class="footer-social" role="navigation" aria-label="<?php _e('Social Networks', 'fs-notes'); ?>">
+						<?php if ( has_nav_menu( 'social_menu' ) ) : 
+						 	if ( get_theme_mod('dark_icons') == true ) {
+								$darkicons = 'dark-icons';
+							} else {
+								$darkicons = null;
+							}
+						?>
+						<nav class="footer-social<?php echo $darkicons; ?>" role="navigation" aria-label="<?php _e('Social Networks', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'social_menu',
 								'menu_class'		=>	'social-menu',

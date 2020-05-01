@@ -142,6 +142,9 @@
 				@include dark() {
 					background-position-y: -30px;
 				}
+				.dark-icons & {
+					background-position-y: -30px;
+				}
 			}
 			
 			&:hover,
