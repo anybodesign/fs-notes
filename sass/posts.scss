@@ -55,12 +55,16 @@
 .post-content {
 	
 	@include rwd(large) {
-		flex: 1 0 0;
-		padding: 0 $grid-padding*2 0 $grid-padding;
+		padding-right: $grid-padding*2;
 		
-		.post-block:nth-of-type(even) & {
-			padding: 0 $grid-padding*2 0 0;
+		.has-post-thumbnail & {
+			flex: 1 0 0;
+			padding: 0 $grid-padding*2 0 $grid-padding;
 		}
+		.post-block:nth-of-type(even) & {
+			padding-left: 0;
+		}
+		
 	}	
 }
 
