@@ -120,7 +120,7 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'White', 'fs-notes' ),
 	        'slug' => 'white',
-	        'color' => '#ffffff',
+	        'color' => '#fff',
 	    ),
 
 	    // Customizer colors
@@ -128,18 +128,29 @@ function fs_setup() {
 	    array(
 	        'name' => esc_html__( 'Primary color', 'fs-notes' ),
 	        'slug' => 'primary-color',
-	        'color' => get_theme_mod('primary_color', '#99cc00'),
+	        'color' => get_theme_mod('primary_color', '#FF0055'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'Secondary color', 'fs-notes' ),
-	        'slug' => 'secondary-color',
-	        'color' => get_theme_mod('secondary_color', '#606060'),
+	        'name' => esc_html__( 'Titles color', 'fs-notes' ),
+	        'slug' => 'title-color',
+	        'color' => get_theme_mod('title_color', '#23252B'),
 	    ),
 	    array(
-	        'name' => esc_html__( 'Complementary color', 'fs-notes' ),
-	        'slug' => 'third-color',
-	        'color' => get_theme_mod('third_color', '#8def12'),
+	        'name' => esc_html__( 'Page color', 'fs-notes' ),
+	        'slug' => 'page-color',
+	        'color' => get_theme_mod('page_color', '#fff'),
 	    ),
+	    array(
+	        'name' => esc_html__( 'Sidebar color', 'fs-notes' ),
+	        'slug' => 'sidebar-color',
+	        'color' => get_theme_mod('sidebar_color', '#FBFF00'),
+	    ),
+	    array(
+	        'name' => esc_html__( 'Background color', 'fs-notes' ),
+	        'slug' => 'bg-color',
+	        'color' => '#'.get_background_color(),
+	    ),
+	    
 	    
 	));	
 	
