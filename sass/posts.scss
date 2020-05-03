@@ -155,9 +155,15 @@
 	.pages {
 		@include a11y-hidden();
 	}
-}
-.nav-links {
+	.previouspostslink,
+	.nextpostslink {
+		span {
+			@include a11y-hidden();
+		}
+	}
 	
+	a.last,
+	a.first,
 	a.next,
 	a.prev {
 		position: relative;
