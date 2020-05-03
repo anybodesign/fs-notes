@@ -13,7 +13,6 @@
 	
 	&.has-sidebar {
 		@include center();	
-		overflow-x: hidden;
 		
 		@include rwd(large) {
 			display: flex;
@@ -177,7 +176,8 @@
 	position: absolute;
 	top: $grid-padding*4;
 	right: 0;
-	transform: translateX(100%);
+	transform: translateX(100%) scaleX(0);
+	transform-origin: top left;
 	transition: transform .3s ease-in-out;
 
 	max-width: 23rem;
@@ -186,7 +186,7 @@
 	z-index: 2;
 
 	.menu-opened + .page-content + & {
-		transform: translateX(0);
+		transform: translateX(0) scaleX(1);
 	}
 
 	@include rwd(large) {
