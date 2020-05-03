@@ -213,12 +213,15 @@
 .comments-area,
 .comment-respond {
 	margin-top: $grid-padding*3;
-	
+}
+.comments-title,
+.comment-reply-title {
 	&::before {
 		@include after-stroke(15rem);
 		margin-bottom: $grid-padding*3;
 	}
 }
+
 .comment-list {
 	padding: 0;
 	list-style: none;
