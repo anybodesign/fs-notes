@@ -317,6 +317,10 @@
 		margin: 0;
 		border-top: var(--text_color) 2px solid;
 		transition: .3s linear;
+		
+		.white-text + .content-area & {
+			border-top-color: #fff;
+		}
 	}
 	span {
 		top: 2rem; 
@@ -340,7 +344,7 @@
 
 	&.menu-opened {
 		span {
-			border-color: transparent; 
+			border-top-color: transparent !important; 
 		}
 		span::after {
 			top: 0;
