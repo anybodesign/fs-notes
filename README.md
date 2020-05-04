@@ -10,6 +10,9 @@ A WordPress Sketchbook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.1.1 - 2020.05.04
+* Bugfix: burger button color
+
 ### 1.1 - 2020.05.04
 * Bugfix: wrapper overflow
 * CSS update
