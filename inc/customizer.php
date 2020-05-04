@@ -125,6 +125,7 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+/*
 		$fs_customize->add_setting(
 			'text_color', 
 			array(
@@ -167,6 +168,7 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
+*/
 		
 						
 		// Page color
@@ -216,7 +218,95 @@ function fs_customize_register($fs_customize) {
 				)
 			)
 		);
-
+		
+		// White text
+		
+		$fs_customize->add_setting(
+			'white_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White page text', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_text',
+			)
+		);
+		$fs_customize->add_setting(
+			'white_btn_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_btn_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White button text', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_btn_text',
+			)
+		);
+		$fs_customize->add_setting(
+			'white_sidebar_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_sidebar_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White sidebar text', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_sidebar_text',
+			)
+		);	
+		$fs_customize->add_setting(
+			'white_header_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_header_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White header text', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_header_text',
+			)
+		);
+		$fs_customize->add_setting(
+			'white_footer_text', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_footer_text', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White footer text', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_footer_text',
+			)
+		);		
+		
 		// Dark Mode
 		
 		$fs_customize->add_setting(
@@ -651,16 +741,36 @@ function fs_colors() { ?>
 		:root {
 			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
 			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
-			--text_color: <?php echo get_theme_mod('text_color', '#23252B'); ?>;
-			--btn_text_color: <?php echo get_theme_mod('btn_text_color', '#FFFFFF'); ?>;
 			--sidebar_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
+
+			<?php
+			if ( get_theme_mod('white_text') == true ) {
+				echo '--text_color: #fff;';
+			}
+			if ( get_theme_mod('white_btn_text') == true ) {
+				echo '--btn_text_color: #fff;';
+			}
+			if ( get_theme_mod('white_sidebar_text') == true ) {
+				echo '--sidebar_text_color: #fff;';
+			}
+			if ( get_theme_mod('white_header_text') == true ) {
+				echo '--header_text_color: #fff;';
+			}
+			if ( get_theme_mod('white_footer_text') == true ) {
+				echo '--footer_text_color: #fff;';
+			}
+			?>
 		}
 	</style>
 	<?php } else { ?>
 	<style>
 		:root {
-			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>; 
+			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>;
+			--text_color: #fff;
+			--sidebar_text_color: #fff;
+			--header_text_color: #fff;
+			--footer_text_color: #fff;
 		}
 	</style>
 	<?php } ?>

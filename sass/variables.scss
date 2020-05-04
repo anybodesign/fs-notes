@@ -27,17 +27,29 @@ $admin-bar: 48.875em;	 	// @note: 782px
 // Darkmode vars => mixins.scss
 
 :root {
+	
+	// Background colors 
+	
 	--primary_color: #FF0055; 
-	--title_color: #23252B;
-	--text_color: #23252B;
-	--btn_text_color: #FFFFFF;
 	--sidebar_color: #FBFF00;
 	--page_color: #FFFFFF;
 	--bg_color: #E3DFC0;
 	
+	// Text colors 
+	
+	--title_color: #23252B;			// for page titles
+	--text_color: #23252B;			// for page text
+	--btn_text_color: #23252B;		// for buttons
+	--sidebar_text_color: #23252B;	// for sidebar titles & widgets
+	--header_text_color: #23252B;	// for header title, tagline & nav
+	--footer_text_color: #23252B;	// for footer text and nav
+	
+	// Dark mode colors 
+	
 	--text_dark: #23252B;
 	--sidebar_dark: #2F3239;
 	--page_dark: #383B44;
+	
 	
 	&.dark-mode {
 		--primary_color: #FF0055; 
