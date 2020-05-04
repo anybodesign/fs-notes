@@ -11,7 +11,7 @@
  */ 
 get_header(); ?>
 
-				<div class="page-content">
+				<div class="page-content<?php if ( get_theme_mod('white_text') == true ) { echo ' white-text'; } ?>">
 
 					<?php if ( is_home() && ! is_front_page() ) { ?>
 						<h1 class="page-title"><?php single_post_title(); ?></h1>

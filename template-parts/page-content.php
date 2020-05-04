@@ -9,8 +9,13 @@
  * @since 1.0
  * @version 1.0
  */
+if ( get_theme_mod('white_text') == true ) { 
+	$pclass = 'page-content white-text'; 
+} else { 
+	$pclass = 'page-content'; 
+}
 ?>
-					<div <?php post_class('page-content') ?>>
+					<div <?php post_class($pclass) ?>>
 					<?php 
 						get_template_part( 'template-parts/page', 'banner' );
 						

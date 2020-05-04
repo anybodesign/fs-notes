@@ -2,6 +2,7 @@
 // = Mixins
 // -------------------------
 
+
 // Figure
 
 @mixin figure() {
@@ -27,6 +28,10 @@
 	width: $w;
 	height: 1px;
 	border-top: var(--text_color) 1px solid;
+	
+	.white-text & {
+		border-top-color: #fff;
+	}
 	
 }
 

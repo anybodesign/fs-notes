@@ -121,3 +121,16 @@
 		}
 	}
 }
+
+// White text 
+
+.white-text {
+	
+	.site-title,
+	.site-desc {
+		color: #fff;
+	}
+	.site-desc::after {
+		border-top-color: #fff;
+	}
+}

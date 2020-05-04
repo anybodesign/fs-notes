@@ -12,7 +12,7 @@
 get_header(); ?>
 					
 
-					<div class="page-content">
+					<div class="page-content<?php if ( get_theme_mod('white_text') == true ) { echo ' white-text'; } ?>">
 						
 						<h1 class="page-title">
 							<?php esc_html_e( 'Oops! That page can&rsquo;t be found', 'fs-notes' ); ?>

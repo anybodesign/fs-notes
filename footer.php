@@ -15,7 +15,7 @@
 		
 	<?php if ( ! is_page_template( 'pagecustom-maintenance.php' ) ) { ?>
 
-		<footer role="contentinfo" id="site_foot">
+		<footer role="contentinfo" id="site_foot" class="site-footer<?php if ( get_theme_mod('white_footer_text') == true ) { echo ' white-text'; } ?>">
 			
 			<div class="inner">
 				
@@ -30,7 +30,7 @@
 
 						<?php if ( has_nav_menu( 'social_menu' ) ) : 
 						 	if ( get_theme_mod('dark_icons') == true ) {
-								$darkicons = 'dark-icons';
+								$darkicons = ' dark-icons';
 							} else {
 								$darkicons = null;
 							}

@@ -51,6 +51,59 @@
     wp.customize( 'page_color', rootCustomProperty );
     wp.customize( 'sidebar_color', rootCustomProperty );
 	
+	//White text
+    wp.customize('white_text', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.page-content' ).addClass('white-text');
+            }
+            else {
+                $( '.page-content' ).removeClass('white-text');
+            }
+        });
+    });
+    wp.customize('white_sidebar_text', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.page-sidebar' ).addClass('white-text');
+            }
+            else {
+                $( '.page-sidebar' ).removeClass('white-text');
+            }
+        });
+    });
+    wp.customize('white_footer_text', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '#site_foot' ).addClass('white-text');
+            }
+            else {
+                $( '#site_foot' ).removeClass('white-text');
+            }
+        });
+    });
+    wp.customize('white_header_text', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '#site_head' ).addClass('white-text');
+            }
+            else {
+                $( '#site_head' ).removeClass('white-text');
+            }
+        });
+    });
+    wp.customize('white_btn_text', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '.action-btn' ).css('color', '#fff');
+            }
+            else {
+                $( '.action-btn' ).css('color', '#23252B');
+            }
+        });
+    });
+
+	
 	// Dark Mode
     wp.customize('dark_mode', function( value ) {
         value.bind( function( to ) {

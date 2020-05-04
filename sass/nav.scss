@@ -109,6 +109,18 @@
 			
 		}
 	}
+
+	// White text 
+	
+	.white-text & {
+		
+		& > li {
+			color: #fff;
+		}
+		& > li a::after {
+			border-top-color: #fff;
+		}
+	}	
 }
 
 
@@ -381,9 +393,27 @@
 				color: var(--text_dark);
 			}
 		}
-		
-		
 	}
+	
+	// White text
+	
+	.white-text & {
+		border-top-color: #fff;
+		
+		li {
+			border-bottom-color: #fff;
+			color: #fff;
+			
+			& a:hover,
+			& a.focus-visible,
+			&.current-menu-item a,
+			&.current-cat a {
+				background-color: #fff;
+				color: var(--text_dark);
+			}
+			
+		}
+	}	
 }
 
 .widget-container ul {

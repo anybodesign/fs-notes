@@ -113,18 +113,6 @@ p.text-mentions {
 	font-size: 1.3rem;
 }
 
-// White text, inside a .white-text class container
-
-.white-text {
-	
-	p, li, span, small, time, div,
-	h1, h2, h3, h4, h5, h6,
-	label, legend, address, figcaption {
-		color: #fff;
-	}
-	
-}
-
 // Links
 
 a {
@@ -481,6 +469,7 @@ input[type="submit"] {
 			background-color: var(--text_dark);
 		}
 	}
+	
 }
 
 // Variation example of .action-btn

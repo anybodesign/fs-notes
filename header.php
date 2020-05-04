@@ -37,8 +37,8 @@
 		}
 	?>
 	
-	<header role="banner" id="site_head">
-		<div class="row inner justify-between">
+	<header role="banner" id="site_head" class="site-header<?php if ( get_theme_mod('white_header_text') == true ) { echo ' white-text'; } ?>">
+		<div class="row inner">
 			
 			<?php 
 				get_template_part('template-parts/header', 'brand'); 

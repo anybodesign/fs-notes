@@ -133,6 +133,10 @@
 		@include dark() {
 			color: var(--text_dark);
 		}
+		.white-text & {
+			background-color: #fff;
+			color: var(--text_color);
+		}
 	}
 	a {
 		text-decoration: none;
@@ -149,6 +153,9 @@
 
 		@include dark() {
 			color: #fff;
+		}
+		.white-text & {
+			background-color: var(--primary_color);
 		}
 	}
 	
@@ -185,6 +192,14 @@
 		&.focus-visible::after {
 			width: 100%;
 		}
+
+		.white-text & {
+			color: #fff;
+			
+			&::after {
+				border-top-color: #fff;
+			}
+		}
 	}
 }
 
@@ -195,13 +210,15 @@
 /* = Single
 /* ------------------------- */
 
-.single {
+.post-meta {
 	
-	.post-meta {
+	&::after {
+		@include after-stroke(15rem);
+		content: none;
+		margin: $grid-padding*3 0;
 		
-		&::after {
-			@include after-stroke(15rem);
-			margin: $grid-padding*3 0;
+		.single & {
+			content: '';
 		}
 	}
 }
@@ -307,7 +324,6 @@
 		
 	}
 }
-
 
 /* ------------------------- */
 /* = Galleries

@@ -11,7 +11,7 @@
  */
 ?>
 				<?php if ( is_active_sidebar( 'widgets_area1' ) ) { ?>
-				<div class="page-sidebar">
+				<div class="page-sidebar<?php if ( get_theme_mod('white_sidebar_text') == true ) { echo ' white-text'; } ?>">
 					
 					<aside class="widget-area" role="complementary">
 						<?php dynamic_sidebar( 'widgets_area1' ); ?>					

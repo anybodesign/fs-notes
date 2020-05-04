@@ -5,7 +5,11 @@
 
 #site_foot {
 	
-	.inner {
+	&.white-text {
+		p,
+		.footer-title {
+			color: #fff;
+		}
 	}
 }
 
@@ -103,6 +107,10 @@
 				position: absolute;
 				top: 0;
 				left: 0;
+				
+				.white-text & {
+					border-top-color: #fff;
+				}
 			}
 		}
 		
@@ -143,6 +151,11 @@
 					background-position-y: -30px;
 				}
 				.dark-icons & {
+					background-position-y: -30px;
+				}
+				
+				.white-text & {
+					background-color: #fff;
 					background-position-y: -30px;
 				}
 			}
@@ -215,6 +228,10 @@
 		text-align: center;
 		border-top: var(--text_color) 1px solid;
 		padding: $grid-padding;
+
+		.white-text & {
+			border-top-color: #fff;
+		}
 	}
 	
 	@include rwd(large) {

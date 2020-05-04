@@ -45,7 +45,7 @@
 		.page-title {
 			display: inline-block;
 			padding: $grid-padding/2 $grid-padding;
-			background-color: #fff;
+			background-color: var(--page_color);
 			
 			@include dark() {
 				background-color: var(--page_dark);
@@ -169,7 +169,23 @@
 		.has-sidebar & {
 			width: 66.6667%;
 		}
-	}	
+	}
+
+
+	// White-text
+	
+	&.white-text {
+		color: #fff;
+		
+		p, li, span {
+			color: #fff;
+		}
+		table {
+			background-color: #fff;
+			color: var(--text_color);
+		}
+	}
+		
 }
 
 .page-sidebar {
@@ -211,6 +227,18 @@
 	.widget-title {
 		@extend .h3-like;
 	}
+
+	// White-text
+	
+	&.white-text {
+		color: #fff;
+		
+		.widget-title,
+		p, span, li {
+			color: #fff;
+		}
+	}
+
 	
 	// Corner
 	

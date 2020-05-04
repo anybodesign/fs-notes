@@ -10,18 +10,15 @@
 get_header(); ?>
 
 				
-				<div class="page-wrap">
+				<?php 
+					while ( have_posts() ) : the_post();
+						get_template_part( 'template-parts/page', 'banner' );
+					endwhile;					
+				?>
+				<div class="page-content<?php if ( get_theme_mod('white_text') == true ) { echo ' white-text'; } ?>">
 					<?php 
-						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/page', 'banner' );
-						endwhile;					
+						get_template_part('template-parts/temp','styleguide'); 
 					?>
-					<div class="page-content">
-						<?php 
-							get_template_part('template-parts/temp','styleguide'); 
-						?>
-					</div>
-					
-				</div>	
+				</div>
 						
 <?php get_footer(); ?>

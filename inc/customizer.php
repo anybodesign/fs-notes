@@ -125,52 +125,6 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
-/*
-		$fs_customize->add_setting(
-			'text_color', 
-			array(
-				'default'			=> '#23252B',
-				'sanitize_callback'	=> 'sanitize_hex_color',
-				'capability'		=> 'edit_theme_options',
-				'type'				=> 'theme_mod',
-				'transport'			=> 'postMessage', 
-			)
-		);
-		$fs_customize->add_control(
-			new WP_Customize_Color_control(
-				$fs_customize, 
-				'text_color', 
-				array(
-					'label'		=> __('Text color', 'fs-notes'),
-					'section'	=> 'colors',
-					'settings'	=> 'text_color',
-				)
-			)
-		);
-		$fs_customize->add_setting(
-			'btn_text_color', 
-			array(
-				'default'			=> '#fff',
-				'sanitize_callback'	=> 'sanitize_hex_color',
-				'capability'		=> 'edit_theme_options',
-				'type'				=> 'theme_mod',
-				'transport'			=> 'postMessage', 
-			)
-		);
-		$fs_customize->add_control(
-			new WP_Customize_Color_control(
-				$fs_customize, 
-				'btn_text_color', 
-				array(
-					'label'		=> __('Buttons text color', 'fs-notes'),
-					'section'	=> 'colors',
-					'settings'	=> 'btn_text_color',
-				)
-			)
-		);
-*/
-		
-						
 		// Page color
 		
 		$fs_customize->add_setting(
@@ -745,20 +699,8 @@ function fs_colors() { ?>
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
 
 			<?php
-			if ( get_theme_mod('white_text') == true ) {
-				echo '--text_color: #fff;';
-			}
 			if ( get_theme_mod('white_btn_text') == true ) {
 				echo '--btn_text_color: #fff;';
-			}
-			if ( get_theme_mod('white_sidebar_text') == true ) {
-				echo '--sidebar_text_color: #fff;';
-			}
-			if ( get_theme_mod('white_header_text') == true ) {
-				echo '--header_text_color: #fff;';
-			}
-			if ( get_theme_mod('white_footer_text') == true ) {
-				echo '--footer_text_color: #fff;';
 			}
 			?>
 		}
@@ -767,10 +709,6 @@ function fs_colors() { ?>
 	<style>
 		:root {
 			--primary_color: <?php echo get_theme_mod('primary_color', '#FF0055'); ?>;
-			--text_color: #fff;
-			--sidebar_text_color: #fff;
-			--header_text_color: #fff;
-			--footer_text_color: #fff;
 		}
 	</style>
 	<?php } ?>
