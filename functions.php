@@ -358,6 +358,7 @@ include_once( FS_THEME_DIR . '/inc/fs-extended-search.php' );
 
 // Archives titles
 
+/*
 add_filter( 'get_the_archive_title', function ($title) {
 
     if ( is_category() ) {
@@ -380,6 +381,7 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+*/
 
 
 // Excerpts lenght
