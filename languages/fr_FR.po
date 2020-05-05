@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2020-05-01 19:01+0200\n"
-"PO-Revision-Date: 2020-05-01 19:02+0200\n"
+"POT-Creation-Date: 2020-05-05 14:09+0200\n"
+"PO-Revision-Date: 2020-05-05 14:09+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -48,7 +48,7 @@ msgstr "Ajouter mon commentaire"
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: footer.php:57 functions.php:308
+#: footer.php:57 functions.php:328
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -72,11 +72,11 @@ msgstr "Couleur primaire"
 msgid "Titles color"
 msgstr "Couleur des titres"
 
-#: functions.php:139 inc/customizer.php:189
+#: functions.php:139 inc/customizer.php:145
 msgid "Page color"
 msgstr "Couleur de la page"
 
-#: functions.php:144 inc/customizer.php:213
+#: functions.php:144 inc/customizer.php:169
 msgid "Sidebar color"
 msgstr "Couleur de la barre latérale"
 
@@ -100,76 +100,76 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:307 template-parts/header-nav.php:6
+#: functions.php:327 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:309
+#: functions.php:329
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:378
+#: functions.php:398
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:393
+#: functions.php:413
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:394
+#: functions.php:414
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:395
+#: functions.php:415
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:396
+#: functions.php:416
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:420
+#: functions.php:440
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:445
+#: functions.php:465
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:451
+#: functions.php:471
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:457
+#: functions.php:477
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:477
+#: functions.php:497
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:478
+#: functions.php:498
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:479
+#: functions.php:499
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:510
+#: functions.php:530
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:521
+#: functions.php:541
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:531
+#: functions.php:551
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:538
+#: functions.php:558
 msgid "Edit"
 msgstr "Modifier"
 
@@ -193,83 +193,99 @@ msgstr "Couleur de contraste"
 msgid "Links and buttons color"
 msgstr "Couleur des liens et des boutons"
 
-#: inc/customizer.php:143
-msgid "Text color"
-msgstr "Couleur du texte"
+#: inc/customizer.php:190
+msgid "White page text"
+msgstr "Texte blanc sur la page"
 
-#: inc/customizer.php:164
-msgid "Buttons text color"
-msgstr "Couleur du texte des boutons"
+#: inc/customizer.php:207
+msgid "White button text"
+msgstr "Texte blanc pour les boutons"
 
-#: inc/customizer.php:234
+#: inc/customizer.php:224
+msgid "White sidebar text"
+msgstr "Texte blanc dans la barre latérale"
+
+#: inc/customizer.php:241
+msgid "White header text"
+msgstr "Texte blanc dans l'en-tête"
+
+#: inc/customizer.php:258
+msgid "White footer text"
+msgstr "Texte blanc dans le pied de page"
+
+#: inc/customizer.php:278
 msgid "Dark Mode"
 msgstr "Mode sombre"
 
-#: inc/customizer.php:254
+#: inc/customizer.php:298
 msgid "Use dark social icons"
 msgstr "Utilisez des icônes sociales sombres"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:325
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:301
+#: inc/customizer.php:345
 msgid "Hide the site tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:321
+#: inc/customizer.php:365
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:322
+#: inc/customizer.php:366
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:342
+#: inc/customizer.php:386
 msgid "Dark mode Logo"
 msgstr "Logo pour mode sombre"
 
-#: inc/customizer.php:343
+#: inc/customizer.php:387
 msgid "Your logo, for the Dark mode."
 msgstr "Votre logo, pour le mode sombre."
 
-#: inc/customizer.php:369
+#: inc/customizer.php:413
 msgid "Display Blog Author"
 msgstr "Afficher l’auteur du blog"
 
-#: inc/customizer.php:389
+#: inc/customizer.php:433
 msgid "Author name"
 msgstr "Nom de l’auteur"
 
-#: inc/customizer.php:407
+#: inc/customizer.php:451
 msgid "Author biography"
 msgstr "Biographie de l’auteur"
 
-#: inc/customizer.php:426
+#: inc/customizer.php:470
 msgid "Author Avatar"
 msgstr "Avatar de l’auteur"
 
-#: inc/customizer.php:499
+#: inc/customizer.php:543
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:500
+#: inc/customizer.php:544
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:521
+#: inc/customizer.php:565
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:545
+#: inc/customizer.php:589
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:564
+#: inc/customizer.php:608
+msgid "Infinite scroll (trigger on click)"
+msgstr "Scroll infini (déclenché au clic)"
+
+#: inc/customizer.php:627
 msgid "Display the sketchbook spiral"
 msgstr "Afficher la spirale du carnet"
 
-#: inc/customizer.php:581
+#: inc/customizer.php:644
 msgid "Display the sketchbook lines"
 msgstr "Afficher les lignes de carnet"
 
@@ -322,15 +338,23 @@ msgstr "Déplier le sous-menu"
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
 
-#: index.php:36
+#: index.php:40
+msgid "Load more"
+msgstr "Charger plus d’articles"
+
+#: index.php:44
+msgid "No more posts"
+msgstr "Pas d’autre article"
+
+#: index.php:55
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: index.php:37
+#: index.php:56
 msgid "Next page"
 msgstr "Page suivante"
 
-#: index.php:38
+#: index.php:57
 msgid "Page"
 msgstr "Page"
 
@@ -405,8 +429,8 @@ msgid "https://github.com/anybodesign/fs-notes"
 msgstr "https://github.com/anybodesign/fs-notes"
 
 #. Description of the plugin/theme
-msgid "A WordPress Sketchbook Theme"
-msgstr "Un thème WordPress Sketchbook"
+msgid "A WordPress Notebook Theme"
+msgstr "Un thème WordPress carnet de notes"
 
 #. Author of the plugin/theme
 msgid "Thomas Villain"
@@ -423,6 +447,12 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Text color"
+#~ msgstr "Couleur du texte"
+
+#~ msgid "Buttons text color"
+#~ msgstr "Couleur du texte des boutons"
 
 #~ msgid "Complementary color"
 #~ msgstr "Couleur complémentaire"
