@@ -25,7 +25,13 @@ if ( get_theme_mod('white_text') == true ) {
 								<h1 class="page-title"><?php the_title(); ?></h1>
 							</header>
 							
-							<?php the_content(); ?>	
+							<?php 
+								the_content(); 
+
+								if ( comments_open() || get_comments_number() ) :
+					  				comments_template();
+								endif;
+							?>	
 						
 						<?php endwhile;
 					?>
