@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2020-05-05 14:09+0200\n"
-"PO-Revision-Date: 2020-05-05 14:09+0200\n"
+"POT-Creation-Date: 2020-05-05 18:30+0200\n"
+"PO-Revision-Date: 2020-05-05 18:31+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -108,68 +108,68 @@ msgstr "Menu principal"
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:398
+#: functions.php:367
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:413
+#: functions.php:382
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:414
+#: functions.php:383
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:415
+#: functions.php:384
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:416
+#: functions.php:385
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:440
+#: functions.php:409
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:465
+#: functions.php:434
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:471
+#: functions.php:440
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:477
+#: functions.php:446
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:497
+#: functions.php:466
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:498
+#: functions.php:467
 msgid "Keywords"
 msgstr "Mots clés"
 
-#: functions.php:499
+#: functions.php:468
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:530
+#: functions.php:499
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:541
+#: functions.php:510
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:551
+#: functions.php:520
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:558
+#: functions.php:527
 msgid "Edit"
 msgstr "Modifier"
 
@@ -329,10 +329,6 @@ msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
-#: inc/subnav-walker.php:20
-msgid "Unfold Sub-Menu"
-msgstr "Déplier le sous-menu"
-
 #: index.php:21
 #, php-format
 msgid "Search Results for: %s"
@@ -403,7 +399,7 @@ msgstr ""
 
 #: template-parts/post-meta.php:16
 msgid "Posted on&nbsp;"
-msgstr "Posté le&nbsp;"
+msgstr "Publié le&nbsp;"
 
 #: template-parts/post-meta.php:17
 msgid "by&nbsp;"
@@ -447,6 +443,9 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Unfold Sub-Menu"
+#~ msgstr "Déplier le sous-menu"
 
 #~ msgid "Text color"
 #~ msgstr "Couleur du texte"
