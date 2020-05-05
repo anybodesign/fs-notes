@@ -592,7 +592,26 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
-		// Sketchbook
+		// IAS
+	
+		$fs_customize->add_setting(
+			'ias', 
+			array(
+				'default'			=> false,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'ias', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Infinite scroll (trigger on click)', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'ias',
+			)
+		);
+		
+		// Notebook
 	
 		$fs_customize->add_setting(
 			'spiral', 

@@ -110,6 +110,33 @@
 	}
 }
 
+// IAS 3
+
+.trigger {
+	margin-bottom: $grid-padding*3;
+}
+.spinner {
+	padding: $grid-padding*2 0;
+
+	svg {
+		display: inline-block;
+		width: 4.4rem;
+		height: 4.4rem;
+		
+		circle {
+			fill: var(--text_color);
+			
+			.white-text & {
+				fill: #fff;
+			}
+		}
+	}
+}
+.no-more {
+	display: none;
+}
+
+
 // Pagenavi & Nav links
 
 .pagination {

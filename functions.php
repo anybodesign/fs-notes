@@ -225,6 +225,26 @@ function fs_scripts_load() {
 			// jQuery 
 					
 			wp_enqueue_script( 'jquery' );			
+
+			// IAS
+			
+			if ( get_theme_mod('ias') == true ) {
+				
+				wp_enqueue_script(
+					'ias', 
+					FS_THEME_URL . '/js/infinite-ajax-scroll.min.js', 
+					array(), 
+					FS_THEME_VERSION, 
+					true
+				);
+				wp_enqueue_script(
+					'ias-init', 
+					FS_THEME_URL . '/js/infinite-ajax-scroll-init.js', 
+					array('ias'), 
+					FS_THEME_VERSION, 
+					true
+				);
+			}
 			
 			// Back 2 top
 			
