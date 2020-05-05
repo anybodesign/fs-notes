@@ -11,7 +11,7 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 ## Changelog
 
 ### 1.2 - 2020.05.05
-* CSS: Some modifications
+* CSS updates and Gravityforms styles
 * Infinite scroll option
 * Comments allowed on pages
 * Sub-menus hidden
