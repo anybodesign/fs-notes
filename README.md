@@ -1,6 +1,6 @@
 # FS Notes
 
-A WordPress Sketchbook Theme by Thomas Villain @ anybodesign.com
+A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## To-do
 
