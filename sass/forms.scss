@@ -326,7 +326,7 @@ span.wpcf7-list-item {
 //
 // -------------------------
 
-// If you use the Gravity Forms Plugin (CSS disabled)
+// Labels, fields
 
 .gform_fields,
 .gfield_checkbox {
@@ -341,24 +341,76 @@ span.wpcf7-list-item {
 	position: absolute !important;
 	left: -9000px;
 }
-.ginput_container_checkbox {
-	padding: $grid-padding*2 0;
+.gfield_description {
+	font-family: var(--font_italic);
+	margin-bottom: .5rem;
 }
 
+// Wrapper
+
 .gform_wrapper {
+	
 	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
 		padding: $grid-padding !important;
 		margin-bottom: 0 !important;
 	}
 }
 
+.ginput_complex {
+	
+	
+	@include rwd(medium) {
+		
+		&.gf_name_has_2,
+		&.gf_name_has_3 {
+			display: flex;
+			flex-wrap: wrap;
+
+			span {
+				padding-right: $grid-padding;
+				
+				label {
+					font-size: 1.4rem;
+					margin-bottom: 0;
+				}
+			}
+			span:last-child {
+				padding-right: 0;
+			}
+
+		}
+
+		&.gf_name_has_2 {
+			span {
+				width: 50%;
+			}
+		}
+		&.gf_name_has_3 {
+			span {
+				width: 33.3333%;
+			}
+		}
+
+	}
+	
+}
+
+
 // Checkbox, Radio & Select
 
-.gfield_checkbox li {
+.gfield_checkbox li,
+.ginput_container_consent {
 	@extend .formfield-checkbox;
+}
+.gfield_radio {
+	padding-left: 0;
+	list-style: none;
 }
 .gfield_radio li {
 	@extend .formfield-radio;
+}
+.ginput_container_checkbox {
+	//padding: $grid-padding 0;
 }
 .ginput_container_select {
 	@extend .formfield-select--container;
@@ -368,6 +420,9 @@ span.wpcf7-list-item {
 		line-height: normal !important;
 		padding: $grid-padding !important;		
 	}
+}
+.ginput_container_post_image {
+	@extend .formfield-file--container;
 }
 
 // Submit
@@ -384,6 +439,21 @@ input[type="submit"].gform_button {
 	left: -9000px;
 }
 
+// Messages
+
+.gform_confirmation_message {
+	padding-top: $grid-padding*3;
+	
+	&::before {
+		@include after-stroke(15rem);
+		margin-bottom: $grid-padding*3;
+	}
+}
+.validation_error,
+.gfield_error {
+	padding: $grid-padding*2;
+	border: var(--text_color) 2px solid;
+}
 
 
 // -------------------------
