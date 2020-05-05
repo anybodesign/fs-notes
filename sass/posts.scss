@@ -112,16 +112,20 @@
 
 // Pagenavi & Nav links
 
+.pagination {
+	padding: $grid-padding*2 0;
+}
 .nav-links,
 .wp-pagenavi {
 	display: flex;
+	flex-wrap: wrap;
 	
 	& > a,
 	& > span {
 		display: block;
 		width: 3.4rem;
 		height: 3.4rem;
-		margin-right: $grid-padding;
+		margin: 0 $grid-padding $grid-padding 0;
 		
 		background-color: var(--text_color);
 		color: #fff;
