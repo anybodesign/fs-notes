@@ -358,8 +358,9 @@
 		}
 	}
 
-	&:hover {
-		background-color: transparent;
+	&:hover,
+	&.focus-visible {
+		background-color: var(--primary_color);
 	}	
 	
 	@include rwd(large) {
