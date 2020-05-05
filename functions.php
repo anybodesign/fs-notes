@@ -346,42 +346,9 @@ function fs_modify_nav_menu_args( $args ) {
 add_filter( 'wp_nav_menu_args', 'fs_modify_nav_menu_args' );
 
 
-// Sub-menus Walker
-
-include_once( FS_THEME_DIR . '/inc/subnav-walker.php' );
-
-
 // Extended Search
 
 include_once( FS_THEME_DIR . '/inc/fs-extended-search.php' );
-
-
-// Archives titles
-
-/*
-add_filter( 'get_the_archive_title', function ($title) {
-
-    if ( is_category() ) {
-
-        $title = single_cat_title( '', false );
-
-    } elseif ( is_tag() ) {
-
-        $title = single_tag_title( '', false );
-
-    } elseif ( is_post_type_archive() ) {
-
-        $title = post_type_archive_title( '', false );
-    
-    } elseif ( is_tax() ) {
-
-        $title = single_term_title( '', false );
-    } 
-
-    return $title;
-
-});
-*/
 
 
 // Excerpts lenght

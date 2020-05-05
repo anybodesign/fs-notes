@@ -8,7 +8,6 @@
 					'theme_location'	=> 	'main_menu',
 					'menu_class'		=>	'main-menu',
 					'container'			=>	false,
-					'walker'			=>	new fs_subnav_walker()
 					));
 				?>
 			</nav>

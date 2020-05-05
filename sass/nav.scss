@@ -108,6 +108,10 @@
 		a:focus {
 			
 		}
+		
+		.sub-menu {
+			display: none;
+		}
 	}
 
 	// White text 
@@ -121,171 +125,6 @@
 			border-top-color: #fff;
 		}
 	}	
-}
-
-
-// Sub-Menus behaviors
-
-
-.menu-item-has-children {
-	
-	& > a {
-		padding-right: 2.4rem;
-		
-		@include rwd(large) {
-			padding-right: 1.8rem;
-		}
-		@include rwd(wide) {
-			padding-right: 0;
-		}
-	}
-
-	@include rwd(wide) {
-		
-		&.unfold-parent > a {
-			padding-right: 1.8rem;
-		}
-		
-		&:hover > .sub-menu {
-			left: auto;
-			opacity: 1;
-			
-			& > li {
-				display: block;
-			}
-		}
-	}
-}
-
-.sub-menu-opened + .sub-menu {
-	transform: scaleY(1);
-	height: auto;
-	
-	& > li {
-		display: block;
-	}
-	
-	@include rwd(large) {
-		left: auto;
-		opacity: 1;
-		
-		& > li {
-			display: block;
-		}
-	}
-}
-
-.sub-menu {
-	position: relative;
-	height: 1px;
-	transform: scaleY(0);
-	transform-origin: center top;
-	overflow: hidden;
-	transition: .2s ease-in-out;
-	
-	@include rwd(large) {
-		position: absolute;
-		height: auto;
-		top: auto;
-		left: -999em;
-		opacity: 0;
-		transform: none;
-		min-width: 100%;
-		z-index: 100;
-		transition: opacity .2s ease-in-out;
-	}
-
-	& > li {
-		
-		@include rwd(wide) {
-			display: none;
-		}
-		
-		
-		a {
-			display: block;
-		}
-		a:hover, 
-		a.focus-visible,
-		&.current-menu-item a {
-			
-		}
-	}
-	
-	.current-menu-item &,
-	.current-menu-ancestor & {
-		
-	}			
-}
-
-
-// Sub-Menus trigger
-
-
-.sub-menu-unfold {
-	position: absolute;
-	top: 0; 
-	right: 0;
-	display: block;
-	height: 2.2rem; 
-	width: 2.2rem;
-	margin-top: 0;
-	border: 0; 
-	border-radius: 1.1rem; 
-	padding: 0;
-	background: transparent !important;
-	
-	@include rwd(wide) {
-		left: -999rem;
-		
-		&:focus {
-			left: auto;
-			right: 0;
-		}
-	}
-	
-	&::after, 
-	&::before {
-		content: '';
-		display: block;
-		position: absolute;
-		top: 10px; 
-		left: 3px;
-		width: 16px; 
-		height: 3px;
-		background-color: var(--primary_color);
-		transition: transform .2s ease-in-out;
-	}
-	&::after {
-		transform: rotate(-90deg);
-	}
-	span {
-		@include a11y-hidden();
-	}
-	
-	&.sub-menu-opened::after {
-		transform: rotate(45deg);
-	}
-	&.sub-menu-opened::before {
-		transform: rotate(-45deg);
-	}
-	
-	@include rwd(large) {
-		height: 1.6rem; 
-		width: 1.6rem;
-		top: 50%; 
-		margin-top: -.8rem;
-		border-radius: .8rem;
-		
-		&::after, 
-		&::before {
-			top: 7px; 
-			left: 3px;
-			width: 10px; 
-			height: 2px;
-		} 
-	}
-
 }
 
 // Hamburger Menu
@@ -397,6 +236,10 @@
 			@include dark() {
 				color: var(--text_dark);
 			}
+		}
+		
+		.sub-menu {
+			display: none;
 		}
 	}
 	
