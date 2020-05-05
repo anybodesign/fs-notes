@@ -30,7 +30,7 @@
 								<?php get_template_part('template-parts/post', 'meta'); ?>							
 							</header>
 							<div class="post-excerpt">
-								<p><?php the_excerpt(); ?></p>
+								<?php the_excerpt(); ?>
 							</div>
 						</div>
 						
