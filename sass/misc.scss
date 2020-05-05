@@ -45,13 +45,13 @@
 
 #back2top {
 	display: block;
-	padding: .5rem;
+	padding: 0;
 	width: 6rem;
 	height: 6rem;
 	border: 0;
 	outline: 0;
 	border-radius: 50%;
-	background-color: transparent;
+	background-color: #fff;
 	
 	position: fixed;
 	bottom: 1.5rem;
@@ -61,19 +61,29 @@
 	transition: .4s ease-in-out;
 	
 	z-index: 100;
-}
-#back2top svg {
-	width: 100%;
-	height: auto;
+
+	svg {
+		width: 100%;
+		height: auto;
+		
+		path {
+			fill: var(--text_color);
+		}
+	}
+	&:hover,
+	&.focus-visible {
+		transform: scale(1.1);
+	}
 	
-	path {
-		fill: var(--text_color);
+	#site_foot.white-text + & {
+		background-color: var(--text_color);
+		
+		svg path {
+			fill: #fff;
+		}
 	}
 }
-#back2top:hover,
-#back2top.focus-visible {
-	transform: scale(1.1);
-}
+
 
 .back2top-btn #back2top {
 	opacity: 1;
