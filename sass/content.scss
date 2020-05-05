@@ -20,7 +20,7 @@
 			align-items: flex-start;
 			
 			.page-content {
-				$shift: calc( #{$grid-padding*2.5} + 8.3333% );
+				$shift: calc( #{$grid-padding*1.5} + 8.3333% );
 				transform: translateX($shift);
 			}
 			.page-sidebar {
