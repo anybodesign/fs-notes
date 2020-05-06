@@ -25,13 +25,11 @@ get_header(); ?>
 						the_archive_description( '<div class="archive-desc">', '</div>' );
 					} ?>
 					
+					<?php if ( have_posts() ) : ?>		
 					<div id="posts_list">
-					<?php // The Loop
-					if ( have_posts() ) :		
-						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/post', 'block' );
-						endwhile;
-					?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'template-parts/post', 'block' ); ?>
+						<?php endwhile; ?>
 					</div>
 
 					<?php if ( get_theme_mod('ias') == true ) { ?>
