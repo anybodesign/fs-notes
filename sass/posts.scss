@@ -40,11 +40,15 @@
 	}
 }
 .post-title {
-	max-width: 85%;
-	margin-bottom: 0;
-
-	@include rwd(large) {
-		max-width: none;
+	@extend .page-title;
+	
+	.post-block & {
+		max-width: 85%;
+		margin-bottom: 0;
+	
+		@include rwd(large) {
+			max-width: none;
+		}
 	}
 
 	a {
@@ -57,6 +61,7 @@
 		}
 	}
 }
+
 .post-content {
 	
 	@include rwd(large) {
