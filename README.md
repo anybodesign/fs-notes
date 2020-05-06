@@ -10,6 +10,15 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.3 - 2020.05.06
+* Bugfix: Centering page
+* Bugfix: Post block display
+* Bugfix: Post block excerpt
+* Post meta template parts split
+* CSS updates
+* Placeholder removed in search field
+* Archive description added
+
 ### 1.2 - 2020.05.05
 * CSS updates and Gravityforms styles
 * Infinite scroll option
