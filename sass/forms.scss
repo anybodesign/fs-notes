@@ -174,10 +174,10 @@ input[type="submit"] {
 			content: ''; 
 			vertical-align: middle;
 			display: inline-block; 
-			width: 16px;
-			height: 16px;
+			width: 1.6rem;
+			height: 1.6rem;
 			position: absolute; 
-			top: 3px; 
+			top: .5rem; 
 			left: 0;
 			border: var(--text_color) 1px solid;
 			background-color: #fff;
@@ -216,7 +216,7 @@ input[type="submit"] {
 
 .formfield-checkbox input[type="checkbox"] + label::after,
 .formfield-checkbox input[type="checkbox"] + span::after {
-	top: .5rem; 
+	top: .7rem; 
 	left: .35rem;
 	content: '';
 	width: 1rem;

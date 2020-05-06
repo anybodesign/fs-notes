@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, 
 .h1-like {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
     text-transform: uppercase;
 }
 h2, 
@@ -196,7 +196,12 @@ img {
 	border: 0;
 	border-style: none;
 }
-
+.figure {
+	@include figure();
+}
+.is-rounded {
+	border-radius: 50%;
+}
 figure {
 	position: relative;
 	max-width: 100%;
