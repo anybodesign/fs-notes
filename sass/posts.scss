@@ -41,8 +41,13 @@
 	}
 }
 .post-title {
+	max-width: 85%;
 	margin-bottom: 0;
-	
+
+	@include rwd(large) {
+		max-width: none;
+	}
+
 	a {
 		text-decoration: none;
 		transition: color .3s ease-in-out;
@@ -116,6 +121,7 @@
 // IAS 3
 
 .trigger {
+	padding-top: $grid-padding*2;
 	margin-bottom: $grid-padding*3;
 }
 .spinner {

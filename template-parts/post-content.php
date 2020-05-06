@@ -12,7 +12,7 @@
 ?>
 
 					<header class="post-header">
-						<h1 class="page-title"><?php the_title(); ?></h1>
+						<h1 class="post-title"><?php the_title(); ?></h1>
 						<?php get_template_part('template-parts/post', 'meta'); ?>
 					</header>
 					

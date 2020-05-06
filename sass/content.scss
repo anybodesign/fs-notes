@@ -68,6 +68,16 @@
 
 .page-title {
 	
+	// Archive & Search
+	.archive .page-content > &,
+	.search .page-content > & {
+		padding-right: 15%;
+		
+		@include rwd(large) {
+			padding-right: $grid-padding*2;
+		}
+	}
+	
 	.search-term {
 		font-family: var(--font_title);
 		color: var(--primary_color);
