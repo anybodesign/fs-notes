@@ -19,9 +19,11 @@ get_header(); ?>
 					<h1 class="page-title"><?php the_archive_title(); ?></h1>
 					<?php } else if ( is_search() ) { ?>
 					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'fs-notes' ), '<span class="search-term">' . get_search_query() . '</span>' ); ?></h1>
-					<?php } else { ?> 
-					<?php // No title ^^ ?>
-					<?php } ?>
+					<?php } ?> 
+
+					<?php if ( is_archive() ) {
+						the_archive_description( '<div class="archive-desc">', '</div>' );
+					} ?>
 					
 					<div id="posts_list">
 					<?php // The Loop
