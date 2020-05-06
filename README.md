@@ -10,6 +10,10 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.3.1 - 2020.05.06
+* Bugfix: Search template 
+* New theme screenshot
+
 ### 1.3 - 2020.05.06
 * Bugfix: Centering page
 * Bugfix: Post block display
