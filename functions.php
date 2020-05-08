@@ -228,7 +228,11 @@ function fs_scripts_load() {
 
 			// IAS
 			
-			if ( get_theme_mod('ias') == true ) {
+			if ( 
+				get_theme_mod('ias') == true && is_home()
+				|| get_theme_mod('ias') == true && is_archive()
+				|| get_theme_mod('ias') == true && is_search()				
+			) {
 				
 				wp_enqueue_script(
 					'ias', 
