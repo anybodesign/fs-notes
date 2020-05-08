@@ -10,6 +10,9 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.3.2 - 2020.05.08
+* Bugfix: IAS Conditional enqueue 
+
 ### 1.3.1 - 2020.05.06
 * Bugfix: Search template 
 * New theme screenshot
