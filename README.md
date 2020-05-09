@@ -10,6 +10,10 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.3.3 - 2020.05.09
+* A11y: Removed alt on title image
+* A11y: Added sidebar skiplinks 
+
 ### 1.3.2 - 2020.05.08
 * Bugfix: IAS Conditional enqueue 
 
