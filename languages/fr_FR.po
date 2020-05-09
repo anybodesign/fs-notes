@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2020-05-05 18:30+0200\n"
-"PO-Revision-Date: 2020-05-05 18:31+0200\n"
+"POT-Creation-Date: 2020-05-09 15:25+0200\n"
+"PO-Revision-Date: 2020-05-09 15:25+0200\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -48,7 +48,7 @@ msgstr "Ajouter mon commentaire"
 msgid "Social Networks"
 msgstr "Réseaux sociaux"
 
-#: footer.php:57 functions.php:328
+#: footer.php:57 functions.php:332
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
@@ -100,76 +100,72 @@ msgstr "Grande"
 msgid "L"
 msgstr "L"
 
-#: functions.php:327 template-parts/header-nav.php:6
+#: functions.php:331 template-parts/header-nav.php:6
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:329
+#: functions.php:333
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:367
+#: functions.php:371
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:382
+#: functions.php:386
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:383
+#: functions.php:387
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:384
+#: functions.php:388
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:385
+#: functions.php:389
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:409
+#: functions.php:413
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:434
+#: functions.php:438
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:440
+#: functions.php:444
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:446
+#: functions.php:450
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:466
+#: functions.php:470
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:467
-msgid "Keywords"
-msgstr "Mots clés"
-
-#: functions.php:468
+#: functions.php:472
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:499
+#: functions.php:503
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:510
+#: functions.php:514
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:520
+#: functions.php:524
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:527
+#: functions.php:531
 msgid "Edit"
 msgstr "Modifier"
 
@@ -370,6 +366,10 @@ msgstr "Aller au contenu principal"
 msgid "Go to main menu"
 msgstr "Aller au menu principal"
 
+#: template-parts/header-skiplinks.php:11
+msgid "Go to sidebar"
+msgstr "Aller à la barre latérale"
+
 #: template-parts/nothing.php:14
 msgid "Nothing Found"
 msgstr "Aucun résultat"
@@ -397,6 +397,13 @@ msgstr ""
 "Nous ne trouvons pas ce que vous cherchez. Essayez peut-être de faire une "
 "recherche."
 
+#: template-parts/post-meta-comments.php:14
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s commentaire"
+msgstr[1] "%s commentaires"
+
 #: template-parts/post-meta.php:16
 msgid "Posted on&nbsp;"
 msgstr "Publié le&nbsp;"
@@ -408,13 +415,6 @@ msgstr "par&nbsp;"
 #: template-parts/post-meta.php:18
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
-
-#: template-parts/post-meta.php:27
-#, php-format
-msgid "%s comment"
-msgid_plural "%s comments"
-msgstr[0] "%s commentaire"
-msgstr[1] "%s commentaires"
 
 #. Theme Name of the plugin/theme
 msgid "FS Notes"
@@ -443,6 +443,9 @@ msgstr "Maintenance"
 #. Template Name of the plugin/theme
 msgid "Style Guide"
 msgstr "Style Guide"
+
+#~ msgid "Keywords"
+#~ msgstr "Mots clés"
 
 #~ msgid "Unfold Sub-Menu"
 #~ msgstr "Déplier le sous-menu"
