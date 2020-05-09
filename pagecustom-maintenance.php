@@ -9,12 +9,6 @@
  */
 get_header(); ?>
 
-				<div class="page-wrap">
-					<?php 
-						while ( have_posts() ) : the_post();
-							get_template_part( 'template-parts/page', 'banner' );
-						endwhile;					
-					?>
-				</div>	
+				<?php get_template_part( 'template-parts/page', 'content' ); ?>
 						
 <?php get_footer(); ?>
