@@ -4,23 +4,16 @@
 //
 // ------------------------------
 
-// Define your custom fonts :)
 
-:root {
+// Fonts Families
 
-	--font_stack: Helvetica, Arial, sans-serif;
-	
-	--font_title: 'Title', var(--font_stack);
-	--font_regular: 'Regular', var(--font_stack);
-	--font_italic: 'Italic', var(--font_stack);
-	--font_bold: 'Bold', var(--font_stack);
-	--font_bolditalic: 'BoldItalic', var(--font_stack);
-	
-	--font_mono: 'Andale Mono', 'DejaVu Sans Mono', Courier, monospace;
+@font-face {
+	font-family: 'Title';
+	src: url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
-
-// Fonts
-
 @font-face {
 	font-family: 'Regular';
 	src: url('fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('fonts/LibreBaskerville-Regular.woff') format('woff');
@@ -49,11 +42,3 @@
 	font-style: normal;
 	font-display: swap;
 }
-@font-face {
-	font-family: 'Title';
-	src: url('fonts/BebasNeue-Bold.woff2') format('woff2'), url('fonts/BebasNeue-Bold.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-

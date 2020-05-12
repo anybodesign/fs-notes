@@ -5,8 +5,9 @@ Description: Have fun with Gutenberg style editor.
 
 @import 'variables.scss';
 @import 'mixins.scss';
-@import 'webfonts.scss';
+@import 'webfonts-admin.scss';
 
+/*
 @font-face {
 	font-family: 'Regular';
 	src: url('../fonts/LibreBaskerville-Regular.woff2') format('woff2'), url('../fonts/LibreBaskerville-Regular.woff') format('woff');
@@ -42,6 +43,7 @@ Description: Have fun with Gutenberg style editor.
 	font-style: normal;
 	font-display: swap;
 }
+*/
 
 /* Typography */
 
