@@ -221,18 +221,30 @@
 	max-width: $max-width-small;
 	margin: 0 auto;
 	
-	p {
+	p, li {
 		font-family: var(--font_mono);
 		font-size: 1.2rem;
 		margin-bottom: 0;
 		text-align: center;
-		border-top: var(--text_color) 1px solid;
 		padding: $grid-padding;
-
+		
+		.white-text & {
+			color: #fff;
+		}
+		
+		a {
+			@include link-style();
+		}
+	}
+	p, nav {
+		border-top: var(--text_color) 1px solid;
+		
 		.white-text & {
 			border-top-color: #fff;
 		}
 	}
+	
+		
 	
 	@include rwd(large) {
 		
@@ -240,10 +252,19 @@
 			padding-left: 8rem;
 		}
 			
-		p {
+		p, li {
 			text-align: left;
 			padding-left: 0;
 		}
+
+		&.has-copyright-menu {
+			display: flex;
+			flex-wrap: wrap;
+			
+			.copyright-nav {
+				flex: 1 0 0;
+			}	
+		}		
 	}
 }
 

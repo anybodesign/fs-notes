@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '1.3.3' );
+define( 'FS_THEME_VERSION', '1.4' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -330,6 +330,7 @@ function fs_custom_nav_menus() {
 	$locations = array(
 		'main_menu' =>  esc_html__( 'Main Menu', 'fs-notes' ),
 		'footer_menu' => esc_html__( 'Footer Menu', 'fs-notes' ),
+		'copyright_menu' => esc_html__( 'Copyright Menu', 'fs-notes' ),
 		'social_menu' => esc_html__( 'Social Networks Menu', 'fs-notes' )
 	);
 	register_nav_menus( $locations );

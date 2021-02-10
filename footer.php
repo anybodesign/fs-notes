@@ -68,7 +68,7 @@
 
 				<?php // The credit/copyright line, settings in the Customizer ?>
 				
-				<div class="footer-copyright">
+				<div class="footer-copyright<?php if ( has_nav_menu( 'copyright_menu' ) ) { echo ' has-copyright-menu';} ?>">
 					<p>
 						<?php if(get_theme_mod('footer_text')) {
 							echo get_theme_mod('footer_text', ''); 
@@ -78,6 +78,16 @@
 						
 						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
 					</p>
+					<?php if ( has_nav_menu( 'copyright_menu' ) ) : ?>
+					<nav class="copyright-nav" role="navigation" aria-label="<?php _e('Copyright Menu', 'fs-notes'); ?>">
+						<?php wp_nav_menu( array(
+								'theme_location'	=> 	'copyright_menu',
+								'menu_class'		=>	'copyright-menu',
+								'container'			=>	false
+								));
+						?>
+						</nav>
+					<?php endif; ?>
 				</div>
 				
 			</div>

@@ -267,3 +267,16 @@
 .widget-container ul {
 	padding-left: 0;
 }
+
+// Copyright
+
+.copyright-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+	@include rwd(large) {
+		justify-content: flex-start;
+	}
+	
+}
