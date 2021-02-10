@@ -259,6 +259,23 @@ function fs_customize_register($fs_customize) {
 				'section'		=> 'colors',
 				'settings'		=> 'white_footer_text',
 			)
+		);
+		$fs_customize->add_setting(
+			'white_burger', 
+			array(
+				'default'			=> false,
+				'transport'			=> 'postMessage',
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'white_burger', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('White burger icon', 'fs-notes'),
+				'section'		=> 'colors',
+				'settings'		=> 'white_burger',
+			)
 		);		
 		
 		// Dark Mode
@@ -751,11 +768,11 @@ function fs_colors() { ?>
 			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
 			--sidebar_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
-
+			
 			<?php
-			if ( get_theme_mod('white_btn_text') == true ) {
-				echo '--btn_text_color: #fff;';
-			}
+				if ( get_theme_mod('white_btn_text') == true ) {
+					echo '--btn_text_color: #fff;';
+				}
 			?>
 		}
 	</style>

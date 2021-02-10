@@ -102,6 +102,16 @@
             }
         });
     });
+	wp.customize('white_burger', function( value ) {
+        value.bind( function( to ) {
+            if( to ) {
+                $( '#menu_toggle' ).addClass('white-burger');
+            }
+            else {
+                $( '#menu_toggle' ).removeClass('white-burger');
+            }
+        });
+    });
 
 	
 	// Dark Mode

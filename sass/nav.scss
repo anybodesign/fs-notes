@@ -129,7 +129,7 @@
 
 // Hamburger Menu
 
-#menu-toggle {
+#menu_toggle {
 	display: block; 
 	height: 4.4rem; 
 	width: 4.4rem;
@@ -156,11 +156,16 @@
 		margin: 0;
 		border-top: var(--text_color) 2px solid;
 		transition: .3s linear;
-		
-		.white-text + .content-area & {
-			border-top-color: #fff;
+	}
+	
+	&.white-burger {
+		span,
+		span::before,
+		span::after {
+			border-top-color: #fff
 		}
 	}
+	
 	span {
 		top: 2rem; 
 		left: 1rem;

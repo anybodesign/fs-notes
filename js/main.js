@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	
 	// Responsive Sidebar Menu
 
-	$('#menu-toggle').click(function() {
+	$('#menu_toggle').click(function() {
 		$(this).toggleClass('menu-opened');
 			
 			if ($(this).hasClass('menu-opened')) {
@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 		$(window).resize(function() {
 			if ($(window).width() > 960) {
 		    	$('.page-sidebar').show().removeAttr('style').removeAttr('aria-hidden');
-		    	$('#menu-toggle').removeClass('menu-opened').removeAttr('aria-expanded');
+		    	$('#menu_toggle').removeClass('menu-opened').removeAttr('aria-expanded');
 			}
 		});
 	
