@@ -10,6 +10,17 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.4 - 2021.02.10
+* Removed style guide template
+* Webfonts vars
+* Maintenance page template
+* Footer copyright nav menu
+* Back to top button SVG fix
+* Logo dimensions fix
+* Pagination fix (has pagination)
+* Post metas display options
+* White burger icon option
+
 ### 1.3.3 - 2020.05.09
 * A11y: Removed alt on title image
 * A11y: Added sidebar skiplinks 
