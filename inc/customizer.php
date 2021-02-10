@@ -647,6 +647,41 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		// Post metas
+		
+		$fs_customize->add_setting(
+			'meta_author', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_author', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the author in post meta', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'meta_author',
+			)
+		);
+		$fs_customize->add_setting(
+			'meta_category', 
+			array(
+				'default'			=> true,
+				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
+			)
+		);
+		$fs_customize->add_control(
+			'meta_category', 
+			array(
+				'type'			=> 'checkbox',
+				'label'			=> __('Show the category in post meta', 'fs-notes'),
+				'section'		=> 'fs_options_section',
+				'settings'		=> 'meta_category',
+			)
+		);
+		
 		// Tags & Formats
 		/*
 		$fs_customize->add_setting(
