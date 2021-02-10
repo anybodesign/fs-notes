@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2020-05-09 15:25+0200\n"
-"PO-Revision-Date: 2020-05-09 15:25+0200\n"
+"POT-Creation-Date: 2021-02-10 11:55+0100\n"
+"PO-Revision-Date: 2021-02-10 11:56+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: style.css\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -55,6 +55,10 @@ msgstr "Menu pied de page"
 #: footer.php:79
 msgid "Powered by WordPress!"
 msgstr "Propulsé par WordPress !"
+
+#: footer.php:82 functions.php:333
+msgid "Copyright Menu"
+msgstr "Menu copyright"
 
 #: functions.php:116
 msgid "Black"
@@ -104,68 +108,68 @@ msgstr "L"
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: functions.php:333
+#: functions.php:334
 msgid "Social Networks Menu"
 msgstr "Menu réseaux sociaux"
 
-#: functions.php:371
+#: functions.php:372
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:386
+#: functions.php:387
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:387
+#: functions.php:388
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:388
+#: functions.php:389
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:389
+#: functions.php:390
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:413
+#: functions.php:414
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:438
+#: functions.php:439
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:444
+#: functions.php:445
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:450
+#: functions.php:451
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:470
+#: functions.php:471
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:472
+#: functions.php:473
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:503
+#: functions.php:504
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:514
+#: functions.php:515
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:524
+#: functions.php:525
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:531
+#: functions.php:532
 msgid "Edit"
 msgstr "Modifier"
 
@@ -209,119 +213,131 @@ msgstr "Texte blanc dans l'en-tête"
 msgid "White footer text"
 msgstr "Texte blanc dans le pied de page"
 
-#: inc/customizer.php:278
+#: inc/customizer.php:275
+msgid "White burger icon"
+msgstr "Icône burger blanche"
+
+#: inc/customizer.php:295
 msgid "Dark Mode"
 msgstr "Mode sombre"
 
-#: inc/customizer.php:298
+#: inc/customizer.php:315
 msgid "Use dark social icons"
 msgstr "Utilisez des icônes sociales sombres"
 
-#: inc/customizer.php:325
+#: inc/customizer.php:342
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:345
+#: inc/customizer.php:362
 msgid "Hide the site tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:365
+#: inc/customizer.php:382
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:366
+#: inc/customizer.php:383
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:386
+#: inc/customizer.php:403
 msgid "Dark mode Logo"
 msgstr "Logo pour mode sombre"
 
-#: inc/customizer.php:387
+#: inc/customizer.php:404
 msgid "Your logo, for the Dark mode."
 msgstr "Votre logo, pour le mode sombre."
 
-#: inc/customizer.php:413
+#: inc/customizer.php:430
 msgid "Display Blog Author"
 msgstr "Afficher l’auteur du blog"
 
-#: inc/customizer.php:433
+#: inc/customizer.php:450
 msgid "Author name"
 msgstr "Nom de l’auteur"
 
-#: inc/customizer.php:451
+#: inc/customizer.php:468
 msgid "Author biography"
 msgstr "Biographie de l’auteur"
 
-#: inc/customizer.php:470
+#: inc/customizer.php:487
 msgid "Author Avatar"
 msgstr "Avatar de l’auteur"
 
-#: inc/customizer.php:543
+#: inc/customizer.php:560
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:544
+#: inc/customizer.php:561
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:565
+#: inc/customizer.php:582
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:589
+#: inc/customizer.php:606
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:608
+#: inc/customizer.php:625
 msgid "Infinite scroll (trigger on click)"
 msgstr "Scroll infini (déclenché au clic)"
 
-#: inc/customizer.php:627
+#: inc/customizer.php:644
 msgid "Display the sketchbook spiral"
 msgstr "Afficher la spirale du carnet"
 
-#: inc/customizer.php:644
+#: inc/customizer.php:661
 msgid "Display the sketchbook lines"
 msgstr "Afficher les lignes de carnet"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:54
+#: inc/customizer.php:680
+msgid "Show the author in post meta"
+msgstr "Afficher l’auteur dans les post meta"
+
+#: inc/customizer.php:696
+msgid "Show the category in post meta"
+msgstr "Afficher la catégorie dans les post meta"
+
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:54
 msgid "View details"
 msgstr "Voir les détails"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:77
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:77
 #, php-format
 msgid "More information about %s"
 msgstr "Plus d'informations sur %s"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:128
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:128
 msgid "Check for updates"
 msgstr "Vérifier les mises à jour"
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:213
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:213
 #, php-format
 msgctxt "the plugin title"
 msgid "The %s plugin is up to date."
 msgstr "L’extension %s est à jour."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:215
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:215
 #, php-format
 msgctxt "the plugin title"
 msgid "A new version of the %s plugin is available."
 msgstr "Une nouvelle version de l'extension %s est disponible."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:217
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:217
 #, php-format
 msgctxt "the plugin title"
 msgid "Could not determine if updates are available for %s."
 msgstr "Impossible de déterminer si des mises à jour sont disponibles pour %s."
 
-#: inc/plugin-update-checker/Puc/v4p8/Plugin/Ui.php:223
+#: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:223
 #, php-format
 msgid "Unknown update checker status \"%s\""
 msgstr "Statut inconnu du vérificateur de mise à jour \"%s\""
 
-#: inc/plugin-update-checker/Puc/v4p8/Vcs/PluginUpdateChecker.php:98
+#: inc/plugin-update-checker/Puc/v4p10/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
 msgstr "Il n’y a aucun historique des mises à jour disponible."
 
@@ -329,26 +345,6 @@ msgstr "Il n’y a aucun historique des mises à jour disponible."
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de la recherche pour : %s"
-
-#: index.php:40
-msgid "Load more"
-msgstr "Charger plus d’articles"
-
-#: index.php:44
-msgid "No more posts"
-msgstr "Pas d’autre article"
-
-#: index.php:55
-msgid "Previous page"
-msgstr "Page précédente"
-
-#: index.php:56
-msgid "Next page"
-msgstr "Page suivante"
-
-#: index.php:57
-msgid "Page"
-msgstr "Page"
 
 #: template-parts/footer-back2top.php:10
 msgid "Back to top"
@@ -408,13 +404,33 @@ msgstr[1] "%s commentaires"
 msgid "Posted on&nbsp;"
 msgstr "Publié le&nbsp;"
 
-#: template-parts/post-meta.php:17
+#: template-parts/post-meta.php:18
 msgid "by&nbsp;"
 msgstr "par&nbsp;"
 
-#: template-parts/post-meta.php:18
+#: template-parts/post-meta.php:21
 msgid "in&nbsp;"
 msgstr "dans&nbsp;"
+
+#: template-parts/post-pagination.php:18
+msgid "Load more"
+msgstr "Charger plus d’articles"
+
+#: template-parts/post-pagination.php:22
+msgid "No more posts"
+msgstr "Pas d’autre article"
+
+#: template-parts/post-pagination.php:34
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: template-parts/post-pagination.php:35
+msgid "Next page"
+msgstr "Page suivante"
+
+#: template-parts/post-pagination.php:36
+msgid "Page"
+msgstr "Page"
 
 #. Theme Name of the plugin/theme
 msgid "FS Notes"
@@ -440,9 +456,8 @@ msgstr "https://anybodesign.com/"
 msgid "Maintenance"
 msgstr "Maintenance"
 
-#. Template Name of the plugin/theme
-msgid "Style Guide"
-msgstr "Style Guide"
+#~ msgid "Style Guide"
+#~ msgstr "Style Guide"
 
 #~ msgid "Keywords"
 #~ msgstr "Mots clés"
@@ -865,9 +880,6 @@ msgstr "Style Guide"
 
 #~ msgid "Site Settings"
 #~ msgstr "Paramètres du site"
-
-#~ msgid "Copyright"
-#~ msgstr "Copyright"
 
 #~ msgid "Twitter URL"
 #~ msgstr "URL Twitter"
