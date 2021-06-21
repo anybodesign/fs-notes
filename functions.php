@@ -220,52 +220,36 @@ function fs_acf_admin_css() {
 function fs_scripts_load() {
     if (!is_admin()) {
 
-		// JS 
+		// Register JS 
 		
-			// jQuery 
-					
-			wp_enqueue_script( 'jquery' );			
-
 			// IAS
 			
-			if ( 
-				get_theme_mod('ias') == true && is_home()
-				|| get_theme_mod('ias') == true && is_archive()
-				|| get_theme_mod('ias') == true && is_search()				
-			) {
-				
-				wp_enqueue_script(
-					'ias', 
-					FS_THEME_URL . '/js/infinite-ajax-scroll.min.js', 
-					array(), 
-					FS_THEME_VERSION, 
-					true
-				);
-				wp_enqueue_script(
-					'ias-init', 
-					FS_THEME_URL . '/js/infinite-ajax-scroll-init.js', 
-					array('ias'), 
-					FS_THEME_VERSION, 
-					true
-				);
-			}
-			
-			// Back 2 top
-			
-			if ( get_theme_mod('back2top') == true ) {
-				
-				wp_enqueue_script(
-					'back2top', 
-					FS_THEME_URL . '/js/back2top.js', 
-					array(), 
-					FS_THEME_VERSION, 
-					true
-				);
-			}
+			wp_register_script(
+				'ias', 
+				FS_THEME_URL . '/js/infinite-ajax-scroll.min.js', 
+				array(), 
+				FS_THEME_VERSION, 
+				true
+			);
+			wp_register_script(
+				'ias-fs-init', 
+				FS_THEME_URL . '/js/infinite-ajax-scroll-init.js', 
+				array('ias'), 
+				FS_THEME_VERSION, 
+				true
+			);
 			
 			// Other stuff
 			
-			wp_enqueue_script(
+			wp_register_script(
+				'back2top', 
+				FS_THEME_URL . '/js/back2top.js', 
+				array(), 
+				FS_THEME_VERSION, 
+				true
+			);
+			
+			wp_register_script(
 				'focus-visible', 
 				FS_THEME_URL . '/js/focus-visible.js', 
 				array(), 
@@ -273,27 +257,51 @@ function fs_scripts_load() {
 				true
 			);
 			
-			wp_enqueue_script(
-				'fs-notes-skip-link-focus-fix', 
+			wp_register_script(
+				'skiplink-focus-fix', 
 				FS_THEME_URL . '/js/skip-link-focus-fix.js', 
 				array(), 
 				FS_THEME_VERSION, 
 				true
-			);
+			);	
 			
 			// Main
 			
-		    wp_enqueue_script( 
-			    	'main', 
-			    	FS_THEME_URL . '/js/main.js',
-			    	array('jquery'), 
-			    	FS_THEME_VERSION, 
-			    	true
-		    );
+		    wp_register_script( 
+		    	'main', 
+		    	FS_THEME_URL . '/js/main.js',
+		    	array('jquery'), 
+		    	FS_THEME_VERSION, 
+		    	true
+		    );			
+			
+			
+			
+		// Enqueue JS
+			
+			wp_enqueue_script( 'jquery' );			
+			
+			if ( get_theme_mod('ias') == true ) {
+				$has_pages = get_the_posts_pagination();
+				if (! empty( $has_pages) ) {
+					if ( is_home() || is_archive() || is_search() || is_tax() ) {
+						wp_enqueue_script( 'ias' );
+						wp_enqueue_script( 'ias-fs-init' );
+					}
+				}
+			}
+			
+			if ( get_theme_mod('back2top') == true ) {
+				wp_enqueue_script( 'back2top');
+			}
 		    
 		    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+			
+			wp_enqueue_script( 'focus-visible' );
+			wp_enqueue_script( 'skiplink-focus-fix' );
+			wp_enqueue_script( 'main' );
 			
 		
 		// CSS
@@ -374,6 +382,20 @@ function fs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'fs_excerpt_more' );
 
+// Custom excerpt
+// https://gist.github.com/samjbmason/4050714
+
+function fs_share_excerpt($count, $post_id){
+  $permalink = get_permalink($post_id);
+  $excerpt = get_post($post_id);
+  $excerpt = $excerpt->post_content;
+  $excerpt = strip_tags($excerpt);
+  $excerpt = substr($excerpt, 0, $count);
+  $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+
+  $excerpt = $excerpt.'...';
+  return $excerpt;
+}
 
 // Image Sizes
 

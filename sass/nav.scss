@@ -285,3 +285,41 @@
 	}
 	
 }
+
+// Share box
+
+.share-box {
+	
+	p {
+		font-family: var(--font_italic);
+		padding-bottom: $grid-padding/2;
+		border-bottom: var(--text_color) 1px solid;
+		margin-bottom: $grid-padding;
+	}
+}
+
+.share-items {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	
+	& > li {
+		display: block;
+		margin-right: $grid-padding;
+		
+		img {
+			display: block;
+			transition: .2s ease-in-out;
+		}
+		a {
+			text-decoration: none;
+			
+			&:hover,
+			&:focus {
+				img {
+					transform: translateY(-$grid-padding/2);
+				}
+			}
+		}
+	}
+}

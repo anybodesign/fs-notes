@@ -27,9 +27,9 @@ if ( get_theme_mod('white_text') == true ) {
 							
 							<?php 
 								the_content(); 
-
+								
 								if ( comments_open() || get_comments_number() ) :
-					  				comments_template();
+									comments_template();
 								endif;
 							?>	
 						

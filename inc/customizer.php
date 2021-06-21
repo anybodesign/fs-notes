@@ -54,6 +54,13 @@ function fs_customize_register($fs_customize) {
 			'priority'		=> 20,
 		)
 	);
+	$fs_customize->add_section(
+		'fs_blog_section',
+		array(
+			'title'			=> __('Posts Options', 'fs-notes'),
+			'priority'		=> 40,
+		)
+	);
 	
 	$fs_customize->add_section(
 		'fs_footer_section',
@@ -664,6 +671,12 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+
+
+	// Posts Options
+	// -
+	// + + + + + + + + + + 
+
 		// Post metas
 		
 		$fs_customize->add_setting(
@@ -678,7 +691,7 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Show the author in post meta', 'fs-notes'),
-				'section'		=> 'fs_options_section',
+				'section'		=> 'fs_blog_section',
 				'settings'		=> 'meta_author',
 			)
 		);
@@ -694,47 +707,29 @@ function fs_customize_register($fs_customize) {
 			array(
 				'type'			=> 'checkbox',
 				'label'			=> __('Show the category in post meta', 'fs-notes'),
-				'section'		=> 'fs_options_section',
+				'section'		=> 'fs_blog_section',
 				'settings'		=> 'meta_category',
 			)
 		);
 		
-		// Tags & Formats
-		/*
-		$fs_customize->add_setting(
-			'use_tags', 
-			array(
-				'default'			=> false,
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-			)
-		);
-		$fs_customize->add_control(
-			'use_tags', 
-			array(
-				'type'			=> 'checkbox',
-				'label'			=> __('Enable Tags', 'fs-notes'),
-				'section'		=> 'fs_options_section',
-				'settings'		=> 'use_tags',
-			)
-		);
+		// Sharing 
 		
 		$fs_customize->add_setting(
-			'use_formats', 
+			'share_box', 
 			array(
 				'default'			=> false,
 				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
 			)
 		);
 		$fs_customize->add_control(
-			'use_formats', 
+			'share_box', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Enable Post Formats', 'fs-notes'),
-				'section'		=> 'fs_options_section',
-				'settings'		=> 'use_formats',
+				'label'			=> __('Add basic social networks sharing buttons on single posts (Facebook, Twitter, LinkedIn, e-mail)', 'from-scratch'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'share_box',
 			)
 		);
-		*/
 
 }
 add_action('customize_register', 'fs_customize_register');
