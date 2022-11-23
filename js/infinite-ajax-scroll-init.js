@@ -24,7 +24,8 @@ let ias = new InfiniteAjaxScroll('#posts_list', {
 		hide: function(element) {
 		  element.style.display = 'none'; // default behaviour
 		}
-	}
+	},
+	loadOnScroll: false	
 });
 
 ias.on('last', function() {
@@ -34,8 +35,9 @@ ias.on('last', function() {
 });
 
 // A11Y Move Focus
-ias.on('append', function() {
-  let lastpost = document.querySelector('.post-block:last-of-type .read-more');
-  
-  lastpost.focus();
+
+ias.on('appended', function(event) {
+  let first = event.items[0];
+
+  first.querySelector('a').focus();
 });

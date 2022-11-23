@@ -22,9 +22,9 @@ get_header(); ?>
 						get_template_part( 'template-parts/page', 'banner' ); 
 						get_template_part( 'template-parts/post', 'content' );	
 					endwhile;
-				
+					
 					if ( comments_open() || get_comments_number() ) :
-		  				comments_template();
+					comments_template();
 					endif;
 				?>
 				</article>
