@@ -92,16 +92,6 @@
             }
         });
     });
-    wp.customize('white_btn_text', function( value ) {
-        value.bind( function( to ) {
-            if( to ) {
-                $( '.action-btn' ).css('color', '#fff');
-            }
-            else {
-                $( '.action-btn' ).css('color', '#23252B');
-            }
-        });
-    });
 	wp.customize('white_burger', function( value ) {
         value.bind( function( to ) {
             if( to ) {
@@ -168,6 +158,13 @@
     wp.customize('footer_text', function(value) {
         value.bind( function( text ) {
             $('.footer-copyright').text( text );
+        });
+    });
+	
+	// Share text
+    wp.customize('share_text', function(value) {
+        value.bind( function( text ) {
+            $('.share-box p').text( text );
         });
     });
     

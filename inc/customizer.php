@@ -132,6 +132,28 @@ function fs_customize_register($fs_customize) {
 			)
 		);
 		
+		$fs_customize->add_setting(
+			'btn_text_color', 
+			array(
+				'default'			=> '#23252B',
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'capability'		=> 'edit_theme_options',
+				'type'				=> 'theme_mod',
+				'transport'			=> 'postMessage', 
+			)
+		);
+		$fs_customize->add_control(
+			new WP_Customize_Color_control(
+				$fs_customize, 
+				'btn_text_color', 
+				array(
+					'label'		=> __('Buttons text color', 'fs-notes'),
+					'section'	=> 'colors',
+					'settings'	=> 'btn_text_color',
+				)
+			)
+		);
+		
 		// Page color
 		
 		$fs_customize->add_setting(
@@ -197,23 +219,6 @@ function fs_customize_register($fs_customize) {
 				'label'			=> __('White page text', 'fs-notes'),
 				'section'		=> 'colors',
 				'settings'		=> 'white_text',
-			)
-		);
-		$fs_customize->add_setting(
-			'white_btn_text', 
-			array(
-				'default'			=> false,
-				'transport'			=> 'postMessage',
-				'sanitize_callback'	=> 'fs_customizer_sanitize_checkbox',		
-			)
-		);
-		$fs_customize->add_control(
-			'white_btn_text', 
-			array(
-				'type'			=> 'checkbox',
-				'label'			=> __('White button text', 'fs-notes'),
-				'section'		=> 'colors',
-				'settings'		=> 'white_btn_text',
 			)
 		);
 		$fs_customize->add_setting(
@@ -725,9 +730,25 @@ function fs_customize_register($fs_customize) {
 			'share_box', 
 			array(
 				'type'			=> 'checkbox',
-				'label'			=> __('Add basic social networks sharing buttons on single posts (Facebook, Twitter, LinkedIn, e-mail)', 'from-scratch'),
+				'label'			=> __('Add basic social networks sharing buttons on single posts (Facebook, Twitter, LinkedIn, e-mail)', 'fs-notes'),
 				'section'		=> 'fs_blog_section',
 				'settings'		=> 'share_box',
+			)
+		);
+		$fs_customize->add_setting(
+			'share_text', 
+			array(
+				'default'				=> __('Share this post','fs-notes'),
+				'transport'				=> 'postMessage',				
+				'sanitize_callback'		=> 'sanitize_text_field'
+			)
+		);
+		$fs_customize->add_control(
+			'share_text', 
+			array(
+				'label'			=> __('Custom sharing title', 'fs-notes'),
+				'section'		=> 'fs_blog_section',
+				'settings'		=> 'share_text',
 			)
 		);
 
@@ -763,12 +784,7 @@ function fs_colors() { ?>
 			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
 			--sidebar_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
-			
-			<?php
-				if ( get_theme_mod('white_btn_text') == true ) {
-					echo '--btn_text_color: #fff;';
-				}
-			?>
+			--btn_text_color: <?php echo get_theme_mod('btn_color', '#23252B'); ?>;
 		}
 	</style>
 	<?php } else { ?>
