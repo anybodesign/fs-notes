@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: FS Notes\n"
-"POT-Creation-Date: 2021-06-21 12:01+0200\n"
-"PO-Revision-Date: 2021-06-21 12:01+0200\n"
+"POT-Creation-Date: 2022-11-23 09:19+0100\n"
+"PO-Revision-Date: 2022-11-23 09:20+0100\n"
 "Last-Translator: Thomas Villain <atelier@anybodesign.com>\n"
 "Language-Team: Thomas Villain <atelier@anybodesign.com>\n"
 "Language: fr_FR\n"
@@ -76,11 +76,11 @@ msgstr "Couleur primaire"
 msgid "Titles color"
 msgstr "Couleur des titres"
 
-#: functions.php:139 inc/customizer.php:152
+#: functions.php:139 inc/customizer.php:174
 msgid "Page color"
 msgstr "Couleur de la page"
 
-#: functions.php:144 inc/customizer.php:176
+#: functions.php:144 inc/customizer.php:198
 msgid "Sidebar color"
 msgstr "Couleur de la barre latérale"
 
@@ -116,60 +116,60 @@ msgstr "Menu réseaux sociaux"
 msgid "Read More"
 msgstr "Lire la suite"
 
-#: functions.php:395
+#: functions.php:409
 msgid "Thumbnail HD"
 msgstr "Miniature HD"
 
-#: functions.php:396
+#: functions.php:410
 msgid "Medium HD"
 msgstr "Moyenne HD"
 
-#: functions.php:397
+#: functions.php:411
 msgid "Large HD"
 msgstr "Grande HD"
 
-#: functions.php:398
+#: functions.php:412
 msgid "Banner"
 msgstr "Bannière"
 
-#: functions.php:422
+#: functions.php:436
 msgid "Sidebar Widgets"
 msgstr "Widgets de la barre latérale"
 
-#: functions.php:447
+#: functions.php:461
 msgid "Text intro"
 msgstr "Texte d’intro"
 
-#: functions.php:453
+#: functions.php:467
 msgid "Text mentions"
 msgstr "Mentions"
 
-#: functions.php:459
+#: functions.php:473
 msgid "Action button"
 msgstr "Bouton d’action"
 
-#: functions.php:479
+#: functions.php:493
 msgid "Search for:"
 msgstr "Rechercher :"
 
-#: functions.php:481
+#: functions.php:495
 msgid "Search"
 msgstr "Chercher"
 
-#: functions.php:512
+#: functions.php:526
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s à %2$s"
 
-#: functions.php:523
+#: functions.php:537
 msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de modération."
 
-#: functions.php:533
+#: functions.php:547
 msgid "Reply"
 msgstr "Répondre"
 
-#: functions.php:540
+#: functions.php:554
 msgid "Edit"
 msgstr "Modifier"
 
@@ -197,121 +197,129 @@ msgstr "Couleur de contraste"
 msgid "Links and buttons color"
 msgstr "Couleur des liens et des boutons"
 
-#: inc/customizer.php:197
+#: inc/customizer.php:150
+msgid "Buttons text color"
+msgstr "Couleur du texte des boutons"
+
+#: inc/customizer.php:219
 msgid "White page text"
 msgstr "Texte blanc sur la page"
 
-#: inc/customizer.php:214
-msgid "White button text"
-msgstr "Texte blanc pour les boutons"
-
-#: inc/customizer.php:231
+#: inc/customizer.php:236
 msgid "White sidebar text"
 msgstr "Texte blanc dans la barre latérale"
 
-#: inc/customizer.php:248
+#: inc/customizer.php:253
 msgid "White header text"
 msgstr "Texte blanc dans l'en-tête"
 
-#: inc/customizer.php:265
+#: inc/customizer.php:270
 msgid "White footer text"
 msgstr "Texte blanc dans le pied de page"
 
-#: inc/customizer.php:282
+#: inc/customizer.php:287
 msgid "White burger icon"
 msgstr "Icône burger blanche"
 
-#: inc/customizer.php:302
+#: inc/customizer.php:307
 msgid "Dark Mode"
 msgstr "Mode sombre"
 
-#: inc/customizer.php:322
+#: inc/customizer.php:327
 msgid "Use dark social icons"
 msgstr "Utilisez des icônes sociales sombres"
 
-#: inc/customizer.php:349
+#: inc/customizer.php:354
 msgid "Hide the site title"
 msgstr "Masquer le titre du site"
 
-#: inc/customizer.php:369
+#: inc/customizer.php:374
 msgid "Hide the site tagline"
 msgstr "Masquer le slogan du site"
 
-#: inc/customizer.php:389
+#: inc/customizer.php:394
 msgid "Site Logo"
 msgstr "Logo du site"
 
-#: inc/customizer.php:390
+#: inc/customizer.php:395
 msgid "Your logo, displayed instead of the website title."
 msgstr "Votre logo, affiché à la place du titre du site."
 
-#: inc/customizer.php:410
+#: inc/customizer.php:415
 msgid "Dark mode Logo"
 msgstr "Logo pour mode sombre"
 
-#: inc/customizer.php:411
+#: inc/customizer.php:416
 msgid "Your logo, for the Dark mode."
 msgstr "Votre logo, pour le mode sombre."
 
-#: inc/customizer.php:437
+#: inc/customizer.php:442
 msgid "Display Blog Author"
 msgstr "Afficher l’auteur du blog"
 
-#: inc/customizer.php:457
+#: inc/customizer.php:462
 msgid "Author name"
 msgstr "Nom de l’auteur"
 
-#: inc/customizer.php:475
+#: inc/customizer.php:480
 msgid "Author biography"
 msgstr "Biographie de l’auteur"
 
-#: inc/customizer.php:494
+#: inc/customizer.php:499
 msgid "Author Avatar"
 msgstr "Avatar de l’auteur"
 
-#: inc/customizer.php:567
+#: inc/customizer.php:572
 msgid "Custom footer text"
 msgstr "Texte de pied de page personnalisé"
 
-#: inc/customizer.php:568
+#: inc/customizer.php:573
 msgid "Add a custom text instead of the year and blog name."
 msgstr "Ajouter un texte personnalisé au lieu du nom de blog et de l’année."
 
-#: inc/customizer.php:589
+#: inc/customizer.php:594
 msgid "Display WordPress Link"
 msgstr "Afficher le lien WordPress"
 
-#: inc/customizer.php:613
+#: inc/customizer.php:618
 msgid "Display a Back to top button"
 msgstr "Afficher un bouton Haut de page"
 
-#: inc/customizer.php:632
+#: inc/customizer.php:637
 msgid "Infinite scroll (trigger on click)"
 msgstr "Scroll infini (déclenché au clic)"
 
-#: inc/customizer.php:651
+#: inc/customizer.php:656
 msgid "Display the sketchbook spiral"
 msgstr "Afficher la spirale du carnet"
 
-#: inc/customizer.php:668
+#: inc/customizer.php:673
 msgid "Display the sketchbook lines"
 msgstr "Afficher les lignes de carnet"
 
-#: inc/customizer.php:693
+#: inc/customizer.php:698
 msgid "Show the author in post meta"
 msgstr "Afficher l’auteur dans les post meta"
 
-#: inc/customizer.php:709
+#: inc/customizer.php:714
 msgid "Show the category in post meta"
 msgstr "Afficher la catégorie dans les post meta"
 
-#: inc/customizer.php:728
+#: inc/customizer.php:733
 msgid ""
 "Add basic social networks sharing buttons on single posts (Facebook, "
 "Twitter, LinkedIn, e-mail)"
 msgstr ""
 "Ajouter des boutons de partage de base pour les réseaux sociaux sur les "
 "articles (Facebook, Twitter, LinkedIn, e-mail)"
+
+#: inc/customizer.php:741
+msgid "Share this post"
+msgstr "Partager cet article"
+
+#: inc/customizer.php:749
+msgid "Custom sharing title"
+msgstr "Titre de partage personnalisé"
 
 #: inc/plugin-update-checker/Puc/v4p10/Plugin/Ui.php:54
 msgid "View details"
@@ -444,23 +452,23 @@ msgstr "Page suivante"
 msgid "Page"
 msgstr "Page"
 
-#: template-parts/post-share.php:6
+#: template-parts/post-share.php:7
 msgid "Share post"
 msgstr "Partager cette publication"
 
-#: template-parts/post-share.php:8
+#: template-parts/post-share.php:11
 msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
-#: template-parts/post-share.php:11
+#: template-parts/post-share.php:14
 msgid "Share on Twitter"
 msgstr "Partager sur Twitter"
 
-#: template-parts/post-share.php:14
+#: template-parts/post-share.php:17
 msgid "Share on LinkedIn"
 msgstr "Partager sur LinkedIn"
 
-#: template-parts/post-share.php:17
+#: template-parts/post-share.php:20
 msgid "Share by e-mail"
 msgstr "Partager par email"
 
@@ -488,6 +496,9 @@ msgstr "https://anybodesign.com/"
 msgid "Maintenance"
 msgstr "Maintenance"
 
+#~ msgid "White button text"
+#~ msgstr "Texte blanc pour les boutons"
+
 #~ msgid "Style Guide"
 #~ msgstr "Style Guide"
 
@@ -499,9 +510,6 @@ msgstr "Maintenance"
 
 #~ msgid "Text color"
 #~ msgstr "Couleur du texte"
-
-#~ msgid "Buttons text color"
-#~ msgstr "Couleur du texte des boutons"
 
 #~ msgid "Complementary color"
 #~ msgstr "Couleur complémentaire"
