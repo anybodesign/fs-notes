@@ -10,6 +10,14 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.6 - 2022.11.23
+* Social sharing buttons fix
+* Custom sharing title
+* Load more posts fix
+* Custom colors fix
+* Disable WordPress stuff
+* FR update
+
 ### 1.5 - 2021.06.21
 * FR update
 * Social sharing buttons
