@@ -1,6 +1,6 @@
 <?php if ( !defined('ABSPATH') ) die();
 	
-define( 'FS_THEME_VERSION', '1.6' );
+define( 'FS_THEME_VERSION', '1.7' );
 define( 'FS_THEME_DIR', get_template_directory() );
 define( 'FS_THEME_URL', get_template_directory_uri() );
 	
@@ -545,7 +545,7 @@ function fs_custom_comments($comment, $args, $depth) {
 				
 				<div class="comment-author-text">
 					<?php if ($comment->comment_approved == '0') : ?>
-						<em class="pending"><?php _e('Your comment is awaiting moderation.') ?></em>
+						<em class="pending"><?php esc_html_e('Your comment is awaiting moderation.') ?></em>
 					<?php endif; ?>
 					
 					<?php comment_text(); ?>

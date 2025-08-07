@@ -10,6 +10,10 @@ A WordPress Notebook Theme by Thomas Villain @ anybodesign.com
 
 ## Changelog
 
+### 1.7 - 2025.08.07
+* Pagination template parts
+* Esc html/attr fix
+
 ### 1.6 - 2022.11.23
 * Social sharing buttons fix
 * Custom sharing title
