@@ -784,7 +784,7 @@ function fs_colors() { ?>
 			--title_color: <?php echo get_theme_mod('title_color', '#23252B'); ?>;
 			--sidebar_color: <?php echo get_theme_mod('sidebar_color', '#FBFF00'); ?>;
 			--page_color: <?php echo get_theme_mod('page_color', '#FFFFFF'); ?>;
-			--btn_text_color: <?php echo get_theme_mod('btn_color', '#23252B'); ?>;
+			--btn_text_color: <?php echo get_theme_mod('btn_text_color', '#23252B'); ?>;
 		}
 	</style>
 	<?php } else { ?>
