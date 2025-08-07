@@ -12,7 +12,7 @@
 get_header(); ?>
 
 				<div class="page-content<?php if ( get_theme_mod('white_text') == true ) { echo ' white-text'; } ?>">
-
+				
 					<?php if ( is_home() && ! is_front_page() ) { ?>
 					<h1 class="page-title"><?php single_post_title(); ?></h1>
 					<?php } else if ( is_archive() ) { ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 					<?php } else if ( is_search() ) { ?>
 					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'fs-notes' ), '<span class="search-term">' . get_search_query() . '</span>' ); ?></h1>
 					<?php } ?> 
-
+					
 					<?php if ( is_archive() ) {
 						the_archive_description( '<div class="archive-desc">', '</div>' );
 					} ?>
@@ -31,9 +31,9 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/post', 'block' ); ?>
 						<?php endwhile; ?>
 					</div>
-					
+						
 					<?php get_template_part( 'template-parts/post', 'pagination' ); ?>
-								
+						
 					<?php
 					else:
 						get_template_part( 'template-parts/nothing' );
@@ -43,5 +43,5 @@ get_header(); ?>
 				</div>
 				
 				<?php get_sidebar(); ?>
-
+				
 <?php get_footer(); ?>
