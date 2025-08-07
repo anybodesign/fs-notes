@@ -35,7 +35,7 @@
 								$darkicons = null;
 							}
 						?>
-						<nav class="footer-social<?php echo $darkicons; ?>" role="navigation" aria-label="<?php _e('Social Networks', 'fs-notes'); ?>">
+						<nav class="footer-social<?php echo $darkicons; ?>" role="navigation" aria-label="<?php esc_attr_e('Social Networks', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'social_menu',
 								'menu_class'		=>	'social-menu',
@@ -54,7 +54,7 @@
 						<p class="footer-title">
 							<?php echo wp_get_nav_menu_name('footer_menu'); ?>
 						</p>
-						<nav role="navigation" aria-label="<?php _e('Footer Menu', 'fs-notes'); ?>">
+						<nav role="navigation" aria-label="<?php esc_attr_e('Footer Menu', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'footer_menu',
 								'menu_class'		=>	'footer-menu',
@@ -76,10 +76,10 @@
 							echo '&copy;'; echo date(' Y '); echo esc_url(bloginfo('name')).'.'; 	
 						} ?>
 						
-						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php _e('Powered by WordPress!', 'good-time'); ?></a>
+						<a class="wp-love<?php if ( get_theme_mod('display_wp' ) == false ) { echo ' out-of-reach'; } ?>" href="//wordpress.org"><?php esc_html_e('Powered by WordPress!', 'good-time'); ?></a>
 					</p>
 					<?php if ( has_nav_menu( 'copyright_menu' ) ) : ?>
-					<nav class="copyright-nav" role="navigation" aria-label="<?php _e('Copyright Menu', 'fs-notes'); ?>">
+					<nav class="copyright-nav" role="navigation" aria-label="<?php esc_attr_e('Copyright Menu', 'fs-notes'); ?>">
 						<?php wp_nav_menu( array(
 								'theme_location'	=> 	'copyright_menu',
 								'menu_class'		=>	'copyright-menu',

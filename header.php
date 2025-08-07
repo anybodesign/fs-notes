@@ -71,5 +71,5 @@
 			<div class="page-wrap<?php echo $sidebar; ?>">
 				
 				<?php if ( $sidebar ) { ?>
-				<button id="menu_toggle" type="button"<?php if ( get_theme_mod('white_burger') == true ) { echo ' class="white-burger"'; } ?>><?php _e('Menu', 'fs-notes'); ?><span></span></button>
+				<button id="menu_toggle" type="button"<?php if ( get_theme_mod('white_burger') == true ) { echo ' class="white-burger"'; } ?>><?php esc_html_e('Menu', 'fs-notes'); ?><span></span></button>
 				<?php } ?>
